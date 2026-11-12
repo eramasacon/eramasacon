@@ -61,6 +61,17 @@ PAGES: dict[str, PageSpec] = {
         ("Values", ["4c6cbba"]),
         ("MissionVision", ["17a1c3c", "9fe672f"]),
     ]),
+    "contact": PageSpec("contact-us", 54, "contact", "ContactPage", [
+        ("Banner", ["17bb5b0", "29f0bd5", "5833e61", "9852ebe"]),
+        ("ContactForm", ["8cf2258"]),
+        ("ContactDetails", ["0ca1922", "94658b1"]),
+    ]),
+}
+
+# MetForm forms render in the browser on WordPress, so the cached HTML only has
+# an empty wrapper; each is replaced by a hand-written React component.
+METFORM_COMPONENTS = {
+    "960": ("ContactFormFields", 'import { ContactForm as ContactFormFields } from "@/components/contact/contact-form";'),
 }
 # The header, footer and shared stylesheet bundle are taken from this page.
 CHROME_PAGE = "home"
@@ -367,6 +378,16 @@ class Emitter:
             delim = f' delimiter={jsx_attr("x", a["data-delimiter"])[2:]}' if a.get("data-delimiter") else ""
             return [f'{pad}<Counter className="elementor-counter-number" from={{{a.get("data-from-value") or 0}}} '
                     f'to={{{a["data-to-value"]}}} duration={{{a.get("data-duration") or 2000}}}{delim} />']
+
+        # MetForm widget -> its React form component.
+        if "elementor-widget-metform" in cls:
+            form = next((m for m in walk(n) if m.attrs.get("data-metform-formpicker-key")), None)
+            form_id = form.attrs["data-metform-formpicker-key"] if form is not None else ""
+            if form_id not in METFORM_COMPONENTS:
+                raise SystemExit(f"no component for MetForm form {form_id!r}; add it to METFORM_COMPONENTS")
+            component, import_line = METFORM_COMPONENTS[form_id]
+            self.imports.add(import_line)
+            return [f"{pad}<div {self.attrs(n, tag)}>", f"{pad}  <{component} />", f"{pad}</div>"]
 
         attrs = self.attrs(n, tag)
         extra = ""
