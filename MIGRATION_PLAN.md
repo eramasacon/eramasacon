@@ -2,7 +2,7 @@
 
 Prepared and revised: 12 November 2026 (Asia/Kolkata). Scope: Contracting-only analysis and planning.
 
-**Approved business scope:** The new website represents ERAM ASACON CONTRACTING exclusively. Trading is excluded from navigation, menus, homepage, pages, content records, division-specific components, product listings, Trading portfolios, calls to action, sitemap and internal links. Existing WordPress content, private backups and style references remain intact. This revision changes this document only; implementation awaits further instructions.
+**Approved business scope:** The new website represents ERAM ASACON CONTRACTING exclusively. Trading is excluded from navigation, menus, homepage, pages, content records, division-specific components, product listings, Trading portfolios, calls to action, sitemap and internal links. Existing WordPress content, private backups and style references remain intact. This documentation phase adds evidence maps and readiness findings; implementation awaits further instructions.
 
 ## 1. Existing website analysis
 
@@ -27,7 +27,7 @@ Public inspection attempts recorded during the initial analysis (not repeated fo
 
 These are limitations of inspection from this environment, not proof of a global website outage. No public page was successfully inspected. Guessed company, service, contact, or division URLs are deliberately excluded from the verified inventory.
 
-Filesystem inspection was confined to the Next.js project after locating it at `eramasacon-nextjs/`. The initial filename-only discovery from its parent listed sibling backup paths unintentionally; no sibling file contents, WordPress configuration, credentials, or SQL backups were opened. Those sources are excluded from this plan. Private media/content must later be supplied as a sanitized export inside this project before use under the current access restriction.
+Filesystem inspection was confined to the Next.js project after locating it at `eramasacon-nextjs/`. The initial filename-only discovery from its parent listed sibling backup paths unintentionally; no sibling file contents, WordPress configuration, credentials, or SQL backups were opened. Those sources are excluded from this plan. The current phase explicitly authorizes read-only sanitized references at `/tmp/eram-contracting-review-xml/`. Original source exports/backups remain off limits; no source was reprocessed. Approved original media and visual references are still needed before implementation.
 
 ### Existing Next.js project
 
@@ -50,7 +50,7 @@ Filesystem inspection was confined to the Next.js project after locating it at `
 
 ### Structure and functionality indicated by CSS
 
-ElementsKit navigation and submenu styles occur in posts 546, 849, 2374, 3161, and 5816. Posts 122 and 1793 contain copyright widget selectors, making them footer candidates. Several large files contain testimonial, counter, and logo-grid styling; repeated groups may represent templates, revisions, or duplicate pages. Published status cannot be determined.
+ElementsKit navigation and submenu styles occur in posts 546, 849, 2374, 3161, and 5816. Posts 122 and 1793 contain copyright widget selectors, making them footer candidates. Several large files contain testimonial, counter, and logo-grid styling; repeated groups may represent templates, revisions, or duplicate pages. CSS alone cannot determine published status. The new sanitized inventory establishes publication for specific page candidates, as detailed below; it does not establish active template use.
 
 MetForm-specific rules occur in posts 960 and 1765. The rules include input and validation-related styling, but generated addon CSS can contain selectors for controls absent from the actual form. Field labels, required fields, select options, uploads, recipients, consent, success/error copy, anti-spam, and delivery behavior remain unknown.
 
@@ -60,43 +60,66 @@ Post 1972 contains an advanced accordion; post 2739 has extensive Owl/Unlimited 
 
 The user confirms that the existing WordPress homepage is an entry point to Contracting and Trading. The new `/` will instead be the main **ERAM ASACON CONTRACTING homepage**, based on the original Contracting landing page. Remove the division selector and Trading links rather than reproducing the old dual-division entry experience.
 
-Preserve the original Contracting visual identity, typography, colors, section order, layout, imagery, content and responsive behavior as accurately as possible. Its original landing URL, Elementor/template IDs, text and screenshots remain **unresolved**. No new hero, slogan, services, projects, statistics or company claims may be invented. Moving the Contracting landing experience to `/` is approved; any content adjustment beyond excluding Trading needs verified source material or business-provided copy.
+Preserve the original Contracting visual identity, typography, colors, section order, layout, imagery, content and responsive behavior as accurately as possible. The sanitized export now identifies page 45 Home at `/home/` as the leading Contracting landing candidate, supported by gateway links, service links and menu targets. Its layout/CSS are available; active shell, original screenshots and final source approval remain **unresolved**. No new hero, slogan, services, projects, statistics or company claims may be invented. Moving the Contracting landing experience to `/` is approved; any content adjustment beyond excluding Trading needs verified source material or business-provided copy.
 
 Red-heavy and blue-heavy stylesheet families exist, but neither color families nor post IDs are assigned to Contracting without evidence. Shared legacy material is eligible only after confirming relevance to Contracting, including company facts, contact details, testimonials, clients, certifications and downloads. Unclassified material remains outside implementation until resolved.
 
 ## 2. Contracting page inventory and route mapping
 
-### In-scope register
+### Current sanitized-evidence manifest
 
-No Contracting page URL or service/project name has been independently verified. The following records specify required discovery categories, not invented public pages.
+Read-only sanitized references at `/tmp/eram-contracting-review-xml/` report 522 inventory records, 41 layouts, 462 asset references and 78 skipped records. These are not page counts. Export URLs/statuses are source evidence, not newly verified live responses. No original XML/SQL, private backups, media or credentials were accessed. Automated classifications remain unchanged; the manual-evidence candidate set is documented separately.
 
-| Content/resource | Evidence/status | Next.js destination | Required verification |
-| --- | --- | --- | --- |
-| Main Contracting homepage | Business-approved replacement for the dual-division entry page | `/`, existing `app/page.tsx` | Original Contracting landing URL, content, active Elementor/template IDs, desktop/mobile appearance |
-| Legacy Contracting landing URL | Exact URL unresolved | Proposed redirect to `/` only after URL is verified and mapping approved | Confirm that the entire old page is equivalent to the new homepage; avoid duplicate canonicals |
-| Contracting services overview/details | Names, count and hierarchy unresolved | Preserve verified legacy paths where appropriate | Service names/descriptions, ordering, detail pages, media and CTAs |
-| Contracting projects/portfolios | Published items and categories unresolved | Preserve verified legacy paths where appropriate | Project titles, descriptions, images, categories, filters, pagination, detail URLs and permissions |
-| Contracting company/profile material | Existence and eligible shared content unresolved | Assign only after inventory | Approved company facts, credentials, team/client content and relevant downloads |
-| Contracting contact/enquiry content | URL, fields and routing unresolved | Preserve verified path or section target | Contact details, form schema, recipients, validation, consent and delivery flow |
-| Relevant legal/shared pages | Inclusion unresolved | Preserve only verified, relevant pages | Current approved text and applicability to Contracting |
-| Elementor post IDs in Appendix A | CSS evidence only | No automatic public routes | Map each ID to source URL, type, publication status and Contracting eligibility |
-| Media references | Whole-legacy CSS pool; division ownership unresolved | Approved Contracting assets only | Match files to retained content and establish old-URL compatibility |
+Detailed manifests:
 
-For retained routes, record original absolute URL/pathname, status, canonical, title/H1, parent, menu label/order, Elementor ID, template, content provenance, assets, metadata, destination and redirect decision. Track inclusion as `Contracting`, `shared-approved-for-Contracting`, `excluded-Trading` or `unresolved` in the migration register; the app content model contains only retained material. Published Contracting detail pages, categories, archives, PDFs and language variants enter scope only when verified.
+- [Contracting page map](docs/CONTRACTING_PAGE_MAP.md): IDs, titles/slugs/status, routes, links, matching CSS, assets, confidence, menu evidence, excluded Trading paths and unresolved pages.
+- [Layout map](docs/CONTRACTING_LAYOUT_MAP.md): unavailable header/footer layouts, CSS-only evidence, and homepage 45/5195/5492/5814 comparison.
+- [Asset map](docs/CONTRACTING_ASSET_MAP.md): path/attachment associations, CSS-only references and Trading/unresolved overlap.
+- [Implementation readiness](docs/CONTRACTING_IMPLEMENTATION_READINESS.md): verified export facts, strong candidates, missing evidence and approval gates.
 
-### Contracting navigation structure
+### Contracting route candidates
 
-Confirmed target behavior: the homepage link leads to `/`; no division switcher or Trading destination appears in desktop/mobile navigation, footer, breadcrumbs, cards, CTAs or related-content links. Exact labels, ordering, nesting and destinations are **unresolved**. Services, projects, company and contact are inventory categories above, not an approved menu. Recover the original Contracting menu and relevant shared links before finalizing navigation. Audit links embedded in rich text, images, buttons, forms, downloads and galleries as well as explicit menus.
+All 14 rows below are published `page` records with parent 0 and available sanitized layouts. All have matching supplied CSS except page 52. Proposed routes preserve exported root-level service slugs. Ownership is supported by the extracted `menu`, page 50 service buttons and cross-links, supplemented by the user’s manual review; final classifications/visual approval remain pending.
+
+| ID | Export title | Export path | Proposed route | Qualification |
+| --- | --- | --- | --- | --- |
+| 45 | Home | `/home/` | `/` | Leading homepage candidate; approve source and /home/ redirect |
+| 48 | About Us | `/about-us/` | `/about-us/` | Strong candidate; original visuals/shell still required |
+| 50 | Services | `/services/` | `/services/` | Strong candidate; original visuals/shell still required |
+| 52 | Projects | `/projects/` | `/projects/` | Projects conflict: menu item 2907 points to 2739 /portfolio-2/; resolve before implementation |
+| 54 | Contact Us | `/contact-us/` | `/contact-us/` | Strong candidate; original visuals/shell still required |
+| 1121 | HVAC Contracting | `/hvac-contracting/` | `/hvac-contracting/` | Strong candidate; original visuals/shell still required |
+| 1209 | Civil and mechanical construction | `/civil-and-mechanical-construction/` | `/civil-and-mechanical-construction/` | Strong candidate; original visuals/shell still required |
+| 1211 | Electrical and instrumentation | `/electrical-and-instrumentation/` | `/electrical-and-instrumentation/` | Strong candidate; original visuals/shell still required |
+| 1213 | Firefighting | `/firefighting/` | `/firefighting/` | Strong candidate; original visuals/shell still required |
+| 1216 | MEP Design consultancy | `/mep-design-consultancy/` | `/mep-design-consultancy/` | Strong candidate; original visuals/shell still required |
+| 1218 | Fabrication | `/fabrication/` | `/fabrication/` | Strong candidate; original visuals/shell still required |
+| 1220 | Flooring and landscaping | `/flooring-and-landscaping/` | `/flooring-and-landscaping/` | Strong candidate; original visuals/shell still required |
+| 2406 | Testing and air balancing | `/testing-and-air-balancing/` | `/testing-and-air-balancing/` | Strong candidate; original visuals/shell still required |
+| 2408 | Cleaning services | `/cleaning-services/` | `/cleaning-services/` | Strong candidate; original visuals/shell still required |
+
+The original gateway is page 573 Front Page (`home-main`, exported URL `/`), whose links target `/home/` and `/home-trading/`. Do not migrate its two-division selection design to `/`. Page 45 is the leading Contracting homepage source. Copies 5195/5492/5814 stay outside automatic publication; equal sanitized arrays do not establish active use.
+
+### Proposed Contracting navigation
+
+User-requested order: **Home, About Us, Services, Projects, Contact Us**. Proposed paths are `/`, `/about-us/`, `/services/`, `/projects/` (pending source/destination decision), `/contact-us/`. Extracted menu item 61 targets Services 50 with all nine service destinations as child records; page 50 independently links to all nine. Card/button order and menu_order differ and need final review. The extracted menu’s active theme location and header assignment are unavailable. Internal rich-text/image/button/gallery links, CTAs, breadcrumbs and footer must all follow the retained Contracting set, with no Trading switcher or destination.
 
 ### Excluded Trading URL register
 
-Trading content has no Next.js page destination or sitemap entry. **No exact Trading URL is verified**, and `/trading` must not be presumed to exist. Keep excluded URLs in this planning register separately from retained routes and runtime content.
+These published export paths are excluded under the current business scope. They are not live-response verification or approved redirect mappings. Do not automatically redirect them to `/`; omit their pages, menus, exclusive assets, CTAs and sitemap entries.
 
-| Excluded source category | Verified URLs | Target content | Handling decision |
-| --- | --- | --- | --- |
-| Trading landing and child pages | Unresolved; none verified | Excluded | Pending verified URL inventory and business approval |
-| Trading products/listings and portfolios | Unresolved; none verified | Excluded | Pending per-URL review, including category/pagination/detail variants |
-| Trading-specific enquiry/download/media URLs | Unresolved; none verified | Excluded unless explicitly approved as relevant shared material | Review separately; do not carry over Trading forms, CTAs or assets by default |
+| ID | Exported path | Decision |
+| --- | --- | --- |
+| 856 | `/home-trading/` | Excluded; per-URL handling requires approval |
+| 1581 | `/rubber-products/` | Excluded; per-URL handling requires approval |
+| 1854 | `/rubber-mats-and-tiles/` | Excluded; per-URL handling requires approval |
+| 1862 | `/general-trading/` | Excluded; per-URL handling requires approval |
+| 1907 | `/construction-equipment/` | Excluded; per-URL handling requires approval |
+| 1935 | `/contact-us-trading/` | Excluded; per-URL handling requires approval |
+| 1972 | `/about-trading/` | Excluded; per-URL handling requires approval |
+| 2259 | `/services-trading/` | Excluded; per-URL handling requires approval |
+| 2914 | `/projects-trading-2/` | Excluded; per-URL handling requires approval |
+| 2957 | `/chemicals/` | Excluded; per-URL handling requires approval |
 
 For every discovered excluded URL, record exact URL, evidence of Trading ownership, current status/canonical, relevant existing links, any genuine equivalent destination, proposed response, approval and final verification. Do not redirect Trading pages automatically to the Contracting homepage or use a wildcard division redirect. Recommend a permanent redirect only where a verified destination satisfies the same user intent and the business approves that mapping. For confirmed permanently removed content with no equivalent, recommend an explicit 410 response where supported; a genuine 404 is appropriate for unknown URLs or where removal handling has not been approved. A separately approved external successor may be considered only if verified. Do not publish placeholder Trading pages.
 
@@ -104,7 +127,7 @@ These are recommendations for the future Next.js release, not instructions to de
 
 ## 3. Design system findings
 
-All values below describe the entire legacy CSS reference pool, not an approved Contracting design system. Their Contracting relevance, live use and cascade must be checked against the original Contracting DOM and screenshots before finalizing tokens. Unmapped values must not be adopted merely because they are frequent.
+All values below describe the entire legacy CSS reference pool, not an approved Contracting design system. Matching post CSS for the 14-page candidate set (except missing 52) can now be traced through the page map; the header/footer candidates remain unassigned. Their Contracting relevance, live use and cascade must be checked against the original Contracting DOM and screenshots before finalizing tokens. Unmapped values must not be adopted merely because they are frequent.
 
 | Category | Evidence | Migration treatment |
 | --- | --- | --- |
@@ -174,6 +197,9 @@ Accessibility is part of parity: semantic landmarks, one meaningful H1, logical 
 
 ## 5. WordPress functionality replacement strategy
 
+Current source evidence: page 52 contains `wpb_portfolio`; menu-linked page 2739 has 45 `ucaddon_card_carousel` widgets with omitted settings. Approve the intended Projects source before designing its data model. Page 54 includes `metform`, `google_maps`, image-marker and shortcode nodes; their functional settings are absent. Homepage 45 includes omitted hover-card, logo-grid, testimonial and shortcode settings. These require original visual/function specifications rather than invented content.
+
+
 | Original layer / evidence | Proposed replacement | Outstanding verification |
 | --- | --- | --- |
 | Astra theme and Elementor templates | App Router layouts and reusable React sections | Active shell assignments and exact layout |
@@ -195,6 +221,9 @@ Do not recreate unused plugin features or assume all CSS selectors correspond to
 For forms, identify the Contracting contact/enquiry form and verified recipient/team first. Exclude Trading enquiry routes, department/product options and Trading CTAs; confirm any necessary field/copy changes with the business rather than inventing them. Preserve verified Contracting fields and behavior; enforce server-side type/length/allowlist checks, abuse protection, safe mail construction, pending/success/error states, and minimal logging. Use a server-only delivery adapter with later environment configuration; never expose credentials or silently report successful delivery on failure. Confirm retention and consent requirements. Enable attachment validation and limits only if uploads are part of the verified form. Test against a controlled recipient/sandbox later, without submitting production WordPress forms during discovery.
 
 ## 6. Media and asset migration strategy
+
+The sanitized manifest adds 178 reference entries associated with the 14 candidates: 110 path entries and 68 attachment-ID entries; 17 entries also reference user-excluded Trading pages. The asset map adds CSS provenance separately (116 combined relevant path rows). These are not approved media or unique-original-file counts. Do not copy media yet. Both ARCO Profile PDFs remain quarantined: v2.0 is linked from Contracting service candidates and Trading pages; the 2022 version is linked from Trading. Verify business identity, relevance, rights and intended CTA before including either. Client/partner logos and external service CTAs also need use approval.
+
 
 During the initial analysis, all 40 reference files were read programmatically in full for declarations, URLs, selectors, media queries, and custom CSS. Across Elementor files there are **30 unique CSS asset URLs: 29 under `/wp-content/uploads/` and one Elementor plugin mask SVG**. These counts cover both divisions and are not Contracting asset counts. This is not the full media inventory: `<img>`, `srcset`, videos, documents, logos, inline styles and JS-configured slides are absent from CSS extraction.
 
@@ -228,6 +257,8 @@ Provide genuine 404 responses for unknown routes, and make deliberate removal de
 
 ## 9. Implementation phases
 
+Current Phase A status: the page/service route candidate set, menu links, homepage-copy comparison and asset-reference associations are documented. Phase A is not complete: active header/footer assignments, original design/media, approved Projects source and verified content/use approvals remain outstanding. No phase B–G work is started by these documentation updates.
+
 | Phase | Work | Exit criteria |
 | --- | --- | --- |
 | A — Identify Contracting pages and original assets | Obtain verified Contracting landing/service/project/navigation records and original media; classify shared material; document excluded Trading URLs separately | Contracting inventory, original visual references and approved asset provenance; unresolved items explicitly logged |
@@ -238,7 +269,7 @@ Provide genuine 404 responses for unknown routes, and make deliberate removal de
 | F — SEO, responsiveness, and testing | Validate metadata, canonicals, sitemap, approved redirect/removal mappings, content/asset parity, responsive states and performance | No broken retained links/assets or Trading exposure; build/lint/type and relevant behavior checks pass |
 | G — Vercel preview and approved production deployment | Prepare a Vercel preview with indexing controls; validate runtime/forms; review release and rollback plan; deploy production only after explicit approval | Preview accepted, per-URL handling approved and explicit production authorization obtained; GoDaddy/DNS changes remain outside this task |
 
-This task ends with this document. This revision updates only `MIGRATION_PLAN.md`; no preview or deployment is authorized now. No implementation phase has been started. No dependency installation, app edits, production changes, deletion, commit or push was performed. Build/lint were not run for a documentation-only change; application baseline behavior remains untested.
+This documentation task ends with this plan and the four companion evidence/readiness maps; no preview or deployment is authorized now. No implementation phase has been started. No dependency installation, app edits, production changes, deletion, commit or push was performed. Build/lint were not run for a documentation-only change; application baseline behavior remains untested.
 
 ## 10. Risks, unknowns, and verification checklist
 
@@ -248,7 +279,7 @@ This task ends with this document. This revision updates only `MIGRATION_PLAN.md
 | --- | --- | --- |
 | Live site could not be inspected | Layout/page/content fidelity cannot yet be established | Reachable public site or sanitized HTML/content exports plus screenshots in project |
 | Numbered CSS files lack page mapping | Drafts/duplicates/templates may be mistaken for pages | Sanitized ID/title/URL/type/status/template assignment register |
-| Contracting hierarchy and source design unknown | Incorrect navigation/content or visual identity | Verify original Contracting landing page, menu, services, projects and shell |
+| Candidate hierarchy now evidenced; active design unknown | Incorrect source selection or visual identity | Approve 45, resolve Projects 52 vs menu-linked 2739, recover shell/screenshots |
 | Trading URL inventory and removal decisions unresolved | Accidental inclusion or irrelevant redirects | Separate exclusion register with verified ownership and approved per-URL handling |
 | Astra runtime and addon base styles absent | CSS overrides alone cannot reproduce computed styling | Capture computed styles and approved missing style references in project |
 | Original media/fonts unavailable in project | Branding, dimensions and layout may drift | Approved in-project media/font package with usage rights |
@@ -260,17 +291,21 @@ This task ends with this document. This revision updates only `MIGRATION_PLAN.md
 | Existing Next feature flags/version | Older implementation recipes may fail | Consult installed docs; validate build and route behavior during implementation |
 | Deployment/runtime unspecified | Forms/image handling may not fit target hosting | Validate Vercel runtime compatibility in the later preview phase without altering hosting now |
 
-### Information required before implementation
+### Current evidence and remaining implementation gates
 
-- Original Contracting landing URL, public HTML/content or sanitized in-project export, screenshots and responsive/interaction captures; the dual-division homepage is not the visual source for `/`.
-- Exact Contracting page, service and project inventory, original text, menu labels/order/nesting, portfolio categories/detail relationships and relevant shared/legal/download content approved for retention.
+Page/slug/status, nine-service navigation and sanitized layout evidence are now available in the companion maps; those prior discovery gaps are partially resolved. Page 45 and 5814 have equal sanitized element arrays; 5492 changes two leading image regions, while 5195 omits three early regions. Do not infer original/raw equivalence or activation. Header/footer IDs 546/849/2374/3161/5816/122/1793 have CSS but **no sanitized record or layout**. Page 52 lacks supplied CSS and competes with menu-linked 2739 as Projects source. Original images/fonts/screenshots, active assignments, addon content, form schema and approved SEO/URL decisions remain missing.
+
+### Information still required before implementation
+
+- Approval of leading Contracting page 45 `/home/`, original screenshots and responsive/interaction captures; the dual-division homepage is not the visual source for `/`.
+- Approval of the documented Contracting page/service candidate inventory, final menu order, Projects 52 vs 2739 source/route, project records/categories, omitted addon content and relevant shared/legal/download material.
 - Evidence mapping each retained page and shell to Elementor/template IDs and CSS selectors; confirmed computed typography, colors, dimensions and breakpoints.
 - Original Contracting media and licensed fonts supplied inside the project with provenance, dimensions, captions/alt text, crop guidance and usage rights. Private backups and credentials must not be accessed.
 - Verified Contracting contact information, enquiry schema/options, recipient ownership, consent text and expected success/error behavior; later controlled delivery setup without sharing credentials in this document.
 - Existing Contracting metadata/canonicals and exact legacy landing URL mapping; separately verified Trading URLs and business-approved removal/equivalent redirect decisions.
 - Vercel preview ownership/access and runtime requirements for the later release phase, followed by explicit production approval and an accepted rollback plan.
 
-All of the above source details remain unresolved except the business decisions stated here. Discovery must resolve the necessary inputs before the relevant implementation phase begins; no company content or design may be fabricated to fill a gap.
+The companion manifests record resolved export facts and strong ownership candidates. The approval/design/template/project/form/document gaps above remain unresolved. Discovery must resolve the necessary inputs before the relevant implementation phase begins; no company content or design may be fabricated to fill a gap.
 
 ### Verification checklist for implementation
 
@@ -298,7 +333,7 @@ All of the above source details remain unresolved except the business decisions 
 
 ## Appendix A. Complete style reference inventory
 
-Every file under `migration-reference/styles/` was examined during the initial analysis. This preserved inventory covers both legacy divisions and is not a list of approved implementation assets; Contracting eligibility remains unresolved for every ID. Roles below are CSS-based candidates only; **all public route assignments are unresolved**. “Detail-like” describes a repeated styling pattern, not a verified service/product page.
+Every file under `migration-reference/styles/` was examined during the initial analysis. This preserved inventory covers both legacy divisions and is not a list of approved implementation assets; Contracting eligibility must now be assessed alongside the page map; CSS alone does not establish it. Roles below are CSS-based candidates only; **CSS alone cannot establish public route assignments; candidate page mappings are now documented in CONTRACTING_PAGE_MAP.md**. “Detail-like” describes a repeated styling pattern, not a verified service/product page.
 
 | File (relative to `migration-reference/styles/`) | Bytes | Findings |
 | --- | ---: | --- |
@@ -347,4 +382,5 @@ Every file under `migration-reference/styles/` was examined during the initial a
 
 - Project files: `AGENTS.md`, `package.json`, `package-lock.json` (present), `next.config.ts`, `tsconfig.json`, `eslint.config.mjs`, `README.md`, `app/layout.tsx`, `app/page.tsx`, `app/globals.css`, and the complete style inventory above. Versions reported here are declared dependency versions; no registry upgrade research or installation was performed.
 - Installed framework guidance read: `node_modules/next/dist/docs/01-app/01-getting-started/05-server-and-client-components.md`, `node_modules/next/dist/docs/01-app/02-guides/migrating-to-cache-components.md`, and `node_modules/next/dist/docs/01-app/03-api-reference/05-config/01-next-config-js/redirects.md`.
+- Sanitized sources used in this phase: `page-inventory.json`, classification review files, `asset-manifest.json`, `extraction-report.md` and `elementor-layouts/*.json` under `/tmp/eram-contracting-review-xml/`; no raw extracts copied or published.
 - Public resources attempted are listed in section 1. They yielded access errors rather than usable site content and cannot substantiate page/design claims.

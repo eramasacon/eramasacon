@@ -9,6 +9,7 @@ import re
 import sys
 from urllib.parse import unquote, urlsplit, urlunsplit
 import xml.etree.ElementTree as ET
+from xml.parsers import expat
 
 VERSION = 1
 MAX_STATEMENT = 32 * 1024 * 1024
@@ -127,6 +128,10 @@ STYLE_FIELDS = {'color', 'background_color', 'title_color', 'text_color',
 MEDIA_FIELDS = {'image', 'background_image', 'background_overlay_image'}
 LINK_FIELDS = {'link', 'button_link', 'url'}
 REPEATERS = {'tabs', 'icon_list', 'slides', 'testimonials', 'gallery'}
+PUBLIC_WIDGETS = {'heading', 'text-editor', 'button', 'image', 'image-box', 'icon',
+                  'icon-box', 'icon-list', 'divider', 'spacer', 'counter', 'progress',
+                  'tabs', 'accordion', 'toggle', 'testimonial', 'image-gallery',
+                  'image-carousel', 'slides', 'video', 'social-icons', 'container'}
 
 
 def style_value(value):
@@ -188,13 +193,16 @@ def sanitize_layout(raw):
         widget = str(item.get('widgetType', '')).lower()
         # Even public form definitions may embed delivery or submitted values.
         is_form = any(x in widget for x in ('form', 'mf-', 'html', 'shortcode'))
-        out['settings'] = {} if is_form else settings_public(item.get('settings', {}))
+        unknown_widget = bool(widget) and widget not in PUBLIC_WIDGETS
+        out['settings'] = {} if is_form or unknown_widget else settings_public(item.get('settings', {}))
+        if unknown_widget and not is_form:
+            out['settings_omitted'] = 'unsupported-widget'
         if is_form:
             out['settings_omitted'] = 'form-or-code-widget'
         children = item.get('elements', [])
         if not isinstance(children, list):
             raise ExtractionError('Unsupported Elementor children.')
-        out['elements'] = [] if is_form else [node(v, depth + 1) for v in children]
+        out['elements'] = [] if is_form or unknown_widget else [node(v, depth + 1) for v in children]
         return out
     return [node(v) for v in data]
 
@@ -206,12 +214,37 @@ def integer(value):
         raise ExtractionError('Invalid numeric source identifier.') from None
 
 
+def validate_xml(text):
+    """Reject actual declarations, while allowing declaration-like character data.
+
+    Expat distinguishes markup from CDATA, escaped text and comments. Reject
+    DTDs at their opening callback, before processing their entity declarations.
+    No external entity parser or resource loader is ever created.
+    """
+    if '\x00' in text:
+        raise ExtractionError('XML NUL bytes are unsupported.')
+    parser = expat.ParserCreate(namespace_separator='}')
+
+    def reject(*_args):
+        raise ExtractionError('XML DTDs and entity declarations/references are unsupported.')
+
+    parser.StartDoctypeDeclHandler = reject
+    parser.EntityDeclHandler = reject
+    parser.ExternalEntityRefHandler = reject
+    parser.SkippedEntityHandler = reject
+    parser.SetParamEntityParsing(expat.XML_PARAM_ENTITY_PARSING_NEVER)
+    try:
+        parser.Parse(text, True)
+    except expat.ExpatError:
+        # Expat messages may expose source details; retain generic diagnostics.
+        raise ExtractionError('Malformed or unsupported XML.') from None
+
+
 def wxr_records(path, allowed, report):
-    # UTF-8 WXR only; reject DTD/entity declarations before parsing.
+    # Validate the exact UTF-8 text later consumed by ElementTree, before extraction.
     raw = path.read_bytes()
     text = raw.decode('utf-8-sig')
-    if re.search(r'<!\s*(DOCTYPE|ENTITY)', text, re.I) or '\x00' in text:
-        raise ExtractionError('XML DTD/entities or non-UTF-8 XML are unsupported.')
+    validate_xml(text)
     root = ET.fromstring(text)
     wp = 'http://wordpress.org/export/1.2/'
     if not root.findall('.//{' + wp + '}wxr_version'):
@@ -337,6 +370,8 @@ def sql_records(path, prefix, allowed, report):
     schemas = {}; posts = {}; metadata = {}; terms = {}; tax = {}; rel = []
     for statement in statements(path):
         if not statement: continue
+        if re.match(r'SET\b', statement, re.I) and re.search(r'NO_BACKSLASH_ESCAPES|ANSI_QUOTES', statement, re.I):
+            raise ExtractionError('Unsupported SQL quoting mode.')
         create = re.match(r'CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?`?(\w+)`?\s*\(', statement, re.I)
         if create and create[1] in tables:
             # Standard mysqldump CREATE format: each column starts its own line.
@@ -395,11 +430,11 @@ def build_outputs(records, source, report):
         public = status == 'publish' and not r['password_protected'] and role not in {'form', 'revision'}
         if role == 'attachment' and status == 'inherit':
             parent = next((v for v in records if v['id'] == r['parent_id']), None)
-            public = bool(parent and parent['status'] == 'publish' and not parent['password_protected'] and parent['type'] in {'page', 'post'} | (set(v['type'] for v in records) - FORM_TYPES - {'revision', 'attachment', 'nav_menu_item', 'elementor_library'}))
+            public = bool(not r['password_protected'] and parent and parent['status'] == 'publish' and not parent['password_protected'] and parent['type'] not in FORM_TYPES | {'revision', 'attachment', 'nav_menu_item', 'elementor_library'})
         p = {k:r[k] for k in ('id', 'parent_id', 'type', 'menu_order')}
         p['status'] = status if status in {'publish', 'draft', 'pending', 'private', 'future', 'inherit', 'trash', 'auto-draft'} else 'unknown'
         # Draft/private titles and slugs can themselves contain private records.
-        p.update({'title':clean_text(r['title']) if public else '', 'slug':clean_text(r['slug']) if public else '',
+        p.update({'title':public_html(r['title'])['text'] if public else '', 'slug':clean_text(r['slug']) if public else '',
                   'role':role, 'published':status == 'publish', 'presentation_eligible':public,
                   'provenance':{'format':source, 'post_id':r['id']}, 'division':'unresolved',
                   'evidence':[], 'review_required':True, 'url':safe_url(r['url']) if public else None,
@@ -426,6 +461,13 @@ def build_outputs(records, source, report):
     # Menu names are evidence, not proof of a target's exclusive ownership.
     for p in pages.values():
         if 'menu' not in p: continue
+        raw_meta = next(r['meta'] for r in records if r['id'] == p['id'])
+        target = pages.get(p['menu']['target_id'])
+        if not (raw_meta.get('_menu_item_type') == 'post_type' and target and raw_meta.get('_menu_item_object') == target['type']):
+            p['menu']['target_id'] = 0
+        menu_parent = pages.get(p['menu']['parent_menu_item_id'])
+        if not menu_parent or menu_parent['role'] != 'menu':
+            p['menu']['parent_menu_item_id'] = 0
         hints = division_words(' '.join(p['menu']['labels']))
         target = pages.get(p['menu']['target_id'])
         if target and target['presentation_eligible']:
@@ -503,7 +545,7 @@ def run(args):
         raise ExtractionError('Output must be a new or empty directory; existing files are never overwritten.')
     if not source.is_file(): raise ExtractionError('Input file is unavailable.')
     if not re.fullmatch(r'[A-Za-z0-9_]+', args.table_prefix): raise ExtractionError('Invalid table prefix.')
-    if any(not ID.fullmatch(v) or v in FORM_TYPES | {'revision', 'user', 'users'} for v in args.public_post_type):
+    if any(not ID.fullmatch(v) or re.search(r'form|submission|entry|user|order|customer|token', v, re.I) or v == 'revision' for v in args.public_post_type):
         raise ExtractionError('Invalid public content type selection.')
     allowed = PUBLIC_TYPES | set(args.public_post_type)
     report = Counter()
@@ -516,7 +558,7 @@ def run(args):
     def write(path, value):
         path.write_text(json.dumps(value, indent=2, sort_keys=True, ensure_ascii=False) + '\n', encoding='utf-8')
     for name,value in outputs.items(): write(output / name, value)
-    for pid,value in sorted(layouts.items()): write(folder / f'{pid}.json', {'source_post_id':pid, 'elements':value})
+    for pid,value in sorted(layouts.items()): write(folder / f'{pid}.json', {'source_post_id':pid, 'source_format':'wxr-1.2' if args.xml else 'mysql-literal-inserts', 'elements':value})
     counts = '\n'.join(f'- {k}: {v}' for k,v in sorted(report.items()))
     (output / 'extraction-report.md').write_text(
         '# Offline extraction report\n\nSchema version: 1\n\n' + counts +

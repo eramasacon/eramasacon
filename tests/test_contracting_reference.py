@@ -12,6 +12,84 @@ FIXTURES = ROOT / 'tests/fixtures'
 
 
 class ExtractionTests(unittest.TestCase):
+    def extract_xml_text(self, content='', prolog='', suffix=''):
+        """Build minimal synthetic WXR in a temporary directory, never a backup."""
+        tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        source = Path(tmp.name) / 'synthetic.xml'
+        source.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>' + prolog +
+            '<rss xmlns:wp="http://wordpress.org/export/1.2/" '
+            'xmlns:content="http://purl.org/rss/1.0/modules/content/">'
+            '<channel><wp:wxr_version>1.2</wp:wxr_version><item>'
+            '<title>Contracting</title><wp:post_id>1</wp:post_id>'
+            '<wp:post_type>page</wp:post_type><wp:status>publish</wp:status>'
+            '<content:encoded>' + content + '</content:encoded>'
+            '</item></channel></rss>' + suffix, encoding='utf-8')
+        output = Path(tmp.name) / 'output'
+        result = subprocess.run(
+            [sys.executable, str(SCRIPT), '--xml', str(source), '--output-dir', str(output)],
+            text=True, capture_output=True)
+        return result, output
+
+    def assert_xml_accepted(self, content):
+        result, output = self.extract_xml_text(content)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        inventory = json.loads((output / 'page-inventory.json').read_text())
+        self.assertEqual(len(inventory), 1)
+        self.assertEqual(inventory[0]['division'], 'contracting')
+        self.assertIn('Visible synthetic heading', inventory[0]['presentation']['text'])
+
+    def assert_xml_rejected(self, **kwargs):
+        result, output = self.extract_xml_text(**kwargs)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(output.exists())
+        self.assertNotIn('SYNTHETIC_SECRET', result.stdout + result.stderr)
+
+    def test_doctype_text_in_cdata_accepted(self):
+        self.assert_xml_accepted(
+            '<![CDATA[<!DOCTYPE html><h2>Visible synthetic heading</h2>]]>')
+
+    def test_entity_text_in_cdata_accepted(self):
+        self.assert_xml_accepted(
+            '<![CDATA[<!ENTITY example "literal"><h2>Visible synthetic heading</h2>]]>')
+
+    def test_escaped_declaration_text_accepted(self):
+        self.assert_xml_accepted(
+            '&lt;!DOCTYPE html&gt;&lt;!ENTITY example &quot;literal&quot;&gt;'
+            '&lt;h2&gt;Visible synthetic heading&lt;/h2&gt;')
+
+    def test_actual_doctype_rejected(self):
+        self.assert_xml_rejected(prolog='<!DOCTYPE rss>')
+
+    def test_actual_entity_declaration_rejected(self):
+        self.assert_xml_rejected(
+            prolog='<!DOCTYPE rss [<!ENTITY example "SYNTHETIC_SECRET">]>',
+            content='&example;')
+        # A standalone ENTITY declaration is also invalid/unsafe XML.
+        self.assert_xml_rejected(prolog='<!ENTITY example "SYNTHETIC_SECRET">')
+
+    def test_external_entity_references_rejected(self):
+        for uri in ('file:///synthetic-must-not-be-opened',
+                    'https://example.invalid/synthetic-must-not-be-fetched'):
+            with self.subTest(uri=uri):
+                self.assert_xml_rejected(
+                    prolog='<!DOCTYPE rss [<!ENTITY example SYSTEM "' + uri + '">]>',
+                    content='&example;')
+                self.assert_xml_rejected(prolog='<!DOCTYPE rss SYSTEM "' + uri + '">')
+        self.assert_xml_rejected(
+            prolog='<!DOCTYPE rss [<!ENTITY % external SYSTEM '
+                   '"https://example.invalid/parameter">%external;]>')
+        self.assert_xml_rejected(content='&undeclared;')
+
+    def test_normal_wxr_accepted(self):
+        self.assert_xml_accepted('&lt;h2&gt;Visible synthetic heading&lt;/h2&gt; &amp; text')
+
+    def test_malformed_and_nul_xml_rejected(self):
+        self.assert_xml_rejected(content='\x00SYNTHETIC_SECRET')
+        self.assert_xml_rejected(content='<unclosed>SYNTHETIC_SECRET')
+        self.assert_xml_rejected(suffix='<second-root/>')
+
     def extract(self, source='wordpress-synthetic.xml', *extra):
         tmp = tempfile.TemporaryDirectory()
         self.addCleanup(tmp.cleanup)

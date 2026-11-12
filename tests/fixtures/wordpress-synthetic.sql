@@ -34,3 +34,4 @@ INSERT INTO `wp_users` (`ID`,`user_pass`) VALUES
 (1,'FAKE_USER_RECORD');
 INSERT INTO `wp_options` (`option_name`,`option_value`) VALUES
 ('smtp_password','SYNTHETIC_SECRET');
+INSERT INTO wp_postmeta (post_id,meta_key,meta_value) VALUES (10,'_menu_item_type','post_type'),(10,'_menu_item_object','page');
