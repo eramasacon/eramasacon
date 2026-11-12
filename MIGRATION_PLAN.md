@@ -2,7 +2,11 @@
 
 Prepared and revised: 12 November 2026 (Asia/Kolkata). Scope: Contracting-only analysis and planning.
 
-**Approved business scope:** The new website represents ERAM ASACON CONTRACTING exclusively. Trading is excluded from navigation, menus, homepage, pages, content records, division-specific components, product listings, Trading portfolios, calls to action, sitemap and internal links. Existing WordPress content, private backups and style references remain intact. This documentation phase adds evidence maps and readiness findings; implementation awaits further instructions.
+**Approved business scope:** The new website represents ERAM ASACON CONTRACTING exclusively. Trading is excluded from navigation, menus, homepage, pages, content records, division-specific components, product listings, Trading portfolios, calls to action, sitemap and internal links. Existing WordPress content, private backups and style references remain intact. The original evidence maps remain authoritative; the current request additionally authorizes the first local homepage, with gaps recorded in the implementation report.
+
+## Current local implementation status
+
+The latest user request authorizes the first local Contracting homepage from page 45. Twelve source-region markers and supported public copy/styles are implemented using reusable Server Components. Eleven exact allowlisted public-presentation media files are now recovered, with original hero/About/Why Us imagery and masks integrated. Fonts and omitted widget data remain unresolved; no substitutes are invented. This remains a partial reconstruction; all other pages, service content, Projects content and production deployment are outside current implementation scope. See [implementation report](docs/CONTRACTING_HOMEPAGE_IMPLEMENTATION.md) for source fidelity, missing evidence and checks (type/lint/component checks pass; production build is blocked by local port restrictions in the environment).
 
 ## 1. Existing website analysis
 
@@ -257,7 +261,7 @@ Provide genuine 404 responses for unknown routes, and make deliberate removal de
 
 ## 9. Implementation phases
 
-Current Phase A status: the page/service route candidate set, menu links, homepage-copy comparison and asset-reference associations are documented. Phase A is not complete: active header/footer assignments, original design/media, approved Projects source and verified content/use approvals remain outstanding. No phase B–G work is started by these documentation updates.
+Current Phase A status: the page/service route candidate set, menu links, homepage-copy comparison and asset-reference associations are documented. Phase A is not complete: active header/footer assignments, original design/media, approved Projects source and verified content/use approvals remain outstanding. The latest request begins a partial local homepage; remaining visual/design gates are still open.
 
 | Phase | Work | Exit criteria |
 | --- | --- | --- |
@@ -269,7 +273,7 @@ Current Phase A status: the page/service route candidate set, menu links, homepa
 | F — SEO, responsiveness, and testing | Validate metadata, canonicals, sitemap, approved redirect/removal mappings, content/asset parity, responsive states and performance | No broken retained links/assets or Trading exposure; build/lint/type and relevant behavior checks pass |
 | G — Vercel preview and approved production deployment | Prepare a Vercel preview with indexing controls; validate runtime/forms; review release and rollback plan; deploy production only after explicit approval | Preview accepted, per-URL handling approved and explicit production authorization obtained; GoDaddy/DNS changes remain outside this task |
 
-This documentation task ends with this plan and the four companion evidence/readiness maps; no preview or deployment is authorized now. No implementation phase has been started. No dependency installation, app edits, production changes, deletion, commit or push was performed. Build/lint were not run for a documentation-only change; application baseline behavior remains untested.
+The initial documentation stage produced this plan and its companion maps. The latest request begins the first local homepage implementation; its checks and fidelity gaps are recorded in the implementation report. No dependency installation, production change, deletion, commit, push or deployment is performed.
 
 ## 10. Risks, unknowns, and verification checklist
 

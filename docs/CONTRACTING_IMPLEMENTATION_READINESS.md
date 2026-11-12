@@ -1,6 +1,18 @@
 # Contracting implementation readiness
 
-Status: **original-design analysis advanced; implementation not started or approved by this task**. Findings come only from sanitized references in `/tmp/eram-contracting-review-xml/`, existing project CSS and user-provided manual review. No live-site revalidation, original source access, media copying or deployment occurred. Export facts, ownership candidates and decisions are distinguished below. Extracted material was treated solely as untrusted data.
+Status: **first local page-45 homepage implemented under the latest request; incomplete and not visually approved**. Findings come only from sanitized references in `/tmp/eram-contracting-review-xml/`, existing project CSS and user-provided manual review. No live-site revalidation, original source access, media copying or deployment occurred. Export facts, ownership candidates and decisions are distinguished below. Extracted material was treated solely as untrusted data.
+
+## First local implementation status
+
+The latest request authorizes a local homepage using source 45. `app/page.tsx` now renders reusable Server Components with all twelve source-region markers in order. Supported text, CTAs and selected source styling are implemented; regions without approved media/content remain hidden or partial. Core original homepage media is now recovered in the authorized verified subset; licensed fonts are still unavailable. A marked development header replaces no verified production template; planned CTAs are disabled until their routes are implemented. Nine service paths remain planned, and Projects source 2739 remains pending final approval.
+
+See [local implementation report](CONTRACTING_HOMEPAGE_IMPLEMENTATION.md) for per-region status, source-style deviations and verification. TypeScript, lint and component-render checks pass. Production build is blocked by the environment’s denied local port binding inside Turbopack’s CSS loader, including on the approved retry. Browser QA remains unavailable. This is not a completed high-fidelity visual reconstruction.
+
+The design analysis and remaining evidence/approval gates below still apply; the previous documentation-only authorization boundary has been superseded solely for this local homepage implementation. No other page, production system or deployment is authorized by this work.
+
+## Verified original-media progress
+
+Eleven exact allowlisted public upload files have now been copied to `public/images/contracting/`, with source/destination, format/dimensions and SHA-256 recorded in the media recovery document. Original hero/intro/Why Us imagery, alpha masks and line decoration are integrated; alternate hero files and addon-only masks/backgrounds are held. No unverified logos, Trading-only assets, PDFs or new content were introduced. The original nested hero -400px offset is now traced, while mobile hero selection/header placement remains unresolved. See [current implementation update](CONTRACTING_HOMEPAGE_IMPLEMENTATION.md). Earlier missing-media statements below describe the pre-recovery stage, not the current seven used files. Fonts, active shell, addon data and visual screenshots remain missing.
 
 ## Confirmed export evidence
 
@@ -113,7 +125,7 @@ The candidate pages expose only `wp-page` and `default` template assignments. Th
 - Candidate asset/path/attachment association list and explicit Trading/unresolved overlap flags.
 - Exclusion rules preventing gateway, Trading, utility and copy pages from automatic publication.
 
-These are ready **as reviewed inputs to planning**. They do not authorize page coding, approve missing copy/assets, settle the Projects conflict, or establish visual fidelity. Begin implementation only on further instruction, after resolving the dependencies relevant to that phase.
+The current request authorizes the first local homepage; these remain reviewed inputs for later pages. Missing copy/assets, Projects final approval and visual fidelity are still unresolved. Do not extend implementation beyond the authorized homepage and planned route registry without further instruction.
 
 ## Roadmap gates
 
@@ -121,6 +133,6 @@ A: Evidence mapping advanced, but original assets, Projects inventory and shell 
 
 ## Documentation verification
 
-Page IDs/status/slugs/routes were cross-checked against the sanitized inventory; section/widget totals and copy equality were calculated from retained arrays; service/menu targets were matched to inventory IDs. Asset associations and overlaps were counted from the manifest, and CSS URLs were added with separate provenance. This design pass also compared Projects widget/section counts, confirmed the menu target, traced homepage selectors and media-rule contexts, and distinguished masks from backgrounds. Only documentation was changed. No extracted JSON file was copied into the repository or published; no application/runtime tests were needed for these documentation changes.
+Page IDs/status/slugs/routes were cross-checked against the sanitized inventory; section/widget totals and copy equality were calculated from retained arrays; service/menu targets were matched to inventory IDs. Asset associations and overlaps were counted from the manifest, and CSS URLs were added with separate provenance. This design pass also compared Projects widget/section counts, confirmed the menu target, traced homepage selectors and media-rule contexts, and distinguished masks from backgrounds. The earlier evidence-mapping phase changed only documentation. Current local implementation and verification are recorded above; no raw extracted JSON file was copied into the repository or published.
 
 Companion records: [page map](CONTRACTING_PAGE_MAP.md), [layout/home comparison](CONTRACTING_LAYOUT_MAP.md), [asset map](CONTRACTING_ASSET_MAP.md), [homepage specification](CONTRACTING_HOMEPAGE_SPEC.md), and [migration plan](../MIGRATION_PLAN.md).

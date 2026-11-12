@@ -1,26 +1,13 @@
-@import "tailwindcss";
+/*
+ * Tailwind without Preflight: the ported Astra/Elementor stylesheets
+ * (public/legacy/css) bring their own normalize/reset, and Preflight's resets
+ * (margins, img display, borders) would change the WordPress layout.
+ */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme {
+  --color-brand: #c5352d;
+  --font-sans: var(--font-dm-sans), Arial, sans-serif;
 }

@@ -1,0 +1,103 @@
+/* Hand-mapped page-45 declarations. Source selectors and intentional deviations:
+   docs/CONTRACTING_HOMEPAGE_IMPLEMENTATION.md. No Elementor/plugin runtime CSS. */
+.home { overflow-x: clip; font-family: "DM Sans", Arial, sans-serif; font-weight: 400; }
+.container { width: 100%; max-width: 1340px; margin-inline: auto; }
+.home h1, .home h2, .home h3, .home p { margin-block: 0 20px; }
+.home h2 { font-size: 40px; font-weight: 500; }
+.cta { display: inline-flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 400; border-radius: 20px; padding: 13px 40px; border: 1px solid #c5352d; line-height: 1.5; cursor: default; }
+.outline { color: #c5352d; background: #fff; }
+.solid, .service { background: #c5352d; color: #fff; border: 0; }
+.solid { padding: 14px 40px; }
+.service { border-radius: 10px; padding: 12px 18px 11px; }
+.actions { display: flex; flex-wrap: wrap; gap: 20px; }
+/* Page 45: 17aa5f8 mask/filter; b05cf9b provides the verified -400px overlap.
+   The min-height preserves image footprint while the numeric-counter region is absent. */
+.leadingImage { width: 100%; }
+.heroImage { display: block; width: 100%; height: auto; filter: saturate(200%); }
+.hero { position: relative; margin-top: -400px; min-height: 400px; color: #fff; }
+.heroMessage { width: 70%; }
+.hero p { margin-right: 390px; }
+.hero .cta { background: transparent; color: #fff; border-color: #fff; }
+.introductionLayout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 60px; align-items: start; }
+.aboutImage { display: block; width: 100%; height: 500px; object-fit: cover; object-position: center; margin-top: 20px; }
+.whyLayout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.whyImage { display: block; width: 100%; max-width: 100%; height: 550px; object-fit: cover; object-position: center; filter: brightness(100%) contrast(103%) saturate(101%); }
+.reasonSeparator { display: block; width: 2px; height: 90px; margin: -45px auto 20px; }
+.reasonSeparator[data-source-widget="a3ff072"] { height: 70px; }
+.hero h1 { font-size: 50px; font-weight: 500; }
+.hero p { font-size: 16px; line-height: 28px; }
+.hero .cta { border-width: 2px; }
+.introduction { margin-top: 40px; }
+.introduction h2 { line-height: 61px; }
+.introduction p { font-size: 17px; line-height: 33px; }
+.services { padding: 0 8px 20px; }
+.services h2 { font-size: 45px; line-height: 60px; }
+/* Source card settings absent: natural wrapping of retained controls only. */
+.serviceActions { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+.clients { padding: 0 90px 70px; }
+.clients h2 { line-height: 52px; letter-spacing: -.6px; text-transform: capitalize; }
+.values { padding: 0 8px; }
+.valuesPanel { background: radial-gradient(at center, #910800 0%, #230200 100%); border-radius: 30px; padding: 60px 0; color: #fff; }
+.values h2 { text-align: center; line-height: 60px; }
+.valuesIntro { margin-inline: 180px; text-align: center; font-size: 16px; line-height: 33px; }
+.valueCards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.valueCard { background: #36000054; padding: 20px 20px 30px; border-radius: 20px; }
+.valueCard h3 { font-size: 22px; font-weight: 400; margin-bottom: 8px; }
+.valueCard p { font-size: 15px; font-weight: 300; }
+.whyUs { margin-top: 30px; padding: 0 10px; }
+.whyPanel { background: #f8f8f8; border-radius: 30px; padding-top: 50px; }
+.whyUs h2 { font-weight: 600; }
+/* Only unique retained prose is rendered; no speculative duplicate responsive branch. */
+.reasonCards { display: grid; gap: 20px; background: #fff; border: 1px solid #ccc; border-radius: 25px; padding: 25px; }
+.reasonCard { min-width: 0; }
+.reasonCard h3 { margin-bottom: 0; font-size: 22px; line-height: 35px; font-weight: 500; }
+.reasonCard p { margin-bottom: 0; font-size: 15px; line-height: 28px; }
+.testimonials { margin: 0 0 30px; padding: 0 8px 40px; }
+.testimonialPanel { background: #fff8f8; border-radius: 30px; padding: 50px 0 30px; }
+.testimonials h2 { font-size: 43px; line-height: 55px; color: #0e1110; text-transform: capitalize; }
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 48px; }
+  .hero p { margin-right: 0; }
+  .introductionLayout, .whyLayout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .hero .container { padding-inline: 40px; }
+  .introduction { padding-inline: 20px; }
+  .introduction h2, .introduction p, .services h2 { text-align: center; }
+  .clients { padding: 0 20px 40px; }
+  .valuesPanel { padding: 40px 20px; }
+  .valuesIntro { margin-inline: 40px; }
+  .testimonials { margin: 40px 0 0; }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .valueCards { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  /* Exact mobile hero image selection/layering is unresolved: no guessed alternates. */
+  .hero { margin-top: 0; min-height: 0; color: #000; }
+  .heroMessage { width: 100%; }
+  .hero .cta { background: #fff; color: #c5352d; border-color: #c5352d; }
+  .hero .container { padding-inline: 20px; }
+  .aboutImage { height: 201px; }
+  .whyImage { height: 296px; }
+  .hero h1 { font-size: 30px; line-height: 1.5; text-align: center; }
+  .hero p { text-align: center; font-size: 14px; line-height: 2; }
+  .cta { font-size: 14px; padding: 10px 20px; }
+  .service { padding: 12px 25px; }
+  .introduction { padding: 10px; }
+  .introduction h2 { font-size: 25px; line-height: 1.5; }
+  .introduction p { font-size: 15px; line-height: 2; }
+  .services { margin-top: 30px; padding: 0; }
+  .services h2 { font-size: 25px; }
+  .clients { padding: 25px 10px 0; }
+  .clients h2 { font-size: 25px; }
+  .values { margin-top: 40px; padding: 0 0 10px; }
+  .valuesPanel { padding: 50px 20px 40px; }
+  .values h2 { font-size: 25px; }
+  .valuesIntro { margin-inline: 0; font-size: 15px; line-height: 2; }
+  .valueCards { grid-template-columns: 1fr; }
+  .valueCard h3 { font-size: 18px; margin-bottom: 5px; }
+  .valueCard p { line-height: 2; }
+  .whyUs { padding: 0 0 0 10px; }
+  .whyPanel, .testimonialPanel { padding: 0; }
+  .testimonials { padding: 0; }
+  .testimonials h2 { font-size: 30px; }
+}

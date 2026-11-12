@@ -9,9 +9,10 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   turbopack: {
     rules: {
-      "*.css": {
+      // The installed Tailwind loader is needed only for the global entry.
+      // Leave .module.css resources to Next's native CSS Modules pipeline.
+      "globals.css": {
         loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
       },
     },
   },
