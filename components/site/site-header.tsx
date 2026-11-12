@@ -3,6 +3,7 @@
 // stylesheets (public/legacy/css) apply unchanged.
 /* eslint-disable @next/next/no-img-element -- original WordPress srcset/sizes markup */
 import Link from "next/link";
+import { MenuItem, MenuLink } from "@/components/wordpress/menu-item";
 
 export function SiteHeader() {
   return (
@@ -70,79 +71,79 @@ export function SiteHeader() {
                     </button>
                     <div id="ekit-megamenu-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover">
                       <ul id="menu-menu-1" className="elementskit-navbar-nav elementskit-menu-po-center submenu-click-on-icon">
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-45 current_page_item menu-item-63 nav-item elementskit-mobile-builder-content active" data-vertical-menu="750px">
-                          <Link href="/" className="ekit-menu-nav-link active menu-link">
+                        <MenuItem path="/" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-63 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                          <MenuLink href="/" className="ekit-menu-nav-link menu-link">
                             Home
-                          </Link>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-62 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                          <Link href="/about-us" className="ekit-menu-nav-link menu-link">
+                          </MenuLink>
+                        </MenuItem>
+                        <MenuItem path="/about-us" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-62 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                          <MenuLink href="/about-us" className="ekit-menu-nav-link menu-link">
                             About Us
-                          </Link>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
-                          <Link aria-expanded="false" href="/services" className="ekit-menu-nav-link ekit-menu-dropdown-toggle menu-link">
+                          </MenuLink>
+                        </MenuItem>
+                        <MenuItem path="/services" descendantPaths={["/civil-and-mechanical-construction", "/cleaning-services", "/electrical-and-instrumentation", "/fabrication", "/firefighting", "/flooring-and-landscaping", "/hvac-contracting", "/mep-design-consultancy", "/testing-and-air-balancing"]} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+                          <MenuLink aria-expanded="false" href="/services" className="ekit-menu-nav-link ekit-menu-dropdown-toggle menu-link">
                             Services
                             <i aria-hidden="true" className="icon icon-down-arrow1 elementskit-submenu-indicator" />
-                          </Link>
+                          </MenuLink>
                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/hvac-contracting" className="dropdown-item menu-link">
+                            <MenuItem path="/hvac-contracting" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1423 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/hvac-contracting" className="dropdown-item menu-link">
                                 HVAC Contracting
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1419 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/electrical-and-instrumentation" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/electrical-and-instrumentation" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1419 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/electrical-and-instrumentation" className="dropdown-item menu-link">
                                 Electrical and instrumentation
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1424 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/mep-design-consultancy" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/mep-design-consultancy" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1424 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/mep-design-consultancy" className="dropdown-item menu-link">
                                 MEP Design
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1422 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/flooring-and-landscaping" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/flooring-and-landscaping" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1422 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/flooring-and-landscaping" className="dropdown-item menu-link">
                                 Flooring and landscaping
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1418 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/civil-and-mechanical-construction" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/civil-and-mechanical-construction" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1418 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/civil-and-mechanical-construction" className="dropdown-item menu-link">
                                 Civil and mechanical construction
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1421 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/firefighting" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/firefighting" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1421 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/firefighting" className="dropdown-item menu-link">
                                 Firefighting
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/fabrication" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/fabrication" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/fabrication" className="dropdown-item menu-link">
                                 Fabrication
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2417 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/testing-and-air-balancing" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/testing-and-air-balancing" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2417 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/testing-and-air-balancing" className="dropdown-item menu-link">
                                 Testing and air balancing
-                              </Link>
-                            </li>
-                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2416 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <Link href="/cleaning-services" className="dropdown-item menu-link">
+                              </MenuLink>
+                            </MenuItem>
+                            <MenuItem path="/cleaning-services" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2416 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                              <MenuLink href="/cleaning-services" className="dropdown-item menu-link">
                                 Cleaning services
-                              </Link>
-                            </li>
+                              </MenuLink>
+                            </MenuItem>
                           </ul>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2907 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                          <Link href="/portfolio-2" className="ekit-menu-nav-link menu-link">
+                        </MenuItem>
+                        <MenuItem path="/portfolio-2" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2907 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                          <MenuLink href="/portfolio-2" className="ekit-menu-nav-link menu-link">
                             Projects
-                          </Link>
-                        </li>
-                        <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-64 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                          <Link href="/contact-us" className="ekit-menu-nav-link menu-link">
+                          </MenuLink>
+                        </MenuItem>
+                        <MenuItem path="/contact-us" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-64 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
+                          <MenuLink href="/contact-us" className="ekit-menu-nav-link menu-link">
                             Contact Us
-                          </Link>
-                        </li>
+                          </MenuLink>
+                        </MenuItem>
                       </ul>
                       <div className="elementskit-nav-identity-panel">
                         <button className="elementskit-menu-close elementskit-menu-toggler" type="button">

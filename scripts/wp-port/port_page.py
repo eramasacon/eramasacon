@@ -29,28 +29,47 @@ from urllib.parse import urljoin, urlsplit
 PROJECT = Path(__file__).resolve().parents[2]
 WP_ROOT = PROJECT.parent / "wordpress-extracted"
 CACHE = WP_ROOT / "wp-content/cache/wpo-cache/eramasacon.com"
-SOURCE_HTML = CACHE / "home/index.html"
 PUBLIC = PROJECT / "public"
 SITE = "https://eramasacon.com"
 
-# Top-level sections of Elementor page 45 -> generated component.
-HOME_SECTIONS: list[tuple[str, list[str]]] = [
-    ("Hero", ["fc5da28", "9d527f3", "92f0964", "c79b068", "3344d06"]),
-    ("Introduction", ["e64adbd"]),
-    ("Services", ["7a24bee"]),
-    ("Clients", ["58749c8"]),
-    ("Values", ["b80c63d"]),
-    ("WhyUs", ["121f708"]),
-    ("Testimonials", ["59490c0", "1bdd178"]),
-]
+
+@dataclass
+class PageSpec:
+    """A WordPress page to port: its page-cache folder, Elementor page ID and
+    how its top-level Elementor sections are grouped into components."""
+    cache_dir: str          # folder under the WP-Optimize cache, e.g. "about-us"
+    page_id: int            # Elementor / WordPress post ID
+    name: str               # component folder and CSS name, e.g. "about"
+    component: str          # page component name, e.g. "AboutPage"
+    sections: list[tuple[str, list[str]]]
+
+
+PAGES: dict[str, PageSpec] = {
+    "home": PageSpec("home", 45, "home", "HomePage", [
+        ("Hero", ["fc5da28", "9d527f3", "92f0964", "c79b068", "3344d06"]),
+        ("Introduction", ["e64adbd"]),
+        ("Services", ["7a24bee"]),
+        ("Clients", ["58749c8"]),
+        ("Values", ["b80c63d"]),
+        ("WhyUs", ["121f708"]),
+        ("Testimonials", ["59490c0", "1bdd178"]),
+    ]),
+    "about": PageSpec("about-us", 48, "about", "AboutPage", [
+        ("Banner", ["50faf93", "1760284", "87d5e3e", "a8c0f23"]),
+        ("Introduction", ["ccdfbc1"]),
+        ("GlobalPresence", ["b5b869f", "25df6e8"]),
+        ("Values", ["4c6cbba"]),
+        ("MissionVision", ["17a1c3c", "9fe672f"]),
+    ]),
+}
+# The header, footer and shared stylesheet bundle are taken from this page.
+CHROME_PAGE = "home"
 # Section 1bdd178's shortcode widget (7d08f0d) embeds template 2703, the
 # "Trading Solutions" sticky button. Trading is out of scope for the Contracting
 # site (see MIGRATION_PLAN.md), so the embedded template is dropped; the empty
 # section/widget wrappers stay because their spacing is part of the layout.
 SKIPPED_TEMPLATE_IDS = {"2703"}
 
-# Stylesheets that belong to page 45 rather than the shared header/footer chrome.
-PAGE_STYLESHEET_IDS = {"elementor-post-45-css", "happy-elementor-addons-45-css"}
 
 # Google font families loaded by Elementor -> next/font CSS variable.
 FONT_VARS = {
@@ -251,6 +270,17 @@ def js_string(s: str) -> str:
     return json.dumps(s, ensure_ascii=False)
 
 
+CURRENT_ITEM_CLASSES = {"current-menu-item", "current_page_item", "current-menu-ancestor", "current-menu-parent",
+                        "current_page_parent", "current_page_ancestor", "page_item", "active"}
+
+
+def strip_classes(attr: str, remove: set[str]) -> str:
+    """Remove classes (and WordPress page-item-N markers) from a className="..." attribute."""
+    value = attr[len('className="'):-1]
+    kept = [c for c in value.split() if c not in remove and not re.fullmatch(r"page-item-\d+", c)]
+    return f'className="{" ".join(kept)}"'
+
+
 def jsx_attr(name: str, value: str) -> str:
     # JSX string attributes have no escape sequences; use an expression when needed.
     if re.search(r"[\"\\\n{}]", value):
@@ -304,9 +334,7 @@ class Emitter:
             if key == "class":
                 value = " ".join(value.split()) if value else ""
             if key == "href" and value is not None:
-                value, internal = page_href(value)
-                if internal and n.tag == "a":
-                    self.uses_link = True
+                value, _ = page_href(value)
             elif key in ("src", "data-src", "poster") and value:
                 value = asset_url(value)
             elif key == "srcset" and value:
@@ -362,8 +390,23 @@ class Emitter:
             self.imports.add('import { TestimonialsTrack } from "@/components/wordpress/testimonials-track";')
             tag, attrs, extra = "TestimonialsTrack", "", f" settings={{{json.dumps(keep, separators=(', ', ': '))}}}"
 
+        # WordPress nav menus: "current page" classes follow the URL (menu-item.tsx).
+        if n.tag == "li" and "menu-item" in cls:
+            link = next((c for c in n.children if isinstance(c, Node) and c.tag == "a"), None)
+            if link is not None and page_href(link.attrs.get("href") or "")[1]:
+                self.imports.add('import { MenuItem, MenuLink } from "@/components/wordpress/menu-item";')
+                path = page_href(link.attrs["href"])[0]
+                below = sorted({page_href(a.attrs["href"])[0] for a in walk(n)
+                                if a is not link and a.tag == "a" and page_href(a.attrs.get("href") or "")[1]})
+                attrs = re.sub(r'className="[^"]*"', lambda m: strip_classes(m.group(0), CURRENT_ITEM_CLASSES), attrs)
+                extra = f' path="{path}"' + (f" descendantPaths={{{json.dumps(below)}}}" if below else "")
+                tag = "MenuItem"
         if tag == "a" and n.attrs.get("href") is not None and page_href(n.attrs["href"])[1]:
-            tag = "Link"
+            in_menu = n.parent is not None and n.parent.tag == "li" and "menu-item" in n.parent.classes()
+            if in_menu:
+                attrs = re.sub(r'className="[^"]*"', lambda m: strip_classes(m.group(0), {"active"}), attrs)
+            tag = "MenuLink" if in_menu else "Link"
+            self.uses_link |= not in_menu
         open_tag = f"<{tag}{extra}{' ' + attrs if attrs else ''}"
         kids = [c for c in n.children if not (isinstance(c, Node) and self.skip(c))]
         if "elementor-shortcode" in cls and any(
@@ -433,99 +476,183 @@ def kebab(name: str) -> str:
 
 
 # ---------------------------------------------------------------- CSS bundles
-def collect_css(html: str, body_styles_page: list[str], body_styles_site: list[str]) -> None:
-    body_start = html.find("<body")
-    site, page = [], []
-    pattern = re.compile(r"<link[^>]*rel=['\"]stylesheet['\"][^>]*>|<style([^>]*)>(.*?)</style>", re.S)
-    for m in pattern.finditer(html):
-        tag = m.group(0)
-        in_body = m.start() > body_start
-        if tag.startswith("<link"):
-            href = unescape(re.search(r"href=['\"]([^'\"]+)", tag).group(1))
-            sid = (re.search(r"id=['\"]([^'\"]+)", tag) or [None, ""])[1]
-            if "fonts.googleapis.com" in href:
-                continue  # replaced by next/font in app/fonts.ts
-            path = local_path(href)
-            src = WP_ROOT / path.lstrip("/")
-            if not src.is_file():
-                warnings.append(f"missing stylesheet: {path}")
-                continue
-            css = rewrite_css(src.read_text(errors="replace"), urljoin(SITE, path))
-            block = f"/* {path} */\n{css}"
-            (page if sid in PAGE_STYLESHEET_IDS else site).append(block)
-        elif not in_body:
-            attrs, css = m.group(1), m.group(2)
-            if not css.strip():
-                continue
-            label = (re.search(r"id=['\"]([^'\"]+)", attrs) or [None, "inline head style"])[1]
-            site.append(f"/* inline: {label} */\n{rewrite_css(css, SITE + '/')}")
-    site.extend(f"/* inline body style */\n{rewrite_css(s, SITE + '/')}" for s in body_styles_site)
-    page.extend(f"/* inline page style */\n{rewrite_css(s, SITE + '/')}" for s in body_styles_page)
-    # The removed Trading template (2703) also set the body font for the whole
-    # page; every unstyled text inherits it, so keep that one rule.
-    page.append("/* from template 2703 */\nbody { font-family: var(--font-open-sans), sans-serif; }")
+STYLESHEET_PATTERN = re.compile(r"<link[^>]*rel=['\"]stylesheet['\"][^>]*>|<style([^>]*)>(.*?)</style>", re.S)
+BODY_FONT_RULE = "/* from template 2703 */\nbody { font-family: var(--font-open-sans), sans-serif; }"
 
+
+def page_stylesheet_ids(page_id: int) -> set[str]:
+    return {f"elementor-post-{page_id}-css", f"happy-elementor-addons-{page_id}-css"}
+
+
+def parse_link(tag: str) -> tuple[str, str | None, str] | None:
+    """(id, site-root path or None if external, href) for a stylesheet <link>; None for Google Fonts."""
+    href = unescape(re.search(r"href=['\"]([^'\"]+)", tag).group(1))
+    if "fonts.googleapis.com" in href:
+        return None  # replaced by next/font in app/fonts.ts
+    sid = (re.search(r"id=['\"]([^'\"]+)", tag) or [None, ""])[1]
+    return sid, local_path(href), href
+
+
+def stylesheet_links(html: str):
+    """Yield parse_link() results for each stylesheet <link>, in document order."""
+    for m in STYLESHEET_PATTERN.finditer(html):
+        if m.group(0).startswith("<link") and (link := parse_link(m.group(0))):
+            yield link
+
+
+def stylesheet_block(path: str) -> str | None:
+    src = WP_ROOT / path.lstrip("/")
+    if not src.is_file():
+        warnings.append(f"missing stylesheet: {path}")
+        return None
+    return f"/* {path} */\n{rewrite_css(src.read_text(errors='replace'), urljoin(SITE, path))}"
+
+
+def write_css(name: str, blocks: list[str]) -> None:
     out = PUBLIC / "legacy/css"
     out.mkdir(parents=True, exist_ok=True)
     note = "/* Generated by scripts/wp-port/port_page.py from the WordPress page cache. */\n"
-    (out / "site.css").write_text(note + "\n".join(site))
-    (out / "page-home.css").write_text(note + "\n".join(page))
-    print(f"wrote public/legacy/css/site.css ({len(site)} blocks), page-home.css ({len(page)} blocks)")
+    (out / f"{name}.css").write_text(note + "\n".join(blocks))
+    print(f"wrote public/legacy/css/{name}.css ({len(blocks)} blocks)")
+
+
+def build_site_css(html: str, page_id: int, body_styles: list[str]) -> set[str]:
+    """Shared bundle: everything the chrome page loaded except its own page CSS.
+    Returns the stylesheet paths it contains."""
+    body_start = html.find("<body")
+    blocks, paths = [], set()
+    for m in STYLESHEET_PATTERN.finditer(html):
+        tag = m.group(0)
+        if tag.startswith("<link"):
+            link = parse_link(tag)
+            if link is None:
+                continue
+            sid, path, href = link
+            if path is None:
+                warnings.append(f"external stylesheet skipped: {href}")
+                continue
+            if sid in page_stylesheet_ids(page_id):
+                continue
+            block = stylesheet_block(path)
+            if block:
+                blocks.append(block)
+                paths.add(path)
+        elif m.start() < body_start and m.group(2).strip():
+            label = (re.search(r"id=['\"]([^'\"]+)", m.group(1)) or [None, "inline head style"])[1]
+            blocks.append(f"/* inline: {label} */\n{rewrite_css(m.group(2), SITE + '/')}")
+    blocks.extend(f"/* inline body style */\n{rewrite_css(css, SITE + '/')}" for css in body_styles)
+    write_css("site", blocks)
+    return paths
+
+
+def build_page_css(name: str, html: str, site_paths: set[str], body_styles: list[str], has_body_font: bool) -> None:
+    """Page bundle: the page's stylesheets that are not already in site.css."""
+    blocks = []
+    for sid, path, href in stylesheet_links(html):
+        if path is None:
+            warnings.append(f"external stylesheet skipped: {href}")
+        elif path not in site_paths:
+            block = stylesheet_block(path)
+            if block:
+                blocks.append(block)
+    blocks.extend(f"/* inline page style */\n{rewrite_css(css, SITE + '/')}" for css in body_styles)
+    if has_body_font:
+        # The removed Trading template (2703) also set the body font for the
+        # whole page; every unstyled text inherits it, so keep that one rule.
+        blocks.append(BODY_FONT_RULE)
+    write_css(f"page-{name}", blocks)
 
 
 # ----------------------------------------------------------------------- main
-def main() -> None:
-    html = SOURCE_HTML.read_text()
+def load(cache_dir: str) -> tuple[str, Node]:
+    html = (CACHE / cache_dir / "index.html").read_text()
     builder = TreeBuilder()
     builder.feed(html)
-    root = builder.root
+    return html, builder.root
 
-    body = find(root, lambda n: n.tag == "body")
-    print("body classes:", body.attrs.get("class"))
 
+def without_skipped_templates(html: str) -> str:
+    """Cut the skipped Trading template (with its own <link>/<style> tags) out of the source."""
+    start = html.find('data-elementor-id="2703"')
+    end = html.find("wpr-template-edit-btn", start)
+    return html[:start] + html[end:] if start != -1 and end != -1 else html
+
+
+def body_inline_styles(html: str) -> list[str]:
+    body_start = html.find("<body")
+    return [m.group(1).strip() for m in re.finditer(r"<style[^>]*>(.*?)</style>", html[body_start:], re.S) if m.group(1).strip()]
+
+
+def port_chrome() -> tuple[set[str], set[str]]:
+    """Header, footer, scroll-to-top and site.css. Returns (site css paths, chrome inline styles)."""
+    spec = PAGES[CHROME_PAGE]
+    html, root = load(spec.cache_dir)
     header = find(root, lambda n: n.tag == "header" and n.attrs.get("id") == "masthead")
     footer = find(root, lambda n: n.tag == "footer" and n.attrs.get("id") == "colophon")
     scroll_top = find(root, lambda n: n.attrs.get("id") == "ast-scroll-top")
-    page = find(root, lambda n: "elementor-45" in n.classes() and n.tag == "div")
+    emitters = []
+    for path, name, node in [("site-header", "SiteHeader", header), ("site-footer", "SiteFooter", footer),
+                             ("scroll-to-top", "ScrollToTop", scroll_top)]:
+        em = Emitter()
+        write_component(PROJECT / f"components/site/{path}.tsx", name, [node], em)
+        emitters.append(em)
+    chrome_styles = {css for em in emitters for css in em.styles}
+    page = find(root, lambda n: n.tag == "div" and f"elementor-{spec.page_id}" in n.classes())
+    page_styles = {n.text().strip() for n in walk(page) if n.tag == "style"}
+    css_source = without_skipped_templates(html)
+    # Body <style> blocks outside the page content (e.g. Unlimited Elements overlay CSS) are shared.
+    shared = [css for css in body_inline_styles(css_source) if css not in page_styles]
+    site_paths = build_site_css(css_source, spec.page_id, shared)
+    return site_paths, set(shared) | chrome_styles
 
+
+def port_page(key: str, site_paths: set[str], site_styles: set[str]) -> None:
+    spec = PAGES[key]
+    html, root = load(spec.cache_dir)
+    page = find(root, lambda n: n.tag == "div" and f"elementor-{spec.page_id}" in n.classes())
     sections = {
         next(c[len("elementor-element-"):] for c in s.classes() if c.startswith("elementor-element-")): s
         for s in page.children if isinstance(s, Node) and s.tag == "section"
     }
-    print("page 45 sections:", list(sections))
-
-    site_emitter = Emitter()
-    write_component(PROJECT / "components/site/site-header.tsx", "SiteHeader", [header], site_emitter)
-    footer_emitter = Emitter()
-    write_component(PROJECT / "components/site/site-footer.tsx", "SiteFooter", [footer], footer_emitter)
-    top_emitter = Emitter()
-    write_component(PROJECT / "components/site/scroll-to-top.tsx", "ScrollToTop", [scroll_top], top_emitter)
+    print(f"page {spec.page_id} sections:", list(sections))
+    covered = [i for _, ids in spec.sections for i in ids]
+    if set(sections) != set(covered):
+        warnings.append(f"page {spec.page_id}: unmapped {set(sections) - set(covered)}, unknown {set(covered) - set(sections)}")
 
     page_styles: list[str] = []
-    for name, ids in HOME_SECTIONS:
+    imports = []
+    for name, ids in spec.sections:
         em = Emitter()
-        write_component(PROJECT / f"components/home/sections/{kebab(name)}.tsx", name, [sections[i] for i in ids], em)
+        write_component(PROJECT / f"components/{spec.name}/sections/{kebab(name)}.tsx", name,
+                        [sections[i] for i in ids if i in sections], em)
         page_styles.extend(em.styles)
-    covered = {i for _, ids in HOME_SECTIONS for i in ids}
-    if set(sections) - covered:
-        warnings.append(f"unmapped sections: {set(sections) - covered}")
+        imports.append(f'import {{ {name} }} from "./sections/{kebab(name)}";')
 
-    # Body-level <style> blocks outside the regions above (e.g. Unlimited
-    # Elements overlay CSS) are shared site CSS.
-    # The skipped Trading template carries its own <link>/<style> tags; cut it
-    # out of the source before collecting stylesheets.
-    start = html.find('data-elementor-id="2703"')
-    end = html.find("wpr-template-edit-btn", start)
-    css_source = html[:start] + html[end:] if start != -1 and end != -1 else html
-    region_styles = set(page_styles) | set(site_emitter.styles) | set(footer_emitter.styles)
-    shared_body_styles = []
-    body_start = css_source.find("<body")
-    for m in re.finditer(r"<style[^>]*>(.*?)</style>", css_source[body_start:], re.S):
-        css = m.group(1).strip()
-        if css and css not in region_styles:
-            shared_body_styles.append(css)
-    collect_css(css_source, page_styles, site_emitter.styles + footer_emitter.styles + shared_body_styles)
+    css_source = without_skipped_templates(html)
+    extra = [css for css in body_inline_styles(css_source) if css not in site_styles and css not in page_styles]
+    build_page_css(spec.name, css_source, site_paths, page_styles + extra,
+                   has_body_font='data-elementor-id="2703"' in html)
 
+    body = "\n".join(f"      <{name} />" for name, _ in spec.sections)
+    src = (f"{HEADER}import {{ WordPressPage }} from \"@/components/wordpress/wordpress-page\";\n"
+           + "\n".join(sorted(imports)) + "\n\n"
+           + f"/** WordPress page {spec.page_id} (/{spec.cache_dir}/), section by section. */\n"
+           + f"export function {spec.component}() {{\n  return (\n"
+           + f'    <WordPressPage pageId={{{spec.page_id}}} stylesheet="/legacy/css/page-{spec.name}.css">\n'
+           + f"{body}\n    </WordPressPage>\n  );\n}}\n")
+    path = PROJECT / f"components/{spec.name}/{spec.name}-page.tsx"
+    path.write_text(src)
+    print(f"wrote {path.relative_to(PROJECT)}")
+
+
+def main() -> None:
+    keys = sys.argv[1:] or list(PAGES)
+    unknown = set(keys) - set(PAGES)
+    if unknown:
+        raise SystemExit(f"unknown page(s) {unknown}; choose from {list(PAGES)}")
+    site_paths, site_styles = port_chrome()
+    for key in keys:
+        port_page(key, site_paths, site_styles)
     if warnings:
         print("\nWARNINGS:\n  " + "\n  ".join(sorted(set(warnings))))
     print(f"\ncopied {len(copied)} assets into public/")
