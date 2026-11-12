@@ -1,0 +1,1 @@
+<!DOCTYPE rss [<!ENTITY secret "SYNTHETIC_SECRET">]><rss>&secret;</rss>
