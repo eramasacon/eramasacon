@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element -- original local WordPress assets */
 import Link from "next/link";
+import { WhyUs } from "./sections/why-us";
+import { KeyMetrics } from "./sections/key-metrics";
 import styles from "./redesign.module.css";
 
 const services = [
@@ -176,10 +178,12 @@ export function HomePage() {
         <div><p className={styles.eyebrow}>02 / WHO WE ARE</p><h2>Engineering excellence.<br /><span>Complete solutions.</span></h2></div>
         <div><p>Complete MEP and HVAC solutions that bring design, fabrication, installation, and maintenance together. We focus on efficient systems, reliable performance, and long-term support.</p><Link className={styles.textLink} href="/about-us">Get to know Eram Asacon <span aria-hidden="true">↗</span></Link></div>
       </section>
+      <KeyMetrics />
       <section className={styles.project}>
         <div className={styles.projectImage}><img src="/wp-content/uploads/2026/02/freepik__enhance__27948-1-1024x676-1.webp" alt="Eram Asacon engineering project" loading="lazy" width="1024" height="676" /></div>
         <div className={styles.projectCopy}><p className={styles.eyebrow}>03 / OUR WORK</p><h2>Expertise put<br />into practice.</h2><p>Explore our projects and the engineering services behind them, from construction and fabrication to complete building systems.</p><Link className={styles.primary} href="/portfolio-2">Explore our projects <span aria-hidden="true">↗</span></Link></div>
       </section>
+      <WhyUs />
       <section className={styles.quote} aria-label="Client testimonial"><p className={styles.eyebrow}>IN OUR CLIENTS’ WORDS</p><blockquote>“From design to installation, Eram Asacon delivered top-tier MEP services. Their proactive support and industry compliance made our project hassle-free.”</blockquote><p><strong>Subin</strong><span>Client</span></p></section>
       <section className={styles.cta}><div><p className={styles.eyebrow}>LET’S BUILD WHAT’S NEXT</p><h2>Your project.<br />Our expertise.</h2></div><div><p>Tell us what you’re planning.<br />Our team is ready to help.</p><Link className={styles.whiteButton} href="/contact-us">Talk to our team <span aria-hidden="true">↗</span></Link></div></section>
     </main>
