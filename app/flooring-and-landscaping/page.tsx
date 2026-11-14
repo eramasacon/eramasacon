@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { FlooringAndLandscapingPage } from "@/components/flooring-and-landscaping/flooring-and-landscaping-page";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Flooring and landscaping" };
-
+// Temporarily withdrawn; keep the service components available for restoration.
 export default function Page() {
-  return <FlooringAndLandscapingPage />;
+  redirect("/services");
 }

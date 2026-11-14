@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { CivilAndMechanicalConstructionPage } from "@/components/civil-and-mechanical-construction/civil-and-mechanical-construction-page";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Civil and mechanical construction" };
-
+// Temporarily withdrawn; keep the service components available for restoration.
 export default function Page() {
-  return <CivilAndMechanicalConstructionPage />;
+  redirect("/services");
 }

@@ -12,7 +12,6 @@ export const SERVICE_OPTIONS = [
   { label: "HVAC Contracting", value: "hvac-contracting" },
   { label: "Electrical and instrumentation", value: "electrical-and-instrumentation" },
   { label: "MEP Design Consultancy", value: "mep-design-consultancy" },
-  { label: "Civil and mechanical construction", value: "civil-and-mechanical-construction" },
   { label: "General enquiry", value: "general-enquiry" },
 ] as const;
 

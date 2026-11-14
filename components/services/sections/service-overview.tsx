@@ -22,18 +22,6 @@ const services = [
     "description": "Integrated MEP design solutions that optimize system efficiency and safety."
   },
   {
-    "title": "Flooring and landscaping",
-    "href": "/flooring-and-landscaping",
-    "image": "/wp-content/uploads/2025/02/xcxcxcv.webp",
-    "description": "Expert flooring and landscaping solutions that blend durability with aesthetics."
-  },
-  {
-    "title": "Civil and mechanical construction",
-    "href": "/civil-and-mechanical-construction",
-    "image": "/wp-content/uploads/2025/02/jkhj.webp",
-    "description": "Civil and mechanical construction, including steel structures, equipment erection, and temporary facilities."
-  },
-  {
     "title": "Firefighting",
     "href": "/firefighting",
     "image": "/wp-content/uploads/2025/02/xcccX.webp",
@@ -44,12 +32,6 @@ const services = [
     "href": "/fabrication",
     "image": "/wp-content/uploads/2025/02/cbxcbx.webp",
     "description": "High-quality fabrication and precision ductwork, with durable, custom-built solutions."
-  },
-  {
-    "title": "Testing and air balancing",
-    "href": "/testing-and-air-balancing",
-    "image": "/wp-content/uploads/2025/03/9125.webp",
-    "description": "Eram Asacon provides expert testing and air balancing services, improving HVAC efficiency and comfort."
   },
   {
     "title": "Cleaning services",

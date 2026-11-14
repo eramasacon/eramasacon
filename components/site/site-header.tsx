@@ -81,7 +81,7 @@ export function SiteHeader() {
                             About Us
                           </MenuLink>
                         </MenuItem>
-                        <MenuItem path="/services" descendantPaths={["/civil-and-mechanical-construction", "/cleaning-services", "/electrical-and-instrumentation", "/fabrication", "/firefighting", "/flooring-and-landscaping", "/hvac-contracting", "/mep-design-consultancy", "/testing-and-air-balancing"]} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+                        <MenuItem path="/services" descendantPaths={["/cleaning-services", "/electrical-and-instrumentation", "/fabrication", "/firefighting", "/hvac-contracting", "/mep-design-consultancy"]} className="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-61 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
                           <MenuLink aria-expanded="false" href="/services" className="ekit-menu-nav-link ekit-menu-dropdown-toggle menu-link">
                             Services
                             <i aria-hidden="true" className="icon icon-down-arrow1 elementskit-submenu-indicator" />
@@ -102,16 +102,6 @@ export function SiteHeader() {
                                 MEP Design
                               </MenuLink>
                             </MenuItem>
-                            <MenuItem path="/flooring-and-landscaping" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1422 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <MenuLink href="/flooring-and-landscaping" className="dropdown-item menu-link">
-                                Flooring and landscaping
-                              </MenuLink>
-                            </MenuItem>
-                            <MenuItem path="/civil-and-mechanical-construction" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1418 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <MenuLink href="/civil-and-mechanical-construction" className="dropdown-item menu-link">
-                                Civil and mechanical construction
-                              </MenuLink>
-                            </MenuItem>
                             <MenuItem path="/firefighting" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1421 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
                               <MenuLink href="/firefighting" className="dropdown-item menu-link">
                                 Firefighting
@@ -120,11 +110,6 @@ export function SiteHeader() {
                             <MenuItem path="/fabrication" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-1420 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
                               <MenuLink href="/fabrication" className="dropdown-item menu-link">
                                 Fabrication
-                              </MenuLink>
-                            </MenuItem>
-                            <MenuItem path="/testing-and-air-balancing" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2417 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">
-                              <MenuLink href="/testing-and-air-balancing" className="dropdown-item menu-link">
-                                Testing and air balancing
                               </MenuLink>
                             </MenuItem>
                             <MenuItem path="/cleaning-services" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-2416 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px">

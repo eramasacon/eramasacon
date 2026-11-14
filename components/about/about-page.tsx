@@ -6,7 +6,6 @@ import { Banner } from "./sections/banner";
 import { GlobalPresence } from "./sections/global-presence";
 import { Introduction } from "./sections/introduction";
 import { MissionVision } from "./sections/mission-vision";
-import { Values } from "./sections/values";
 
 /** WordPress page 48 (/about-us/), section by section. */
 export function AboutPage() {
@@ -15,7 +14,6 @@ export function AboutPage() {
       <Banner />
       <Introduction />
       <GlobalPresence />
-      <Values />
       <MissionVision />
     </WordPressPage>
   );

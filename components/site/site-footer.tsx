@@ -122,20 +122,6 @@ export function SiteFooter() {
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
-                              <Link href="/flooring-and-landscaping">
-                                <span className="elementor-icon-list-text">
-                                  Flooring and landscaping
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
-                              <Link href="/civil-and-mechanical-construction">
-                                <span className="elementor-icon-list-text">
-                                  Civil and mechanical construction
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
                               <Link href="/firefighting">
                                 <span className="elementor-icon-list-text">
                                   {"Firefighting "}
@@ -146,13 +132,6 @@ export function SiteFooter() {
                               <Link href="/fabrication">
                                 <span className="elementor-icon-list-text">
                                   Fabrication
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
-                              <Link href="/testing-and-air-balancing">
-                                <span className="elementor-icon-list-text">
-                                  Testing and air balancing
                                 </span>
                               </Link>
                             </li>
@@ -395,20 +374,6 @@ export function SiteFooter() {
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
-                              <Link href="/flooring-and-landscaping">
-                                <span className="elementor-icon-list-text">
-                                  Flooring and landscaping
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
-                              <Link href="/civil-and-mechanical-construction">
-                                <span className="elementor-icon-list-text">
-                                  Civil and mechanical construction
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
                               <Link href="/firefighting">
                                 <span className="elementor-icon-list-text">
                                   {"Firefighting "}
@@ -419,13 +384,6 @@ export function SiteFooter() {
                               <Link href="/fabrication">
                                 <span className="elementor-icon-list-text">
                                   Fabrication
-                                </span>
-                              </Link>
-                            </li>
-                            <li className="elementor-icon-list-item">
-                              <Link href="/testing-and-air-balancing">
-                                <span className="elementor-icon-list-text">
-                                  Testing and air balancing
                                 </span>
                               </Link>
                             </li>

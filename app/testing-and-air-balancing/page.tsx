@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
-import { TestingAndAirBalancingPage } from "@/components/testing-and-air-balancing/testing-and-air-balancing-page";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Testing and air balancing" };
-
+// Temporarily withdrawn; keep the service components available for restoration.
 export default function Page() {
-  return <TestingAndAirBalancingPage />;
+  redirect("/services");
 }

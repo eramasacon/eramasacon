@@ -6,11 +6,8 @@ const services = [
   ["HVAC Contracting", "hvac-contracting", "Efficient, customized solutions for comfort, air quality, and energy efficiency."],
   ["Electrical & instrumentation", "electrical-and-instrumentation", "Specialized testing, switchgear services, and automation solutions."],
   ["MEP Design", "mep-design-consultancy", "Integrated design and detailed drawings, from planning to installation."],
-  ["Civil & mechanical construction", "civil-and-mechanical-construction", "Steel structures, equipment erection, and temporary facilities."],
-  ["Flooring & landscaping", "flooring-and-landscaping", "Sports flooring, artificial grass, and specialist surface solutions."],
   ["Firefighting", "firefighting", "Fire detection, suppression, installation, and ongoing support."],
   ["Fabrication", "fabrication", "Duct fabrication, turnery products, and steel structures."],
-  ["Testing & air balancing", "testing-and-air-balancing", "Air balancing, duct leak testing, and hydronic system testing."],
   ["Cleaning services", "cleaning-services", "Duct cleaning, enzymatic coil cleaning, and probiotic surface cleaning."],
 ];
 const clients = [
@@ -149,11 +146,6 @@ export function HomePage() {
         <div className={styles.projectImage}><img src="/wp-content/uploads/2026/02/freepik__enhance__27948-1-1024x676-1.webp" alt="Eram Asacon engineering project" loading="lazy" width="1024" height="676" /></div>
         <div className={styles.projectCopy}><p className={styles.eyebrow}>03 / OUR WORK</p><h2>Expertise put<br />into practice.</h2><p>Explore our projects and the engineering services behind them, from construction and fabrication to complete building systems.</p><Link className={styles.primary} href="/portfolio-2">Explore our projects <span aria-hidden="true">↗</span></Link></div>
       </section>
-      <section className={styles.values}><div className={styles.sectionHead}><div><p className={styles.eyebrow}>04 / WHAT DRIVES US</p><h2>Built on shared values.</h2></div></div><div className={styles.valueGrid}>{[
-        ["Teamwork", "We harness collaboration to achieve common goals and create a supportive environment."],
-        ["Entrepreneurial spirit", "We encourage innovation and initiative, adapting to excel in a dynamic market."],
-        ["Customer first", "We prioritize our customers’ needs, aiming to exceed their expectations for lasting partnerships."],
-      ].map(([title, copy], i) => <div key={title}><span className={styles.valueNumber}>0{i + 1}</span><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
       <section className={styles.quote} aria-label="Client testimonial"><p className={styles.eyebrow}>IN OUR CLIENTS’ WORDS</p><blockquote>“From design to installation, Eram Asacon delivered top-tier MEP services. Their proactive support and industry compliance made our project hassle-free.”</blockquote><p><strong>Subin</strong><span>Client</span></p></section>
       <section className={styles.cta}><div><p className={styles.eyebrow}>LET’S BUILD WHAT’S NEXT</p><h2>Your project.<br />Our expertise.</h2></div><div><p>Tell us what you’re planning.<br />Our team is ready to help.</p><Link className={styles.whiteButton} href="/contact-us">Talk to our team <span aria-hidden="true">↗</span></Link></div></section>
     </main>
