@@ -28,6 +28,22 @@ export function ElementorRuntime() {
 }
 
 function initNavMenu() {
+  const syncExpanded = () => {
+    document.querySelectorAll<HTMLElement>("#masthead nav").forEach((nav) => {
+      const open = Boolean(nav.querySelector(".elementskit-menu-container.active"));
+      nav.querySelector(".elementskit-menu-hamburger")?.setAttribute("aria-expanded", String(open));
+    });
+  };
+  const closeMenus = () => {
+    document.querySelectorAll("#masthead .elementskit-menu-offcanvas-elements.active").forEach((el) => el.classList.remove("active"));
+    syncExpanded();
+  };
+  const onKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape" && document.querySelector("#masthead .elementskit-menu-container.active")) {
+      closeMenus();
+      document.querySelector<HTMLButtonElement>("#masthead .elementskit-menu-hamburger")?.focus();
+    }
+  };
   const onClick = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
 
@@ -36,6 +52,7 @@ function initNavMenu() {
       event.preventDefault();
       const scope = toggler.closest(".elementskit-menu-container")?.parentElement ?? toggler.parentElement;
       scope?.querySelectorAll(".elementskit-menu-offcanvas-elements").forEach((el) => el.classList.toggle("active"));
+      syncExpanded();
       return;
     }
 
@@ -51,12 +68,17 @@ function initNavMenu() {
 
     // Close the off-canvas menu after following a link.
     if (target.closest(".elementskit-navbar-nav a")) {
-      document.querySelectorAll(".elementskit-menu-offcanvas-elements.active").forEach((el) => el.classList.remove("active"));
+      closeMenus();
     }
   };
   // Capture phase so the submenu arrow inside a <Link> can cancel navigation.
   document.addEventListener("click", onClick, true);
-  return () => document.removeEventListener("click", onClick, true);
+  document.addEventListener("keydown", onKeyDown);
+  closeMenus();
+  return () => {
+    document.removeEventListener("click", onClick, true);
+    document.removeEventListener("keydown", onKeyDown);
+  };
 }
 
 function initScrollToTop() {

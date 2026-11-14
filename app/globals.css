@@ -11,3 +11,40 @@
   --color-brand: #c5352d;
   --font-sans: var(--font-dm-sans), Arial, sans-serif;
 }
+
+/* Use the measured header height for anchor navigation on every viewport. */
+html {
+  scroll-padding-top: calc(var(--navigation-height, 130px) + 16px);
+}
+
+/* The ported menu's desktop height must not constrain the mobile drawer. */
+@media (max-width: 1024px) {
+  body #masthead .ekit_menu_responsive_tablet .elementskit-menu-container {
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    width: min(350px, 90vw);
+    max-width: 90vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+  body #masthead .elementskit-menu-hamburger,
+  body #masthead .elementskit-menu-close {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  body #masthead .elementskit-navbar-nav a {
+    min-height: 44px;
+    white-space: normal;
+  }
+}
+@media (max-width: 767px) {
+  #content input, #content textarea, #content select {
+    font-size: 16px;
+  }
+  #colophon a, #colophon p {
+    overflow-wrap: anywhere;
+  }
+}

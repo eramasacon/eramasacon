@@ -79,3 +79,7 @@ The Projects menu route `/portfolio-2` uses the cached WordPress page 2739, pres
 ## Service pages port
 
 The Services overview and nine individual service pages preserve the cached WordPress markup, content, images, and responsive Elementor styles. Catalogue downloads and contact/service links resolve locally. `scripts/wp-port/port_services.py` regenerates only these pages, preserving shared chrome and other pages; do not rerun after hand-editing generated components. TypeScript and local image, responsive image, stylesheet asset, and download checks passed. Pixel-level browser verification remains pending (no connected browser); the production build remains unverified due to the previously observed Turbopack port-permission limitation.
+
+## Homepage redesign
+
+The homepage now uses a custom responsive layout in `components/home/home-page.tsx` and scoped `redesign.module.css`, retaining local company imagery and established service routes. Its previous Elementor section components remain available as references. Do not regenerate the home page with the port script: that would overwrite the redesign. Shared navigation, footer, and other page designs remain unchanged. TypeScript and image-path checks passed; visual browser review remains pending.

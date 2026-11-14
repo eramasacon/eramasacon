@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ScrollToTop } from "@/components/site/scroll-to-top";
 import { SiteFooter } from "@/components/site/site-footer";
+import { StickyHeader } from "@/components/site/sticky-header";
 import { SiteHeader } from "@/components/site/site-header";
 import { ElementorRuntime } from "@/components/wordpress/elementor-runtime";
 import { fontVariables } from "./fonts";
@@ -33,7 +34,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <div className="hfeed site" id="page">
-          <SiteHeader />
+          <StickyHeader><SiteHeader /></StickyHeader>
           {children}
           <SiteFooter />
         </div>

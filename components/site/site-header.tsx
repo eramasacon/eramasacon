@@ -66,7 +66,7 @@ export function SiteHeader() {
               <div className="elementor-element elementor-element-d6741bf ha-has-bg-overlay elementor-widget elementor-widget-ekit-nav-menu">
                 <div className="elementor-widget-container">
                   <nav className="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="jki jki-menu-button-of-three-horizontal-lines-light" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024">
-                    <button className="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
+                    <button className="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="ekit-megamenu-menu">
                       <i aria-hidden="true" className="ekit-menu-icon jki jki-menu-button-of-three-horizontal-lines-light" />
                     </button>
                     <div id="ekit-megamenu-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-yes ekit-nav-dropdown-hover">
@@ -146,7 +146,7 @@ export function SiteHeader() {
                         </MenuItem>
                       </ul>
                       <div className="elementskit-nav-identity-panel">
-                        <button className="elementskit-menu-close elementskit-menu-toggler" type="button">
+                        <button className="elementskit-menu-close elementskit-menu-toggler" type="button" aria-label="Close navigation">
                           X
                         </button>
                       </div>
