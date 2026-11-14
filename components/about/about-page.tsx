@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- existing local imagery */
+import { ArrowIcon } from "@/components/site/arrow-icon";
 import Link from "next/link";
 import { Banner } from "./sections/banner";
 import { ProjectCta } from "@/components/site/project-cta";
@@ -12,7 +13,7 @@ export function AboutPage() {
       <section className={styles.split} aria-labelledby="about-intro-title">
         <div><p className={styles.eyebrow}>WHO WE ARE</p><h2 id="about-intro-title">Engineering excellence.<br />Complete solutions.</h2><p>Eram Asacon delivers expert construction, MEP, and HVAC solutions, ensuring efficiency, compliance, and long-term reliability. From design to maintenance, we provide seamless, high-performance systems designed to meet industry standards and evolving client needs.</p>
           <ul><li>Integrated MEP solutions ensuring efficiency, safety, and compliance.</li><li>Innovative HVAC and duct systems for superior performance.</li></ul>
-          <Link className={styles.button} href="/services">Explore our services <span aria-hidden="true">↗</span></Link>
+          <Link className={styles.button} href="/services">Explore our services <span aria-hidden="true"><ArrowIcon /></span></Link>
         </div>
         <img src="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.png" alt="Engineer inspecting industrial pipework" width="1024" height="620" />
       </section>

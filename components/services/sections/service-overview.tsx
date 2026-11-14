@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- original local service imagery */
+import { ArrowIcon } from "@/components/site/arrow-icon";
 import Link from "next/link";
 import styles from "./service-overview.module.css";
 
@@ -59,7 +60,7 @@ export function ServiceOverview() {
               <div className={styles.body}>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <div className={styles.cardFooter}><span>Explore service</span><span className={styles.arrow} aria-hidden="true">↗</span></div>
+                <div className={styles.cardFooter}><span>Explore service</span><span className={styles.arrow} aria-hidden="true"><ArrowIcon /></span></div>
               </div>
             </Link>
           ))}

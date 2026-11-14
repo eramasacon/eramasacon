@@ -1,5 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element -- local company logo */
+import { ArrowIcon } from "@/components/site/arrow-icon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
@@ -40,7 +41,7 @@ export function SiteHeader() {
             </li>
           ))}
         </ul>
-        <a className={styles.profile} href={companyProfile} download>Company profile <span aria-hidden="true">↓</span></a>
+        <a className={styles.profile} href={companyProfile} download>Company profile <span aria-hidden="true"><ArrowIcon direction="down" /></span></a>
       </nav>
     </header>
   );

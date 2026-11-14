@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- original local WordPress assets */
+import { ArrowIcon } from "@/components/site/arrow-icon";
 import Link from "next/link";
 import { ProjectCta } from "@/components/site/project-cta";
 import { WhyUs } from "./sections/why-us";
@@ -130,9 +131,9 @@ export function HomePage() {
           <p className={styles.eyebrow}>ERAM ASACON · CONTRACTING</p>
           <h1 id="home-title">Building efficiency.<br /><span>From start to finish.</span></h1>
           <p className={styles.lead}>Complete MEP and HVAC solutions, covering design, fabrication, installation, and ongoing maintenance.</p>
-          <div className={styles.actions}><Link className={styles.primary} href="/services">Explore our services <span aria-hidden="true">↗</span></Link><Link className={styles.lightLink} href="/portfolio-2">View our projects <span aria-hidden="true">→</span></Link></div>
+          <div className={styles.actions}><Link className={styles.primary} href="/services">Explore our services <span aria-hidden="true"><ArrowIcon /></span></Link><Link className={styles.lightLink} href="/portfolio-2">View our projects <span aria-hidden="true"><ArrowIcon direction="right" /></span></Link></div>
         </div>
-        <div className={styles.heroBottom}><span>ENGINEERED FOR PERFORMANCE</span><a href="#expertise">Discover what we do <span aria-hidden="true">↓</span></a></div>
+        <div className={styles.heroBottom}><span>ENGINEERED FOR PERFORMANCE</span><a href="#expertise">Discover what we do <span aria-hidden="true"><ArrowIcon direction="down" /></span></a></div>
       </section>
       <section className={styles.clients} aria-label="Our clients">
         <div className={styles.clientIntro}>
@@ -154,7 +155,7 @@ export function HomePage() {
           </div>
           <div className={styles.servicesIntro}>
             <p>From design to ongoing care, explore the specialist services that keep your buildings working at their best.</p>
-            <Link className={styles.textLink} href="/services">Explore all services <span aria-hidden="true">↗</span></Link>
+            <Link className={styles.textLink} href="/services">Explore all services <span aria-hidden="true"><ArrowIcon /></span></Link>
           </div>
         </div>
         <div className={styles.serviceGrid}>
@@ -170,19 +171,19 @@ export function HomePage() {
               </div>
               <h3>{title}</h3>
               <p>{copy}</p>
-              <span className={styles.serviceAction}>Explore service <span aria-hidden="true">↗</span></span>
+              <span className={styles.serviceAction}>Explore service <span aria-hidden="true"><ArrowIcon /></span></span>
             </Link>
           ))}
         </div>
       </section>
       <section className={styles.intro}>
         <div><p className={styles.eyebrow}>02 / WHO WE ARE</p><h2>Engineering excellence.<br /><span>Complete solutions.</span></h2></div>
-        <div><p>Complete MEP and HVAC solutions that bring design, fabrication, installation, and maintenance together. We focus on efficient systems, reliable performance, and long-term support.</p><Link className={styles.textLink} href="/about-us">Get to know Eram Asacon <span aria-hidden="true">↗</span></Link></div>
+        <div><p>Complete MEP and HVAC solutions that bring design, fabrication, installation, and maintenance together. We focus on efficient systems, reliable performance, and long-term support.</p><Link className={styles.textLink} href="/about-us">Get to know Eram Asacon <span aria-hidden="true"><ArrowIcon /></span></Link></div>
       </section>
       <KeyMetrics />
       <section className={styles.project}>
         <div className={styles.projectImage}><img src="/wp-content/uploads/2026/02/freepik__enhance__27948-1-1024x676-1.webp" alt="Eram Asacon engineering project" loading="lazy" width="1024" height="676" /></div>
-        <div className={styles.projectCopy}><p className={styles.eyebrow}>03 / OUR WORK</p><h2>Expertise put<br />into practice.</h2><p>Explore our projects and the engineering services behind them, from construction and fabrication to complete building systems.</p><Link className={styles.primary} href="/portfolio-2">Explore our projects <span aria-hidden="true">↗</span></Link></div>
+        <div className={styles.projectCopy}><p className={styles.eyebrow}>03 / OUR WORK</p><h2>Expertise put<br />into practice.</h2><p>Explore our projects and the engineering services behind them, from construction and fabrication to complete building systems.</p><Link className={styles.primary} href="/portfolio-2">Explore our projects <span aria-hidden="true"><ArrowIcon /></span></Link></div>
       </section>
       <WhyUs />
       <section className={styles.quote} aria-label="Client testimonial"><p className={styles.eyebrow}>IN OUR CLIENTS’ WORDS</p><blockquote>“From design to installation, Eram Asacon delivered top-tier MEP services. Their proactive support and industry compliance made our project hassle-free.”</blockquote><p><strong>Subin</strong><span>Client</span></p></section>
