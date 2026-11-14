@@ -25,7 +25,11 @@ export function ContactForm() {
     const data = new FormData(event.currentTarget);
     const clientErrors = validate(readFields(data));
     setErrors(clientErrors);
-    if (Object.keys(clientErrors).length) return;
+    if (Object.keys(clientErrors).length) {
+      const form = event.currentTarget;
+      requestAnimationFrame(() => form.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus());
+      return;
+    }
     startTransition(async () => {
       try {
         const result = await submitContactForm(data);
@@ -114,8 +118,9 @@ export function ContactForm() {
                             placeholder="Select a service"
                             isSearchable={false}
                             aria-invalid={Boolean(errors.Services)}
+                            aria-describedby={errors.Services ? "Services-error" : undefined}
                           />
-                          <ErrorMessage message={errors.Services} />
+                          <ErrorMessage id="Services-error" message={errors.Services} />
                         </div>
                       </div>
                     </FormColumn>
@@ -136,9 +141,10 @@ export function ContactForm() {
                             rows={10}
                             required
                             aria-invalid={Boolean(errors.Message)}
+                            aria-describedby={errors.Message ? "Message-error" : undefined}
                             onInput={() => clearError("Message")}
                           />
-                          <ErrorMessage message={errors.Message} />
+                          <ErrorMessage id="Message-error" message={errors.Message} />
                         </div>
                       </div>
                       <div className="elementor-element elementor-element-2274861 mf-btn--left elementor-widget elementor-widget-mf-button">
@@ -188,8 +194,8 @@ function Label({ htmlFor, required, children }: { htmlFor: string; required: boo
   );
 }
 
-function ErrorMessage({ message }: { message?: string }) {
-  return message ? <span className="mf-error-message">{message}</span> : null;
+function ErrorMessage({ id, message }: { id: string; message?: string }) {
+  return message ? <span id={id} className="mf-error-message">{message}</span> : null;
 }
 
 function TextField({
@@ -225,9 +231,10 @@ function TextField({
           required={required}
           autoComplete={kind === "email" ? "email" : kind === "telephone" ? "tel" : "name"}
           aria-invalid={Boolean(error)}
+          aria-describedby={error ? `${name}-error` : undefined}
           onInput={() => onInput(name)}
         />
-        <ErrorMessage message={error} />
+        <ErrorMessage id={`${name}-error`} message={error} />
       </div>
     </div>
   );

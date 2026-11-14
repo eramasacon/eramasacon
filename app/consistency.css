@@ -1,0 +1,89 @@
+/* Shared visual language for the homepage, interior pages, and site chrome. */
+:root {
+  --site-red: #c5352d;
+  --site-ink: #202725;
+  --site-muted: #636b64;
+  --site-paper: #f5f4ef;
+  --site-dark: #232e29;
+  --site-border: #dce0d8;
+}
+body { font-family: var(--font-dm-sans), Arial, sans-serif; color: var(--site-ink); }
+body :is(a, button, summary, input, textarea, select, [tabindex]):focus-visible {
+  outline: 3px solid #a97421;
+  outline-offset: 4px;
+}
+#content { scroll-margin-top: calc(var(--navigation-height, 86px) + 16px); }
+#content.interior-page { background: #fff; }
+#content.interior-page :is(h1, h2, h3, h4, p, .elementor-widget-text-editor, .elementor-icon-box-description, .elementor-button, .mf-input, .mf-input-label) {
+  font-family: var(--font-dm-sans), Arial, sans-serif !important;
+}
+#content.interior-page .elementor h2.elementor-heading-title {
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+#content.interior-page .elementor :is(h3, h4).elementor-heading-title,
+#content.interior-page .elementor .elementor-icon-box-title {
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.3;
+  font-weight: 600;
+}
+#content.interior-page .elementor .elementor-widget-text-editor {
+  font-size: 16px;
+  line-height: 1.75;
+}
+#content.interior-page .elementor :is(.elementor-button, .metform-submit-btn) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 14px 24px;
+  border: 1px solid var(--site-red);
+  border-radius: 0;
+  background: var(--site-red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+#content.interior-page .elementor :is(.elementor-button, .metform-submit-btn):hover { background: #a52b24; border-color: #a52b24; }
+#content.interior-page .elementor .elementor-button:not([href]) { display: none; }
+#content.interior-page .elementor .elementor-widget-image img { border-radius: 0; }
+#content.interior-page .elementor .mf-input:not(.mf-input-select),
+#content.interior-page .elementor .mf_select__control {
+  border: 1px solid #b8c0b2;
+  border-radius: 0;
+  background: #fff;
+  color: var(--site-ink);
+  min-height: 48px;
+  box-shadow: none;
+}
+#content.interior-page .elementor .mf-input[aria-invalid="true"] { border-color: var(--site-red); }
+#content.interior-page .elementor .mf-error-message { color: #a52b24; font-size: 13px; }
+#content.interior-page .elementor .metform-submit-btn:disabled { opacity: .65; cursor: wait; }
+body #ast-scroll-top {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--site-red);
+  color: #fff;
+  cursor: pointer;
+}
+body #ast-scroll-top:hover { background: #a52b24; }
+@media (max-width: 767px) {
+  #content.interior-page .elementor .elementor-widget-text-editor { font-size: 15px; }
+  #content.interior-page .elementor :is(input, textarea, select) { font-size: 16px; }
+  #content.interior-page .elementor .elementor-column { min-width: 0; }
+  #content.interior-page .elementor :is(h1, h2, h3, h4, p, .elementor-widget-text-editor) { overflow-wrap: break-word; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #page *, #page *::before, #page *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+#content :is(input, textarea, [role="combobox"]) { scroll-margin-top: calc(var(--navigation-height, 86px) + 24px); }

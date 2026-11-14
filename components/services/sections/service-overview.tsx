@@ -64,10 +64,7 @@ export function ServiceOverview() {
             </Link>
           ))}
         </div>
-        <aside className={styles.contact}>
-          <div><h3>Let’s find the right solution.</h3><p>Tell us about your project. Our team is ready to help.</p></div>
-          <Link href="/contact-us">Discuss your project <span aria-hidden="true">↗</span></Link>
-        </aside>
+
       </div>
     </section>
   );

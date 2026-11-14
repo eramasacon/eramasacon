@@ -1,3 +1,4 @@
+import { PageHero } from "@/components/site/page-hero";
 // Ported from the rendered WordPress page by scripts/wp-port/port_page.py.
 // Markup and class names match the original Elementor output so the original
 // stylesheets (public/legacy/css) apply unchanged.
@@ -6,59 +7,7 @@
 export function Banner() {
   return (
     <>
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-de6f203 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-        <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7982dd3">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <section className="elementor-section elementor-inner-section elementor-element elementor-element-2e80551 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                <div className="elementor-background-overlay" />
-                <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2c167af">
-                    <div className="elementor-widget-wrap elementor-element-populated">
-                      <div className="elementor-element elementor-element-365caa6 elementor-widget elementor-widget-heading">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          Cleaning services
-                        </h2>
-                      </div>
-                      <div className="elementor-element elementor-element-452438b elementor-icon-list--layout-inline elementor-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list">
-                        <ul className="elementor-icon-list-items elementor-inline-items">
-                          <li className="elementor-icon-list-item elementor-inline-item">
-                            <span className="elementor-icon-list-text">
-                              Home
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item elementor-inline-item">
-                            <span className="elementor-icon-list-icon">
-                              <svg aria-hidden="true" className="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512">
-                                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                              </svg>
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Services
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item elementor-inline-item">
-                            <span className="elementor-icon-list-icon">
-                              <svg aria-hidden="true" className="e-font-icon-svg e-fas-circle" viewBox="0 0 512 512">
-                                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                              </svg>
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Cleaning services
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero title="Cleaning services" description="Specialist duct, coil, and surface cleaning for healthier, more efficient spaces." service />
       <section className="elementor-section elementor-top-section elementor-element elementor-element-413c322 elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-323ed9f">

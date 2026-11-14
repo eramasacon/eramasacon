@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- original local WordPress assets */
 import Link from "next/link";
+import { ProjectCta } from "@/components/site/project-cta";
 import { WhyUs } from "./sections/why-us";
 import { KeyMetrics } from "./sections/key-metrics";
 import styles from "./redesign.module.css";
@@ -122,7 +123,7 @@ const clients = [
 
 export function HomePage() {
   return (
-    <main id="content" className={styles.home}>
+    <main id="content" tabIndex={-1} className={styles.home}>
       <section className={styles.hero} aria-labelledby="home-title">
         <img className={styles.heroImage} src="/wp-content/uploads/2026/02/freepik__enhance__27949-1-1024x684-1.webp" alt="Industrial engineering and construction" fetchPriority="high" />
         <div className={styles.heroContent}>
@@ -185,7 +186,7 @@ export function HomePage() {
       </section>
       <WhyUs />
       <section className={styles.quote} aria-label="Client testimonial"><p className={styles.eyebrow}>IN OUR CLIENTS’ WORDS</p><blockquote>“From design to installation, Eram Asacon delivered top-tier MEP services. Their proactive support and industry compliance made our project hassle-free.”</blockquote><p><strong>Subin</strong><span>Client</span></p></section>
-      <section className={styles.cta}><div><p className={styles.eyebrow}>LET’S BUILD WHAT’S NEXT</p><h2>Your project.<br />Our expertise.</h2></div><div><p>Tell us what you’re planning.<br />Our team is ready to help.</p><Link className={styles.whiteButton} href="/contact-us">Talk to our team <span aria-hidden="true">↗</span></Link></div></section>
+      <ProjectCta />
     </main>
   );
 }

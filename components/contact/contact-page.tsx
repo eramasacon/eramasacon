@@ -1,18 +1,25 @@
-// Ported from the rendered WordPress page by scripts/wp-port/port_page.py.
-// Markup and class names match the original Elementor output so the original
-// stylesheets (public/legacy/css) apply unchanged.
-import { WordPressPage } from "@/components/wordpress/wordpress-page";
+/* eslint-disable @next/next/no-img-element -- existing local presence map */
 import { Banner } from "./sections/banner";
-import { ContactDetails } from "./sections/contact-details";
-import { ContactForm } from "./sections/contact-form";
+import { ContactForm } from "./contact-form";
+import styles from "@/components/site/interior.module.css";
 
-/** WordPress page 54 (/contact-us/), section by section. */
 export function ContactPage() {
   return (
-    <WordPressPage pageId={54} stylesheet="/legacy/css/page-contact.css">
+    <main id="content" tabIndex={-1} className={`${styles.page} interior-page`}>
+      <link rel="stylesheet" href="/legacy/css/page-contact.css" precedence="wordpress-page" />
       <Banner />
-      <ContactForm />
-      <ContactDetails />
-    </WordPressPage>
+      <section className={`${styles.split} ${styles.contact}`} aria-labelledby="contact-form-title">
+        <div><p className={styles.eyebrow}>LET’S TALK</p><h2 id="contact-form-title">How can we help?</h2><p className={styles.contactIntro}>Share your requirements below. Fields marked * are required.</p><ContactForm /></div>
+        <aside className={styles.contactDetails} aria-label="Contact details and global presence">
+          <h3>Get in touch</h3>
+          <address>#353, 2nd floor, Khobar mall,<br />King Fahd Road, Al Khobar</address>
+          <a href="tel:+966138656686">+966 138656686</a>
+          <a href="mailto:info@eramasacon.com">info@eramasacon.com</a>
+          <img src="/wp-content/uploads/2025/01/325051862_fa899d86-37bf-46b5-88eb-abe693907fc5-3-1.png" alt="Map of our international presence" width="1234" height="633" loading="lazy" />
+          <h3>International presence</h3>
+          <p className={styles.countries}>Saudi Arabia · UAE · India · Ireland · Oman · Qatar · Bahrain · Kuwait · UK · Italy · Spain · South Korea · Thailand · Sri Lanka</p>
+        </aside>
+      </section>
+    </main>
   );
 }

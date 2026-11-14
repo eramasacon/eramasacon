@@ -1,3 +1,4 @@
+import { ServicePanel } from "@/components/site/service-panel";
 // Ported from the rendered WordPress page by scripts/wp-port/port_page.py.
 // Markup and class names match the original Elementor output so the original
 // stylesheets (public/legacy/css) apply unchanged.
@@ -81,92 +82,8 @@ export function ServiceDetails() {
           </div>
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1c7489a">
             <div className="elementor-widget-wrap elementor-element-populated">
-              <section className="elementor-section elementor-inner-section elementor-element elementor-element-e2b19da elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                <div className="elementor-background-overlay" />
-                <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4c38bba">
-                    <div className="elementor-widget-wrap elementor-element-populated">
-                      <section className="elementor-section elementor-inner-section elementor-element elementor-element-549a1ff elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                        <div className="elementor-background-overlay" />
-                        <div className="elementor-container elementor-column-gap-default">
-                          <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fc0593c">
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div className="elementor-element elementor-element-bf666c2 elementor-view-stacked elementor-shape-square elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box">
-                                <div className="elementor-icon-box-wrapper">
-                                  <div className="elementor-icon-box-icon">
-                                    <span className="elementor-icon">
-                                      <i aria-hidden="true" className="hm hm-pdf2" />
-                                    </span>
-                                  </div>
-                                  <div className="elementor-icon-box-content">
-                                    <h3 className="elementor-icon-box-title">
-                                      <span>
-                                        {" Download Our "}
-                                        <br />
-                                        {" Catalogue And Profile "}
-                                      </span>
-                                    </h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                      <div className="elementor-element elementor-element-9471a2e elementor-widget elementor-widget-text-editor">
-                        {" Explore our services and expertise, download catalogue and profile. "}
-                      </div>
-                      <section className="elementor-section elementor-inner-section elementor-element elementor-element-483ccbb elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                        <div className="elementor-container elementor-column-gap-default">
-                          <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9ebc7c8">
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div className="elementor-element elementor-element-c8235a3 elementor-align-justify elementor-widget elementor-widget-button">
-                                <a className="elementor-button elementor-button-link elementor-size-sm" href="/wp-content/uploads/2025/04/ARCO-Profile-v2.0.pdf">
-                                  <span className="elementor-button-content-wrapper">
-                                    <span className="elementor-button-icon">
-                                      <i aria-hidden="true" className="icon icon-download1" />
-                                    </span>
-                                    {" "}
-                                    <span className="elementor-button-text">
-                                      {"Brochure "}
-                                    </span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section className="elementor-section elementor-inner-section elementor-element elementor-element-7d5381c elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                <div className="elementor-background-overlay" />
-                <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9fcadd5">
-                    <div className="elementor-widget-wrap elementor-element-populated">
-                      <div className="elementor-element elementor-element-41ee9d4 elementor-widget elementor-widget-heading">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          {"Get In Touch "}
-                        </h2>
-                      </div>
-                      <div className="elementor-element elementor-element-9c4fe88 elementor-widget elementor-widget-text-editor">
-                        {" We’re here to help! Contact us for inquiries, support, or product information. Our team is ready to assist and ensure you get the best experience. Reach out anytime! "}
-                      </div>
-                      <div className="elementor-element elementor-element-eedc1c6 elementor-align-center elementor-widget elementor-widget-button">
-                        <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact-us">
-                          <span className="elementor-button-content-wrapper">
-                            <span className="elementor-button-text">
-                              Reach Us
-                            </span>
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <ServicePanel kind="profile" className="" />
+              <ServicePanel kind="contact" className="elementor-hidden-desktop" />
             </div>
           </div>
         </div>
@@ -320,92 +237,8 @@ export function ServiceDetails() {
           </div>
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5700ead">
             <div className="elementor-widget-wrap elementor-element-populated">
-              <section className="elementor-section elementor-inner-section elementor-element elementor-element-47ee0de elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                <div className="elementor-background-overlay" />
-                <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-c7045c2">
-                    <div className="elementor-widget-wrap elementor-element-populated">
-                      <section className="elementor-section elementor-inner-section elementor-element elementor-element-6b9187d elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                        <div className="elementor-background-overlay" />
-                        <div className="elementor-container elementor-column-gap-default">
-                          <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8dc4f44">
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div className="elementor-element elementor-element-814d56c elementor-view-stacked elementor-shape-square elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box">
-                                <div className="elementor-icon-box-wrapper">
-                                  <div className="elementor-icon-box-icon">
-                                    <span className="elementor-icon">
-                                      <i aria-hidden="true" className="hm hm-pdf2" />
-                                    </span>
-                                  </div>
-                                  <div className="elementor-icon-box-content">
-                                    <h3 className="elementor-icon-box-title">
-                                      <span>
-                                        {" Download Our "}
-                                        <br />
-                                        {" Catalogue And Profile "}
-                                      </span>
-                                    </h3>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                      <div className="elementor-element elementor-element-cbe65b8 elementor-widget elementor-widget-text-editor">
-                        {" Explore our services and expertise, download catalogue and profile. "}
-                      </div>
-                      <section className="elementor-section elementor-inner-section elementor-element elementor-element-8b71038 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                        <div className="elementor-container elementor-column-gap-default">
-                          <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-aaaf95d">
-                            <div className="elementor-widget-wrap elementor-element-populated">
-                              <div className="elementor-element elementor-element-7a0d56b elementor-align-justify elementor-widget elementor-widget-button">
-                                <a className="elementor-button elementor-button-link elementor-size-sm" href="/wp-content/uploads/2025/04/ARCO-Profile-v2.0.pdf">
-                                  <span className="elementor-button-content-wrapper">
-                                    <span className="elementor-button-icon">
-                                      <i aria-hidden="true" className="icon icon-download1" />
-                                    </span>
-                                    {" "}
-                                    <span className="elementor-button-text">
-                                      {"Brochure "}
-                                    </span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section className="elementor-section elementor-inner-section elementor-element elementor-element-2d62e37 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-                <div className="elementor-background-overlay" />
-                <div className="elementor-container elementor-column-gap-default">
-                  <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7932c6d">
-                    <div className="elementor-widget-wrap elementor-element-populated">
-                      <div className="elementor-element elementor-element-9dfd0d9 elementor-widget elementor-widget-heading">
-                        <h2 className="elementor-heading-title elementor-size-default">
-                          {"Get In Touch "}
-                        </h2>
-                      </div>
-                      <div className="elementor-element elementor-element-de3a9e7 elementor-widget elementor-widget-text-editor">
-                        {" We’re here to help! Contact us for inquiries, support, or product information. Our team is ready to assist and ensure you get the best experience. Reach out anytime! "}
-                      </div>
-                      <div className="elementor-element elementor-element-5c74083 elementor-align-center elementor-widget elementor-widget-button">
-                        <Link className="elementor-button elementor-button-link elementor-size-sm" href="/contact-us">
-                          <span className="elementor-button-content-wrapper">
-                            <span className="elementor-button-text">
-                              Reach Us
-                            </span>
-                          </span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
+              <ServicePanel kind="profile" className="" />
+              <ServicePanel kind="contact" className="" />
             </div>
           </div>
         </div>

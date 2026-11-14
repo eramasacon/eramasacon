@@ -6,9 +6,10 @@ import { SiteHeader } from "@/components/site/site-header";
 import { ElementorRuntime } from "@/components/wordpress/elementor-runtime";
 import { fontVariables } from "./fonts";
 import "./globals.css";
+import "./consistency.css";
 
 export const metadata: Metadata = {
-  title: { default: "eramasacon", template: "%s – eramasacon" },
+  title: { default: "Eram Asacon", template: "%s – Eram Asacon" },
   // Local migration build; enable indexing when the site goes live.
   robots: { index: false, follow: false },
 };
