@@ -10,6 +10,15 @@ const services = [
   ["Fabrication", "fabrication", "Duct fabrication, turnery products, and steel structures."],
   ["Cleaning services", "cleaning-services", "Duct cleaning, enzymatic coil cleaning, and probiotic surface cleaning."],
 ];
+const serviceIcons = [
+  "M4 13h19a4 4 0 1 0-4-4 M4 19h23 M4 25h13a4 4 0 1 0-4 4 M4 7h7",
+  "M18 3 7 18h8l-1 11 11-16h-8l1-10Z",
+  "M5 5h22v22H5z M5 13h22 M15 13v14 M10 5v4 M20 5v4 M5 21h5",
+  "M17 3c2 7 9 9 9 16a10 10 0 0 1-20 0c0-4 2-7 5-10 0 5 2 6 3 6 3-3 4-7 3-12Z M16 19c-3 3-4 4-4 6a4 4 0 0 0 8 0c0-2-2-4-4-6Z",
+  "m16 3 12 7v13l-12 7-12-7V10l12-7Z M4 10l12 7 12-7 M16 17v13 M10 7l12 7",
+  "m20 3 1.5 4.5L26 9l-4.5 1.5L20 15l-1.5-4.5L14 9l4.5-1.5L20 3Z M9 14l1.5 4.5L15 20l-4.5 1.5L9 26l-1.5-4.5L3 20l4.5-1.5L9 14Z M24 21v8 M20 25h8",
+];
+
 const clients = [
   [
     "Saudi Aramco",
@@ -134,13 +143,38 @@ export function HomePage() {
           </div>
         </div>
       </section>
-      <section className={styles.intro}>
-        <div><p className={styles.eyebrow}>01 / WHO WE ARE</p><h2>Engineering excellence.<br /><span>Complete solutions.</span></h2></div>
-        <div><p>Complete MEP and HVAC solutions that bring design, fabrication, installation, and maintenance together. We focus on efficient systems, reliable performance, and long-term support.</p><Link className={styles.textLink} href="/about-us">Get to know Eram Asacon <span aria-hidden="true">↗</span></Link></div>
-      </section>
       <section id="expertise" className={styles.services} aria-labelledby="services-title">
-        <div className={styles.sectionHead}><div><p className={styles.eyebrow}>02 / OUR EXPERTISE</p><h2 id="services-title">One partner.<br />Every essential system.</h2></div><Link className={styles.textLink} href="/services">All services <span aria-hidden="true">↗</span></Link></div>
-        <div className={styles.serviceGrid}>{services.map(([title, slug, copy], i) => <Link className={styles.serviceCard} key={slug} href={`/${slug}`}><div className={styles.cardTop}><span>{String(i + 1).padStart(2, "0")}</span><span aria-hidden="true">↗</span></div><h3>{title}</h3><p>{copy}</p></Link>)}</div>
+        <div className={styles.sectionHead}>
+          <div>
+            <p className={styles.eyebrow}>01 / OUR EXPERTISE</p>
+            <h2 id="services-title">One partner.<br /><span>Every essential system.</span></h2>
+          </div>
+          <div className={styles.servicesIntro}>
+            <p>From design to ongoing care, explore the specialist services that keep your buildings working at their best.</p>
+            <Link className={styles.textLink} href="/services">Explore all services <span aria-hidden="true">↗</span></Link>
+          </div>
+        </div>
+        <div className={styles.serviceGrid}>
+          {services.map(([title, slug, copy], i) => (
+            <Link className={styles.serviceCard} key={slug} href={`/${slug}`}>
+              <div className={styles.cardTop}>
+                <span className={styles.serviceIcon} aria-hidden="true">
+                  <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d={serviceIcons[i]} />
+                  </svg>
+                </span>
+                <span className={styles.serviceIndex} aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <span className={styles.serviceAction}>Explore service <span aria-hidden="true">↗</span></span>
+            </Link>
+          ))}
+        </div>
+      </section>
+      <section className={styles.intro}>
+        <div><p className={styles.eyebrow}>02 / WHO WE ARE</p><h2>Engineering excellence.<br /><span>Complete solutions.</span></h2></div>
+        <div><p>Complete MEP and HVAC solutions that bring design, fabrication, installation, and maintenance together. We focus on efficient systems, reliable performance, and long-term support.</p><Link className={styles.textLink} href="/about-us">Get to know Eram Asacon <span aria-hidden="true">↗</span></Link></div>
       </section>
       <section className={styles.project}>
         <div className={styles.projectImage}><img src="/wp-content/uploads/2026/02/freepik__enhance__27948-1-1024x676-1.webp" alt="Eram Asacon engineering project" loading="lazy" width="1024" height="676" /></div>
