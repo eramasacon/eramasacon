@@ -7,7 +7,7 @@ import { PageHero } from "@/components/site/page-hero";
 export function Banner() {
   return (
     <>
-      <PageHero title="MEP Design consultancy" description="Integrated mechanical, electrical, and plumbing design, from planning to installation." service />
+      <PageHero eyebrow="Specialist service" image="/wp-content/uploads/2025/02/29304-1.jpg" title="MEP Design consultancy" description="Integrated mechanical, electrical, and plumbing design, from planning to installation." service />
       <section className="elementor-section elementor-top-section elementor-element elementor-element-d4dec65 elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2b17237">

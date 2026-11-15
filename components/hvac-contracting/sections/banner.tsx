@@ -7,7 +7,7 @@ import { PageHero } from "@/components/site/page-hero";
 export function Banner() {
   return (
     <>
-      <PageHero title="HVAC Contracting" description="Efficient, customized systems for comfort, air quality, and energy performance." service />
+      <PageHero eyebrow="Specialist service" image="/wp-content/uploads/2025/02/2149366668-1.jpg" title="HVAC Contracting" description="Efficient, customized systems for comfort, air quality, and energy performance." service />
       <section className="elementor-section elementor-top-section elementor-element elementor-element-cdda507 elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-62f3d86">

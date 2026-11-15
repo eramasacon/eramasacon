@@ -7,7 +7,7 @@ import { PageHero } from "@/components/site/page-hero";
 export function Banner() {
   return (
     <>
-      <PageHero title="Electrical & instrumentation" description="Electrical testing, switchgear services, and automation solutions for reliable system performance." service />
+      <PageHero eyebrow="Specialist service" image="/wp-content/uploads/2025/02/1273-1.jpg" title="Electrical & instrumentation" description="Electrical testing, switchgear services, and automation solutions for reliable system performance." service />
       <section className="elementor-section elementor-top-section elementor-element elementor-element-963a41a elementor-hidden-desktop elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
         <div className="elementor-container elementor-column-gap-default">
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-97dc5cf">
