@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ProfileRequestProvider } from "@/components/site/profile-request";
 import { ScrollToTop } from "@/components/site/scroll-to-top";
 import { SiteFooter } from "@/components/site/site-footer";
 import { StickyHeader } from "@/components/site/sticky-header";
@@ -34,11 +35,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a className="skip-link screen-reader-text" href="#content" title="Skip to content">
           Skip to content
         </a>
-        <div className="hfeed site" id="page">
-          <StickyHeader><SiteHeader /></StickyHeader>
-          {children}
-          <SiteFooter />
-        </div>
+        <ProfileRequestProvider>
+          <div className="hfeed site" id="page">
+            <StickyHeader><SiteHeader /></StickyHeader>
+            {children}
+            <SiteFooter />
+          </div>
+        </ProfileRequestProvider>
         <ScrollToTop />
         <ElementorRuntime />
       </body>

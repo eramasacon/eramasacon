@@ -15,7 +15,8 @@
 .header .dropdown { position: absolute; z-index: 10; top: calc(100% + 8px); left: -20px; width: 300px; max-width: 80vw; padding: 12px; background: #fff; border: 1px solid var(--site-border); box-shadow: 0 12px 32px #20272516; }
 .dropdown a { display: block; padding: 12px; line-height: 1.4; }
 .dropdown a:hover, .dropdown a[aria-current="page"] { background: var(--site-paper); color: var(--site-red); }
-.header .profile { display: inline-flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 24px; border: 1px solid var(--site-border); padding: 10px 16px; font-size: 12px; }
+.header .profile:hover { color: var(--site-red); border-color: #c8cec2; }
+.header .profile { cursor: pointer; background: #fff; color: var(--site-ink); font-family: inherit; font-weight: 500; border-radius: 0; display: inline-flex; align-items: center; justify-content: space-between; min-height: 44px; gap: 24px; border: 1px solid var(--site-border); padding: 10px 16px; font-size: 12px; }
 .header .menuButton { display: none; }
 .pageHero.pageHero { position: relative; isolation: isolate; display: flex; align-items: center; min-height: 440px; padding: 40px 6vw 72px; background: var(--site-dark); color: #fff; overflow: hidden; }
 .pageHeroCopy { position: relative; z-index: 1; width: 100%; max-width: 760px; }
@@ -59,7 +60,8 @@
   .header { gap: 24px; }
   .navigation, .navList { gap: 18px; }
   .logo img { width: 180px; }
-  .header .profile { gap: 12px; }
+  .header .profile:hover { color: var(--site-red); border-color: #c8cec2; }
+.header .profile { gap: 12px; }
 }
 @media (max-width: 1024px) {
   .header { position: relative; min-height: 78px; padding-block: 14px; }
@@ -111,5 +113,5 @@
 }
 .servicePanel.servicePanel h2 { font-family: inherit; color: var(--site-ink); font-size: 24px; font-weight: 600; line-height: 1.25; letter-spacing: -.5px; margin: 0 0 16px; }
 .servicePanel.servicePanel p { font-family: inherit; font-size: 14px; line-height: 1.75; color: var(--site-muted); margin: 0 0 24px; }
-.servicePanel a { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 48px; padding: 14px 20px; background: var(--site-red); color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; }
-.servicePanel a:hover { background: #a52b24; }
+.servicePanel a, .servicePanel button { border: 0; border-radius: 0; cursor: pointer; font-family: inherit; display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 48px; padding: 14px 20px; background: var(--site-red); color: #fff; font-size: 13px; font-weight: 600; text-decoration: none; }
+.servicePanel a:hover, .servicePanel button:hover { background: #a52b24; }

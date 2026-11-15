@@ -4,7 +4,8 @@ import { ArrowIcon } from "@/components/site/arrow-icon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
-import { companyProfile, mainNavigation, serviceNavigation } from "@/content/site-navigation";
+import { ProfileRequestButton } from "@/components/site/profile-request";
+import { mainNavigation, serviceNavigation } from "@/content/site-navigation";
 import styles from "./site.module.css";
 
 export function SiteHeader() {
@@ -41,7 +42,7 @@ export function SiteHeader() {
             </li>
           ))}
         </ul>
-        <a className={styles.profile} href={companyProfile} download>Company profile <span aria-hidden="true"><ArrowIcon direction="down" /></span></a>
+        <ProfileRequestButton className={styles.profile}>Company profile <span aria-hidden="true"><ArrowIcon direction="down" /></span></ProfileRequestButton>
       </nav>
     </header>
   );

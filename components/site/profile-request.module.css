@@ -1,0 +1,63 @@
+.dialog {
+  width: min(480px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  margin: auto;
+  border: 0;
+  background: #fff;
+  color: var(--site-ink);
+  font-family: var(--font-dm-sans), Arial, sans-serif;
+  box-shadow: 0 24px 64px rgb(15 24 23 / .28);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.dialog::backdrop { background: rgb(15 24 23 / .62); backdrop-filter: blur(2px); }
+.dialog[open] { animation: rise .22s ease-out; }
+.dialog[open]::backdrop { animation: fade .22s ease-out; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } }
+@keyframes fade { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .dialog[open], .dialog[open]::backdrop { animation: none; } }
+
+.dialog *, .dialog *::before, .dialog *::after { box-sizing: border-box; }
+
+.panel { position: relative; padding: 40px 36px 32px; border-top: 4px solid var(--site-red); }
+.panel h2 { margin: 0 0 12px; font-family: inherit; font-size: 28px; font-weight: 600; line-height: 1.15; letter-spacing: -.8px; color: var(--site-ink); }
+.panel p { font-family: inherit; }
+
+.eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--site-red); }
+.eyebrow::before { content: ""; flex: 0 0 24px; height: 2px; background: var(--site-red); }
+.intro { margin: 0 0 28px; font-size: 15px; line-height: 1.6; color: var(--site-muted); }
+
+.dialog .close { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; box-shadow: none; background: transparent; color: var(--site-ink); cursor: pointer; }
+.dialog .close:hover, .dialog .close:focus { background: var(--site-paper); color: var(--site-ink); border: 0; box-shadow: none; }
+.dialog .close:focus-visible, .dialog .field input:focus-visible, .dialog .submit:focus-visible { outline: 2px solid var(--site-ink); outline-offset: 2px; }
+
+.field { margin-bottom: 18px; }
+.field label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: var(--site-ink); }
+.dialog .field input { display: block; width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--site-border); border-radius: 0; background: #fff; color: var(--site-ink); font: 400 15px var(--font-dm-sans), Arial, sans-serif; transition: border-color .15s; }
+.dialog .field input::placeholder { color: #9aa197; }
+.dialog .field input:hover { border-color: #bfc5b9; }
+.dialog .field input:focus { border-color: var(--site-ink); background: #fff; color: var(--site-ink); box-shadow: none; }
+.dialog .field input[aria-invalid="true"] { border-color: var(--site-red); }
+.dialog .field input:disabled { background: var(--site-paper); }
+.error { margin: 6px 0 0; font-size: 13px; line-height: 1.4; color: #b42f28; }
+
+.failure { margin: 0 0 16px; padding: 12px 14px; font-size: 14px; line-height: 1.5; color: #8d241f; background: #fbeceb; border-left: 3px solid var(--site-red); }
+
+.dialog .submit { display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; min-height: 52px; margin-top: 8px; padding: 16px 22px; border: 0; border-radius: 0; background: var(--site-red); color: #fff; font: 600 14px var(--font-dm-sans), Arial, sans-serif; cursor: pointer; transition: background .2s; }
+.dialog .submit:focus { background: var(--site-red); color: #fff; border: 0; box-shadow: none; }
+.dialog .submit:hover:not(:disabled) { background: #a52b24; color: #fff; }
+.dialog .submit:disabled { cursor: progress; opacity: .75; justify-content: center; }
+
+.note { margin: 16px 0 0; font-size: 12px; line-height: 1.5; color: #7b8378; }
+
+.honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.success { padding-top: 4px; text-align: left; }
+.successIcon { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 24px; background: #edf3ec; color: #2f6b3c; border-radius: 50%; }
+.success p { margin: 0 0 24px; font-size: 15px; line-height: 1.6; color: var(--site-muted); overflow-wrap: anywhere; }
+
+@media (max-width: 600px) {
+  .panel { padding: 36px 22px 24px; }
+  .panel h2 { font-size: 24px; }
+}
