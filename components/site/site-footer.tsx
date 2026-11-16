@@ -8,7 +8,7 @@ export function SiteFooter() {
     <footer id="colophon" className={styles.footer}>
       <div className={styles.footerGrid}>
         <div className={styles.footerIntro}>
-          <Link href="/" aria-label="Eram Asacon home"><img src="/wp-content/uploads/2025/02/lkjdfldfhg-1024x272.png" alt="Eram Asacon" width="204" height="54" loading="lazy" /></Link>
+          <Link href="/" aria-label="Eram Asacon home"><img src="/images/site/logo.webp" alt="Eram Asacon" width="204" height="54" loading="lazy" /></Link>
           <p>Complete MEP, HVAC, and construction solutions. Engineered for efficiency and reliable performance.</p>
         </div>
         <nav aria-label="Footer navigation"><h2>Explore</h2><ul>{mainNavigation.map(item => <li key={item.href}><Link href={item.href}>{item.label}</Link></li>)}</ul></nav>

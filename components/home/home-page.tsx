@@ -126,7 +126,7 @@ export function HomePage() {
   return (
     <main id="content" tabIndex={-1} className={styles.home}>
       <section className={styles.hero} aria-labelledby="home-title">
-        <img className={styles.heroImage} src="/images/site/hero-chiller-plant.webp" alt="Eram Asacon chilled water plant with air-cooled chillers and insulated pipework" fetchPriority="high" />
+        <img className={styles.heroImage} src="/images/site/hero-chiller-plant.webp" srcSet="/images/site/hero-chiller-plant-1024.webp 1024w, /images/site/hero-chiller-plant.webp 2048w" sizes="100vw" width="2048" height="1536" alt="Eram Asacon chilled water plant with air-cooled chillers and insulated pipework" fetchPriority="high" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>ERAM ASACON · CONTRACTING</p>
           <h1 id="home-title">Building efficiency.<br /><span>From start to finish.</span></h1>
@@ -142,7 +142,7 @@ export function HomePage() {
         <div className={styles.logoViewport} tabIndex={0} role="region" aria-label="Client logos. Focus to pause; scroll horizontally to explore.">
           <div className={styles.logoTrack}>
             {[0, 1].map((copy) => <div className={styles.logoGroup} key={copy} aria-hidden={copy === 1 ? true : undefined}>
-              {clients.map(([name, src]) => <img key={src} src={src} alt={copy === 0 ? name : ""} width="150" height="80" />)}
+              {clients.map(([name, src]) => <img key={src} src={src} alt={copy === 0 ? name : ""} width="150" height="80" loading="lazy" decoding="async" />)}
             </div>)}
           </div>
         </div>

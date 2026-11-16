@@ -56,7 +56,7 @@ export function MissionVision() {
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8449421">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-ae30eec elementor-hidden-mobile elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1024" height="680" src="/wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1024x680.png" className="attachment-large size-large wp-image-1085" alt="" srcSet="/wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1024x680.png 1024w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-300x199.png 300w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-768x510.png 768w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1536x1020.png 1536w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" />
+                <img loading="lazy" decoding="async" width="1024" height="680" src="/wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1024x680.webp" className="attachment-large size-large wp-image-1085" alt="" srcSet="/wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1024x680.webp 1024w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-300x199.webp 300w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-768x510.webp 768w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1-1536x1020.webp 1536w, /wp-content/uploads/2025/02/freepik__enhance__34158-1-1.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" />
               </div>
             </div>
           </div>

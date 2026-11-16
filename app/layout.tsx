@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { SITE_DESCRIPTION, SITE_IMAGE, SITE_INDEXABLE, SITE_NAME, SITE_URL } from "@/lib/site";
 import { ProfileRequestProvider } from "@/components/site/profile-request";
 import { ScrollToTop } from "@/components/site/scroll-to-top";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -10,9 +11,38 @@ import "./globals.css";
 import "./consistency.css";
 
 export const metadata: Metadata = {
-  title: { default: "Eram Asacon", template: "%s – Eram Asacon" },
-  // Local migration build; enable indexing when the site goes live.
-  robots: { index: false, follow: false },
+  metadataBase: new URL(SITE_URL),
+  title: { default: `${SITE_NAME} | MEP & HVAC Contracting in Saudi Arabia`, template: `%s – ${SITE_NAME}` },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  // Indexing is off unless SITE_INDEXING=true is set on the live deployment.
+  robots: SITE_INDEXABLE
+    ? { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } }
+    : { index: false, follow: false },
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "en_US", url: "/", title: SITE_NAME, description: SITE_DESCRIPTION, images: [SITE_IMAGE] },
+  twitter: { card: "summary_large_image", title: SITE_NAME, description: SITE_DESCRIPTION, images: [SITE_IMAGE.url] },
+  formatDetection: { telephone: false },
+};
+
+export const viewport: Viewport = { themeColor: "#c5352d" };
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/wp-content/uploads/2025/02/lkjdfldfhg-1024x272.png`,
+  image: `${SITE_URL}${SITE_IMAGE.url}`,
+  description: SITE_DESCRIPTION,
+  telephone: "+966138656686",
+  email: "info@eramasacon.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "#353, 2nd floor, Khobar Mall, King Fahd Road",
+    addressLocality: "Al Khobar",
+    addressCountry: "SA",
+  },
+  areaServed: { "@type": "Country", name: "Saudi Arabia" },
 };
 
 // Body classes WordPress (Astra + Elementor) rendered on every page. The
@@ -42,6 +72,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <SiteFooter />
           </div>
         </ProfileRequestProvider>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c") }} />
         <ScrollToTop />
         <ElementorRuntime />
       </body>

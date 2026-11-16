@@ -93,7 +93,7 @@ export function Introduction() {
       <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4bb59b4">
         <div className="elementor-widget-wrap elementor-element-populated">
           <div className="elementor-element elementor-element-4ef7c3a elementor-widget__width-initial elementor-widget elementor-widget-image">
-            <img loading="lazy" decoding="async" width="1024" height="620" src="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.png" className="attachment-large size-large wp-image-1086" alt="" srcSet="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.png 1024w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-300x182.png 300w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-768x465.png 768w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-1536x930.png 1536w, /wp-content/uploads/2025/02/freepik__enhance__89235-1.png 2048w" sizes="(max-width: 1024px) 100vw, 1024px" />
+            <img loading="lazy" decoding="async" width="1024" height="620" src="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.webp" className="attachment-large size-large wp-image-1086" alt="" srcSet="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.webp 1024w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-300x182.webp 300w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-768x465.webp 768w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-1536x930.webp 1536w, /wp-content/uploads/2025/02/freepik__enhance__89235-1.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" />
           </div>
         </div>
       </div>

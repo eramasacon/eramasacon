@@ -25,7 +25,7 @@ export function SiteHeader() {
       }
     }}>
       <Link className={styles.logo} href="/" aria-label="Eram Asacon home" onClick={close}>
-        <img src="/wp-content/uploads/2025/02/lkjdfldfhg-1024x272.png" width="204" height="54" alt="Eram Asacon" />
+        <img src="/images/site/logo.webp" width="204" height="54" alt="Eram Asacon" />
       </Link>
       <button ref={menuButton} className={styles.menuButton} type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)}>{open ? "Close" : "Menu"}<span aria-hidden="true">{open ? "×" : "☰"}</span></button>
       <nav id="primary-navigation" aria-label="Main navigation" className={`${styles.navigation} ${open ? styles.open : ""}`} onClick={event => { if ((event.target as HTMLElement).closest("a")) close(); }} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) close(); }}>
