@@ -1,6 +1,7 @@
 "use server";
 
 import { readFields, SERVICE_OPTIONS, SUCCESS_MESSAGE, validate, type FieldErrors } from "@/lib/contact-form";
+import { CONTACT_TO, emailConfigured, escapeHtml, sendEmail } from "@/lib/email";
 
 export type ContactResult = { ok: true; message: string } | { ok: false; message: string; fieldErrors?: FieldErrors };
 
@@ -8,9 +9,8 @@ const NOT_CONFIGURED =
   "Sorry, the form could not be sent right now. Please email us at info@eramasacon.com or call +966 138656686.";
 
 /**
- * Handles the contact form. WordPress stored entries in its database
- * (MetForm, no email notifications). Here a submission is delivered as JSON to
- * CONTACT_FORM_WEBHOOK_URL (e.g. an email/CRM/automation webhook).
+ * Handles the contact form: emails each enquiry to CONTACT_TO via Resend
+ * (see lib/email.ts), with Reply-To set to the visitor.
  */
 export async function submitContactForm(data: FormData): Promise<ContactResult> {
   const fields = readFields(data);
@@ -29,20 +29,37 @@ export async function submitContactForm(data: FormData): Promise<ContactResult> 
     message: fields.Message,
   };
 
-  const webhook = process.env.CONTACT_FORM_WEBHOOK_URL;
-  if (!webhook) {
-    console.error("[contact form] CONTACT_FORM_WEBHOOK_URL is not set; submission rejected.");
+  if (!emailConfigured()) {
+    if (process.env.NODE_ENV === "development") {
+      console.info("[contact form] RESEND_API_KEY not set; submission (not emailed):", submission);
+      return { ok: true, message: SUCCESS_MESSAGE };
+    }
+    console.error("[contact form] RESEND_API_KEY is not set; submission rejected.");
     return { ok: false, message: NOT_CONFIGURED };
   }
 
+  const rows: [string, string][] = [
+    ["Name", submission.name],
+    ["Email", submission.email],
+    ["Phone", submission.phone],
+    ["Service", submission.service || "Not specified"],
+  ];
   try {
-    const response = await fetch(webhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(submission),
-      signal: AbortSignal.timeout(10_000),
+    await sendEmail({
+      to: CONTACT_TO,
+      replyTo: submission.email, // "Reply" in the inbox answers the visitor directly
+      subject: `New website enquiry from ${submission.name}${submission.service ? ` – ${submission.service}` : ""}`,
+      text: `${rows.map(([k, v]) => `${k}: ${v}`).join("\n")}\n\nMessage:\n${submission.message}\n\nSent from the contact form on eramasacon.com`,
+      html: `<div style="font-family:Arial,sans-serif;font-size:15px;color:#202725">
+  <h2 style="margin:0 0 16px">New website enquiry</h2>
+  <table cellpadding="6" style="border-collapse:collapse">${rows
+    .map(([k, v]) => `<tr><td style="color:#6d746b;padding-right:16px">${k}</td><td><strong>${escapeHtml(v)}</strong></td></tr>`)
+    .join("")}</table>
+  <p style="margin:20px 0 6px;color:#6d746b">Message</p>
+  <p style="white-space:pre-wrap;margin:0">${escapeHtml(submission.message)}</p>
+  <p style="margin-top:28px;font-size:12px;color:#999">Sent from the contact form on eramasacon.com. Reply to this email to answer ${escapeHtml(submission.name)} directly.</p>
+</div>`,
     });
-    if (!response.ok) throw new Error(`webhook responded ${response.status}`);
   } catch (error) {
     console.error("[contact form] delivery failed:", error);
     return { ok: false, message: NOT_CONFIGURED };
