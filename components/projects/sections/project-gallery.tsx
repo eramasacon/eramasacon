@@ -663,7 +663,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/chemanol-resin-hvac-1.webp" alt={"Replacement of hvac units in resin1 & resin 2"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -675,7 +675,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/chemanol-resin-hvac-2.webp" alt={"Replacement of hvac units in resin1 & resin 2"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -687,7 +687,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/chemanol-resin-hvac-3.webp" alt={"Replacement of hvac units in resin1 & resin 2"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -768,7 +768,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-pacu-units-1.webp" alt={"Supply & installation of pacu units"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -780,7 +780,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-pacu-units-2.webp" alt={"Supply & installation of pacu units"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -792,7 +792,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-pacu-units-3.webp" alt={"Supply & installation of pacu units"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -873,7 +873,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/turaif-ug-surface-facilities-1.webp" alt={"Hvac system for construction of northern arabia area ug surface facilities"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -885,7 +885,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/turaif-ug-surface-facilities-2.webp" alt={"Hvac system for construction of northern arabia area ug surface facilities"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -897,7 +897,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/turaif-ug-surface-facilities-3.webp" alt={"Hvac system for construction of northern arabia area ug surface facilities"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -982,7 +982,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/berry-gas-plant-hvac-1.webp" alt={"Hvac system for upgrade sulfur handling and export facilities at berry gas plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -994,7 +994,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/berry-gas-plant-hvac-2.webp" alt={"Hvac system for upgrade sulfur handling and export facilities at berry gas plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1006,7 +1006,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/berry-gas-plant-hvac-3.webp" alt={"Hvac system for upgrade sulfur handling and export facilities at berry gas plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1087,7 +1087,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/midyan-gas-processing-hvac-1.webp" alt={"Hvac system for midyan gas processing facilities in saudi aramco"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1099,7 +1099,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/midyan-gas-processing-hvac-2.webp" alt={"Hvac system for midyan gas processing facilities in saudi aramco"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1111,7 +1111,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/midyan-gas-processing-hvac-3.webp" alt={"Hvac system for midyan gas processing facilities in saudi aramco"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1192,7 +1192,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-yaum-tower-hvac-1.webp" alt={"Hvac system for al yaum tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1204,7 +1204,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-yaum-tower-hvac-2.webp" alt={"Hvac system for al yaum tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1216,7 +1216,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-yaum-tower-hvac-3.webp" alt={"Hvac system for al yaum tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1301,7 +1301,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-khishl-substation-hvac-1.webp" alt={"Hvac system for new al-khishl 132/1 33 kv substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1313,7 +1313,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-khishl-substation-hvac-2.webp" alt={"Hvac system for new al-khishl 132/1 33 kv substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1325,7 +1325,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-khishl-substation-hvac-3.webp" alt={"Hvac system for new al-khishl 132/1 33 kv substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1406,7 +1406,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hail-substation-hvac-1.webp" alt={"Hvac system for hail substation (380/132/13.8 kv i control building i pump & guard room)"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1418,7 +1418,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hail-substation-hvac-2.webp" alt={"Hvac system for hail substation (380/132/13.8 kv i control building i pump & guard room)"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1430,7 +1430,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hail-substation-hvac-3.webp" alt={"Hvac system for hail substation (380/132/13.8 kv i control building i pump & guard room)"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1511,7 +1511,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/majestic-tower-hvac-1.webp" alt={"Hvac system for majestic tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1523,7 +1523,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/majestic-tower-hvac-2.webp" alt={"Hvac system for majestic tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1535,7 +1535,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/majestic-tower-hvac-3.webp" alt={"Hvac system for majestic tower"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1620,7 +1620,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/khurais-cpf-hvac-1.webp" alt={"Hvac system for khurais cpf expansion project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1632,7 +1632,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/khurais-cpf-hvac-2.webp" alt={"Hvac system for khurais cpf expansion project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1644,7 +1644,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/khurais-cpf-hvac-3.webp" alt={"Hvac system for khurais cpf expansion project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1725,7 +1725,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/riviera-compound-hvac-1.webp" alt={"Hvac system for riviera 1 compound project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1737,7 +1737,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/riviera-compound-hvac-2.webp" alt={"Hvac system for riviera 1 compound project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1749,7 +1749,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/riviera-compound-hvac-3.webp" alt={"Hvac system for riviera 1 compound project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1830,7 +1830,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-clean-room-hvac-1.webp" alt={"Hvac (clean room) & plumbing system for wire & cable compounding plant for sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1842,7 +1842,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-clean-room-hvac-2.webp" alt={"Hvac (clean room) & plumbing system for wire & cable compounding plant for sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1854,7 +1854,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-clean-room-hvac-3.webp" alt={"Hvac (clean room) & plumbing system for wire & cable compounding plant for sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1939,7 +1939,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/security-task-force-centre-hvac-1.webp" alt={"Hvac system for security task force training centre"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1951,7 +1951,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/security-task-force-centre-hvac-2.webp" alt={"Hvac system for security task force training centre"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -1963,7 +1963,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/security-task-force-centre-hvac-3.webp" alt={"Hvac system for security task force training centre"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2044,7 +2044,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sec-pd-system-substations-1.webp" alt={"Electrical installation of pd system in 22 substations"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2056,7 +2056,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sec-pd-system-substations-2.webp" alt={"Electrical installation of pd system in 22 substations"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2068,7 +2068,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sec-pd-system-substations-3.webp" alt={"Electrical installation of pd system in 22 substations"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2140,7 +2140,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-transformer-works-1.webp" alt={"Electrical works for assessment transformers"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2152,7 +2152,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-transformer-works-2.webp" alt={"Electrical works for assessment transformers"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2164,7 +2164,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-transformer-works-3.webp" alt={"Electrical works for assessment transformers"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2249,7 +2249,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sharq-lv-cable-testing-1.webp" alt={"Electrical works for lv cable testing"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2261,7 +2261,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sharq-lv-cable-testing-2.webp" alt={"Electrical works for lv cable testing"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2273,7 +2273,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sharq-lv-cable-testing-3.webp" alt={"Electrical works for lv cable testing"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2345,7 +2345,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-vacuum-circuit-breaker-1.webp" alt={"Electrical works for the maintenance vacuum circuit breaker"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2357,7 +2357,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-vacuum-circuit-breaker-2.webp" alt={"Electrical works for the maintenance vacuum circuit breaker"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2369,7 +2369,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-vacuum-circuit-breaker-3.webp" alt={"Electrical works for the maintenance vacuum circuit breaker"} width="765" height="1024" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2450,7 +2450,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/safco-ngr-replacement-1.webp" alt={"Electrical works for replacement of ngr"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2462,7 +2462,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/safco-ngr-replacement-2.webp" alt={"Electrical works for replacement of ngr"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2474,7 +2474,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/safco-ngr-replacement-3.webp" alt={"Electrical works for replacement of ngr"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2559,7 +2559,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-substation-3-hvac-1.webp" alt={"Hvac system for substation 3 in sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2571,7 +2571,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-substation-3-hvac-2.webp" alt={"Hvac system for substation 3 in sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2583,7 +2583,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/sipchem-substation-3-hvac-3.webp" alt={"Hvac system for substation 3 in sipchem"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2664,7 +2664,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/saudi-kayan-amines-hvac-1.webp" alt={"Hvac system for saudi kayan amines project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2676,7 +2676,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/saudi-kayan-amines-hvac-2.webp" alt={"Hvac system for saudi kayan amines project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2688,7 +2688,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/saudi-kayan-amines-hvac-3.webp" alt={"Hvac system for saudi kayan amines project"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2769,7 +2769,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-barrod-plant-hvac-1.webp" alt={"Hvac system for barrod plant in hadeed steel plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2781,7 +2781,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-barrod-plant-hvac-2.webp" alt={"Hvac system for barrod plant in hadeed steel plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2793,7 +2793,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/hadeed-barrod-plant-hvac-3.webp" alt={"Hvac system for barrod plant in hadeed steel plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2878,7 +2878,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-sinopec-package-1-hvac-1.webp" alt={"Hvac system in aramco (jerp) for sinopec package 1"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2890,7 +2890,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-sinopec-package-1-hvac-2.webp" alt={"Hvac system in aramco (jerp) for sinopec package 1"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2902,7 +2902,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-sinopec-package-1-hvac-3.webp" alt={"Hvac system in aramco (jerp) for sinopec package 1"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2983,7 +2983,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-substation-501-hvac-1.webp" alt={"Hvac system in aramco (jerp) for substation 501"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -2995,7 +2995,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-substation-501-hvac-2.webp" alt={"Hvac system in aramco (jerp) for substation 501"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3007,7 +3007,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/jerp-substation-501-hvac-3.webp" alt={"Hvac system in aramco (jerp) for substation 501"} width="1024" height="765" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3084,7 +3084,7 @@ export function ProjectGallery() {
                         <div className="ue-carousel-item">
                           <div className="uc_classic_carousel_placeholder">
                             <a href="#" title="">
-                              <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                              <img loading="lazy" decoding="async" src="/images/projects/aramco-upstream-hvac-cladding-1.webp" alt={"Hvac system & cladding works for aramco upstream project"} width="1024" height="768" />
                             </a>
                           </div>
                           <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3096,7 +3096,7 @@ export function ProjectGallery() {
                         <div className="ue-carousel-item">
                           <div className="uc_classic_carousel_placeholder">
                             <a href="#" title="">
-                              <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                              <img loading="lazy" decoding="async" src="/images/projects/aramco-upstream-hvac-cladding-2.webp" alt={"Hvac system & cladding works for aramco upstream project"} width="1024" height="768" />
                             </a>
                           </div>
                           <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3108,7 +3108,7 @@ export function ProjectGallery() {
                         <div className="ue-carousel-item">
                           <div className="uc_classic_carousel_placeholder">
                             <a href="#" title="">
-                              <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                              <img loading="lazy" decoding="async" src="/images/projects/aramco-upstream-hvac-cladding-3.webp" alt={"Hvac system & cladding works for aramco upstream project"} width="1024" height="768" />
                             </a>
                           </div>
                           <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3197,7 +3197,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/taif-substation-hvac-1.webp" alt={"Hvac system in taif substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3209,7 +3209,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/taif-substation-hvac-2.webp" alt={"Hvac system in taif substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3221,7 +3221,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/taif-substation-hvac-3.webp" alt={"Hvac system in taif substation"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3302,7 +3302,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tihama-cps-hvac-1.webp" alt={"Hvac system for extension of i 32kv at tihama cps"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3314,7 +3314,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tihama-cps-hvac-2.webp" alt={"Hvac system for extension of i 32kv at tihama cps"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3326,7 +3326,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tihama-cps-hvac-3.webp" alt={"Hvac system for extension of i 32kv at tihama cps"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3407,7 +3407,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/maaden-buildings-hvac-1.webp" alt={"Hvac works for various buildings in maaden"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3419,7 +3419,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/maaden-buildings-hvac-2.webp" alt={"Hvac works for various buildings in maaden"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3431,7 +3431,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/maaden-buildings-hvac-3.webp" alt={"Hvac works for various buildings in maaden"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3516,7 +3516,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-iron-hvac-1.webp" alt={"Hvac works for various packages for national steel & iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3528,7 +3528,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-iron-hvac-2.webp" alt={"Hvac works for various packages for national steel & iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3540,7 +3540,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-iron-hvac-3.webp" alt={"Hvac works for various packages for national steel & iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3621,7 +3621,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-transformer-oil-filtration-1.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3633,7 +3633,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-transformer-oil-filtration-2.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3645,7 +3645,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/national-steel-transformer-oil-filtration-3.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3726,7 +3726,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/metal-recycle-mill-hvac-1.webp" alt={"Hvac works in metal recycle mill"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3738,7 +3738,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/metal-recycle-mill-hvac-2.webp" alt={"Hvac works in metal recycle mill"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3750,7 +3750,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/metal-recycle-mill-hvac-3.webp" alt={"Hvac works in metal recycle mill"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3835,7 +3835,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-1.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3847,7 +3847,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-2.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3859,7 +3859,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-3.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3940,7 +3940,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-heavy-industries-hvac-1.webp" alt={"Hvac works for al tuwairqi heavy industries"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3952,7 +3952,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-heavy-industries-hvac-2.webp" alt={"Hvac works for al tuwairqi heavy industries"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -3964,7 +3964,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-heavy-industries-hvac-3.webp" alt={"Hvac works for al tuwairqi heavy industries"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4045,7 +4045,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-power-plant-hvac-1.webp" alt={"Hvac works for al tuwairqi power plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4057,7 +4057,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-power-plant-hvac-2.webp" alt={"Hvac works for al tuwairqi power plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4069,7 +4069,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tuwairqi-power-plant-hvac-3.webp" alt={"Hvac works for al tuwairqi power plant"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4154,7 +4154,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-hvac-works-1.webp" alt={"Hvac works in direct reduction iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4166,7 +4166,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-hvac-works-2.webp" alt={"Hvac works in direct reduction iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4178,7 +4178,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-hvac-works-3.webp" alt={"Hvac works in direct reduction iron co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4259,7 +4259,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-2-1.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4271,7 +4271,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-2-2.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4283,7 +4283,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/dric-transformer-oil-filtration-2-3.webp" alt={"Transformer oil filtration works"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4364,7 +4364,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/eram-steel-factory-hvac-1.webp" alt={"Hvac works for eram steel factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4376,7 +4376,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/14464-768x512.webp" alt="14464" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/eram-steel-factory-hvac-2.webp" alt={"Hvac works for eram steel factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4388,7 +4388,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/eram-steel-factory-hvac-3.webp" alt={"Hvac works for eram steel factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4473,7 +4473,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-suwaiket-office-hvac-1.webp" alt={"Hvac works in al suwaiket co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4485,7 +4485,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-suwaiket-office-hvac-2.webp" alt={"Hvac works in al suwaiket co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4497,7 +4497,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/al-suwaiket-office-hvac-3.webp" alt={"Hvac works in al suwaiket co."} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4578,7 +4578,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/11582-768x512.webp" alt="11582" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tajdeer-factory-hvac-1.webp" alt={"Hvac works for tajdeer scaffolding factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4590,7 +4590,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7553.webp" alt="7553" width="667" height="1000" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tajdeer-factory-hvac-2.webp" alt={"Hvac works for tajdeer scaffolding factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4602,7 +4602,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7552-768x512.webp" alt="7552" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/tajdeer-factory-hvac-3.webp" alt={"Hvac works for tajdeer scaffolding factory"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4683,7 +4683,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/7600-768x512.webp" alt="7600" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/malabar-gold-showroom-hvac-1.webp" alt={"Hvac works for malabar gold showroom"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4695,7 +4695,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/1062-768x512.webp" alt="1062" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/malabar-gold-showroom-hvac-2.webp" alt={"Hvac works for malabar gold showroom"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>
@@ -4707,7 +4707,7 @@ export function ProjectGallery() {
                                 <div className="ue-carousel-item">
                                   <div className="uc_classic_carousel_placeholder">
                                     <a href="#" title="">
-                                      <img loading="lazy" decoding="async" src="/wp-content/uploads/2025/04/2150946675-768x512.webp" alt="2150946675" width="768" height="512" />
+                                      <img loading="lazy" decoding="async" src="/images/projects/malabar-gold-showroom-hvac-3.webp" alt={"Hvac works for malabar gold showroom"} width="1024" height="768" />
                                     </a>
                                   </div>
                                   <div className="uc_classic_carousel_content" style={{ direction: "ltr" }}>

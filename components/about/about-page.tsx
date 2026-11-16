@@ -15,7 +15,7 @@ export function AboutPage() {
           <ul><li>Integrated MEP solutions ensuring efficiency, safety, and compliance.</li><li>Innovative HVAC and duct systems for superior performance.</li></ul>
           <Link className={styles.button} href="/services">Explore our services <span aria-hidden="true"><ArrowIcon /></span></Link>
         </div>
-        <img src="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.png" alt="Engineer inspecting industrial pipework" width="1024" height="620" />
+        <img src="/images/site/about-ahu-installation.webp" alt="Air handling units and ductwork installed by Eram Asacon" width="1400" height="1050" />
       </section>
       <KeyMetrics />
       <section className={`${styles.split} ${styles.global}`} aria-labelledby="global-title">

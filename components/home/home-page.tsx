@@ -126,7 +126,7 @@ export function HomePage() {
   return (
     <main id="content" tabIndex={-1} className={styles.home}>
       <section className={styles.hero} aria-labelledby="home-title">
-        <img className={styles.heroImage} src="/wp-content/uploads/2026/02/freepik__enhance__27949-1-1024x684-1.webp" alt="Industrial engineering and construction" fetchPriority="high" />
+        <img className={styles.heroImage} src="/images/site/hero-chiller-plant.webp" alt="Eram Asacon chilled water plant with air-cooled chillers and insulated pipework" fetchPriority="high" />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>ERAM ASACON · CONTRACTING</p>
           <h1 id="home-title">Building efficiency.<br /><span>From start to finish.</span></h1>
@@ -182,7 +182,7 @@ export function HomePage() {
       </section>
       <KeyMetrics />
       <section className={styles.project}>
-        <div className={styles.projectImage}><img src="/wp-content/uploads/2026/02/freepik__enhance__27948-1-1024x676-1.webp" alt="Eram Asacon engineering project" loading="lazy" width="1024" height="676" /></div>
+        <div className={styles.projectImage}><img src="/images/site/site-team-ductwork.webp" alt="Eram Asacon site team inspecting large ductwork installation" loading="lazy" width="1400" height="1050" /></div>
         <div className={styles.projectCopy}><p className={styles.eyebrow}>03 / OUR WORK</p><h2>Expertise put<br />into practice.</h2><p>Explore our projects and the engineering services behind them, from construction and fabrication to complete building systems.</p><Link className={styles.primary} href="/portfolio-2">Explore our projects <span aria-hidden="true"><ArrowIcon /></span></Link></div>
       </section>
       <WhyUs />

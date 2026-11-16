@@ -49,7 +49,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-29a0769">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-472ab9a elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="714" src="/wp-content/uploads/2025/03/2149408315-1.jpg" className="attachment-large size-large wp-image-2496" alt="" srcSet="/wp-content/uploads/2025/03/2149408315-1.jpg 1000w, /wp-content/uploads/2025/03/2149408315-1-300x214.jpg 300w, /wp-content/uploads/2025/03/2149408315-1-768x548.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/electrical-panel-work.webp" className="attachment-large size-large wp-image-2496" alt="Technician working on an electrical control panel" />
               </div>
               <div className="elementor-element elementor-element-aade518 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
@@ -284,7 +284,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-a4acf10">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-8175ca3 elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="714" src="/wp-content/uploads/2025/03/2149408315-1.jpg" className="attachment-large size-large wp-image-2496" alt="" srcSet="/wp-content/uploads/2025/03/2149408315-1.jpg 1000w, /wp-content/uploads/2025/03/2149408315-1-300x214.jpg 300w, /wp-content/uploads/2025/03/2149408315-1-768x548.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/electrical-panel-work.webp" className="attachment-large size-large wp-image-2496" alt="Technician working on an electrical control panel" />
               </div>
               <div className="elementor-element elementor-element-11af986 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">

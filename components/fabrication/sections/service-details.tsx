@@ -13,7 +13,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c76b66b">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-4b1e1b7 elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="337" height="309" src="/wp-content/uploads/2025/02/image-4-1.png" className="attachment-large size-large wp-image-1752" alt="" srcSet="/wp-content/uploads/2025/02/image-4-1.png 337w, /wp-content/uploads/2025/02/image-4-1-300x275.png 300w" sizes="(max-width: 337px) 100vw, 337px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/fabrication-machining.webp" className="attachment-large size-large wp-image-1752" alt="Machining equipment in the Eram Asacon fabrication workshop" />
               </div>
               <div className="elementor-element elementor-element-801c481 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
@@ -25,7 +25,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-28fdb3c">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-833a465 elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="714" src="/wp-content/uploads/2025/02/2149281312-1.jpg" className="attachment-large size-large wp-image-1203" alt="" srcSet="/wp-content/uploads/2025/02/2149281312-1.jpg 1000w, /wp-content/uploads/2025/02/2149281312-1-300x214.jpg 300w, /wp-content/uploads/2025/02/2149281312-1-768x548.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/duct-fabrication-line.webp" className="attachment-large size-large wp-image-1203" alt="Duct fabrication line at the Eram Asacon factory" />
               </div>
               <div className="elementor-element elementor-element-f2c190b ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
@@ -167,7 +167,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-fb4e4ab">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-157004d elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="337" height="309" src="/wp-content/uploads/2025/02/image-4-1.png" className="attachment-large size-large wp-image-1752" alt="" srcSet="/wp-content/uploads/2025/02/image-4-1.png 337w, /wp-content/uploads/2025/02/image-4-1-300x275.png 300w" sizes="(max-width: 337px) 100vw, 337px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/fabrication-machining.webp" className="attachment-large size-large wp-image-1752" alt="Machining equipment in the Eram Asacon fabrication workshop" />
               </div>
               <div className="elementor-element elementor-element-ba7750a ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
@@ -179,7 +179,7 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6aab7d8">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-88fda8b elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="714" src="/wp-content/uploads/2025/02/2149281312-1.jpg" className="attachment-large size-large wp-image-1203" alt="" srcSet="/wp-content/uploads/2025/02/2149281312-1.jpg 1000w, /wp-content/uploads/2025/02/2149281312-1-300x214.jpg 300w, /wp-content/uploads/2025/02/2149281312-1-768x548.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                <img loading="lazy" decoding="async" width="1000" height="714" src="/images/services/duct-fabrication-line.webp" className="attachment-large size-large wp-image-1203" alt="Duct fabrication line at the Eram Asacon factory" />
               </div>
               <div className="elementor-element elementor-element-e70f0e0 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
