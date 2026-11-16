@@ -64,5 +64,31 @@ export async function submitContactForm(data: FormData): Promise<ContactResult> 
     console.error("[contact form] delivery failed:", error);
     return { ok: false, message: NOT_CONFIGURED };
   }
+
+  // Confirmation to the visitor; the enquiry already reached the team, so a failure here is only logged.
+  try {
+    await sendAcknowledgement(submission);
+  } catch (error) {
+    console.error("[contact form] acknowledgement failed:", error);
+  }
   return { ok: true, message: SUCCESS_MESSAGE };
+}
+
+function sendAcknowledgement(s: { name: string; email: string; service: string; message: string }) {
+  const about = s.service ? ` about ${s.service}` : "";
+  const name = escapeHtml(s.name);
+  return sendEmail({
+    to: s.email,
+    replyTo: CONTACT_TO, // replies reach the team, not the noreply sender
+    subject: "We've received your enquiry – Eram Asacon",
+    text: `Hello ${s.name},\n\nThank you for contacting Eram Asacon. We've received your enquiry${about} and our team will get back to you within 1 business day.\n\nYour message:\n${s.message}\n\nFor urgent matters, call +966 138656686 or simply reply to this email.\n\nEram Asacon\n#353, 2nd floor, Khobar Mall, King Fahd Road, Al Khobar`,
+    html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#202725;max-width:560px">
+  <p>Hello ${name},</p>
+  <p>Thank you for contacting Eram Asacon. We've received your enquiry${s.service ? ` about <strong>${escapeHtml(s.service)}</strong>` : ""} and our team will get back to you within 1 business day.</p>
+  <p style="margin:20px 0 6px;color:#6d746b">Your message</p>
+  <p style="white-space:pre-wrap;margin:0;padding:12px 16px;background:#f4f5f3;border-left:3px solid #c5352d">${escapeHtml(s.message)}</p>
+  <p style="margin-top:20px">For urgent matters, call <a href="tel:+966138656686" style="color:#c5352d">+966 138656686</a> or simply reply to this email.</p>
+  <p style="margin-top:28px">Eram Asacon<br><span style="color:#6d746b;font-size:13px">#353, 2nd floor, Khobar Mall, King Fahd Road, Al Khobar</span></p>
+</div>`,
+  });
 }
