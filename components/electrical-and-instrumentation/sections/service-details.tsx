@@ -53,7 +53,7 @@ export function ServiceDetails() {
               </div>
               <div className="elementor-element elementor-element-aade518 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
-                  {"Startup and testing "}
+                  Automation solution
                 </h2>
               </div>
             </div>
@@ -69,7 +69,7 @@ export function ServiceDetails() {
               </div>
               <div className="elementor-element elementor-element-743a1b8 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
-                  {"LSTK Projects "}
+                  Control panel fabrication and installation
                 </h2>
               </div>
             </div>

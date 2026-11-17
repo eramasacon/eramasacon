@@ -102,6 +102,38 @@ export function ServiceDetails() {
                   <span className="elementor-divider-separator" />
                 </div>
               </div>
+              <div className="service-caption-grid">
+                <div>
+                  <div className="elementor-element elementor-element-393614f elementor-widget elementor-widget-image">
+                    <img loading="lazy" decoding="async" width="1000" height="667" src="/wp-content/uploads/2025/03/2149366667-1.jpg" className="attachment-large size-large wp-image-2638" alt="" srcSet="/wp-content/uploads/2025/03/2149366667-1.jpg 1000w, /wp-content/uploads/2025/03/2149366667-1-300x200.jpg 300w, /wp-content/uploads/2025/03/2149366667-1-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                  </div>
+                  <div className="elementor-element elementor-element-56edd8d ha-has-bg-overlay elementor-widget elementor-widget-heading">
+                    <h2 className="elementor-heading-title elementor-size-default">
+                      Duct cleaning
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="elementor-element elementor-element-58bfcbb elementor-widget elementor-widget-image">
+                    <img loading="lazy" decoding="async" width="1000" height="666" src="/wp-content/uploads/2025/03/3334182.webp" className="attachment-large size-large wp-image-2447" alt="" srcSet="/wp-content/uploads/2025/03/3334182.webp 1000w, /wp-content/uploads/2025/03/3334182-300x200.webp 300w, /wp-content/uploads/2025/03/3334182-768x511.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                  </div>
+                  <div className="elementor-element elementor-element-6b8122b ha-has-bg-overlay elementor-widget elementor-widget-heading">
+                    <h2 className="elementor-heading-title elementor-size-default">
+                      Enzymatic Coil cleaning
+                    </h2>
+                  </div>
+                </div>
+                <div>
+                  <div className="elementor-element elementor-element-dd93f4c elementor-widget elementor-widget-image">
+                    <img decoding="async" width="1000" height="667" src="/wp-content/uploads/2025/03/7312.webp" className="attachment-large size-large wp-image-2448" alt="" srcSet="/wp-content/uploads/2025/03/7312.webp 1000w, /wp-content/uploads/2025/03/7312-300x200.webp 300w, /wp-content/uploads/2025/03/7312-768x512.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
+                  </div>
+                  <div className="elementor-element elementor-element-94de1a4 ha-has-bg-overlay elementor-widget elementor-widget-heading">
+                    <h2 className="elementor-heading-title elementor-size-default">
+                      Probiotic surface cleaning
+                    </h2>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-66e17e1">
@@ -148,49 +180,6 @@ export function ServiceDetails() {
               <ServicePanel kind="profile" className="" />
               <ServicePanel kind="contact" className="" />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="elementor-section elementor-top-section elementor-element elementor-element-46c846e elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no">
-        <div className="elementor-container elementor-column-gap-default">
-          <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-05353d9">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-393614f elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="667" src="/wp-content/uploads/2025/03/2149366667-1.jpg" className="attachment-large size-large wp-image-2638" alt="" srcSet="/wp-content/uploads/2025/03/2149366667-1.jpg 1000w, /wp-content/uploads/2025/03/2149366667-1-300x200.jpg 300w, /wp-content/uploads/2025/03/2149366667-1-768x512.jpg 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
-              </div>
-              <div className="elementor-element elementor-element-56edd8d ha-has-bg-overlay elementor-widget elementor-widget-heading">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Duct cleaning
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-e903170">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-58bfcbb elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1000" height="666" src="/wp-content/uploads/2025/03/3334182.webp" className="attachment-large size-large wp-image-2447" alt="" srcSet="/wp-content/uploads/2025/03/3334182.webp 1000w, /wp-content/uploads/2025/03/3334182-300x200.webp 300w, /wp-content/uploads/2025/03/3334182-768x511.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
-              </div>
-              <div className="elementor-element elementor-element-6b8122b ha-has-bg-overlay elementor-widget elementor-widget-heading">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Enzymatic Coil cleaning
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ea484cb">
-            <div className="elementor-widget-wrap elementor-element-populated">
-              <div className="elementor-element elementor-element-dd93f4c elementor-widget elementor-widget-image">
-                <img decoding="async" width="1000" height="667" src="/wp-content/uploads/2025/03/7312.webp" className="attachment-large size-large wp-image-2448" alt="" srcSet="/wp-content/uploads/2025/03/7312.webp 1000w, /wp-content/uploads/2025/03/7312-300x200.webp 300w, /wp-content/uploads/2025/03/7312-768x512.webp 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
-              </div>
-              <div className="elementor-element elementor-element-94de1a4 ha-has-bg-overlay elementor-widget elementor-widget-heading">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Probiotic surface cleaning
-                </h2>
-              </div>
-            </div>
-          </div>
-          <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-57916f3">
-            <div className="elementor-widget-wrap" />
           </div>
         </div>
       </section>

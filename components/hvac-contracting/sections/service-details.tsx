@@ -49,11 +49,11 @@ export function ServiceDetails() {
           <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7db8291">
             <div className="elementor-widget-wrap elementor-element-populated">
               <div className="elementor-element elementor-element-caebbe5 elementor-widget elementor-widget-image">
-                <img loading="lazy" decoding="async" width="1024" height="620" src="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.webp" className="attachment-large size-large wp-image-1086" alt="" srcSet="/wp-content/uploads/2025/02/freepik__enhance__89235-1-1024x620.webp 1024w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-300x182.webp 300w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-768x465.webp 768w, /wp-content/uploads/2025/02/freepik__enhance__89235-1-1536x930.webp 1536w, /wp-content/uploads/2025/02/freepik__enhance__89235-1.webp 2048w" sizes="(max-width: 1024px) 100vw, 1024px" />
+                <img loading="lazy" decoding="async" width="1000" height="667" src="/wp-content/uploads/2025/01/13437-1-1.png" className="attachment-large size-large wp-image-398" alt="" srcSet="/wp-content/uploads/2025/01/13437-1-1.png 1000w, /wp-content/uploads/2025/01/13437-1-1-300x200.png 300w, /wp-content/uploads/2025/01/13437-1-1-768x512.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" />
               </div>
               <div className="elementor-element elementor-element-6f86120 ha-has-bg-overlay elementor-widget elementor-widget-heading">
                 <h2 className="elementor-heading-title elementor-size-default">
-                  {"LSTK Projects "}
+                  Maintenance and support
                 </h2>
               </div>
             </div>

@@ -23,6 +23,43 @@ body :is(a, button, summary, input, textarea, select, [tabindex]):focus-visible 
   letter-spacing: -1px;
   font-weight: 600;
 }
+/* Image caption cards on service pages: match the homepage service cards. */
+/* Legacy negative margins pulled some card rows up over the content above. */
+#content.interior-page .elementor .elementor-top-section:has(.ha-has-bg-overlay) { margin-top: 0 !important; }
+#content.interior-page .elementor .service-caption-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+#content.interior-page .elementor .service-caption-grid .elementor-element { margin: 0; }
+#content.interior-page .elementor .service-caption-grid > div { display: flex; flex-direction: column; }
+#content.interior-page .elementor .service-caption-grid .ha-has-bg-overlay { flex: 1; }
+/* Cleaning page FCLT-E promo box: square, neutral border like the other panels. */
+#content.interior-page .elementor .elementor-element-ff14b7b { border-radius: 0 !important; border-color: #e0e3da !important; }
+#content.interior-page .elementor .elementor-widget-image:has(+ .ha-has-bg-overlay) { margin-bottom: 0 !important; }
+#content.interior-page .elementor .elementor-widget-image:has(+ .ha-has-bg-overlay) img {
+  display: block;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+#content.interior-page .elementor .elementor-widget-heading.ha-has-bg-overlay {
+  margin-top: 0 !important;
+  padding: 18px 20px !important;
+  border: 1px solid #e0e3da;
+  border-top: 3px solid var(--site-red);
+  border-radius: 0 !important;
+  background: #fff !important;
+  text-align: left !important;
+}
+#content.interior-page .elementor .ha-has-bg-overlay h2.elementor-heading-title {
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: 0;
+  font-weight: 600;
+  text-transform: none;
+  color: var(--site-ink);
+}
 #content.interior-page .elementor :is(h3, h4).elementor-heading-title,
 #content.interior-page .elementor .elementor-icon-box-title {
   font-size: clamp(20px, 2vw, 24px);
@@ -76,6 +113,9 @@ body #ast-scroll-top {
 }
 body #ast-scroll-top:hover { background: #a52b24; }
 @media (max-width: 767px) {
+  #content.interior-page .elementor .elementor-widget-heading.ha-has-bg-overlay { padding: 14px !important; }
+  #content.interior-page .elementor .ha-has-bg-overlay h2.elementor-heading-title { font-size: 16px; }
+  #content.interior-page .elementor .service-caption-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
   #content.interior-page .elementor .elementor-widget-text-editor { font-size: 15px; }
   #content.interior-page .elementor :is(input, textarea, select) { font-size: 16px; }
   #content.interior-page .elementor .elementor-column { min-width: 0; }

@@ -13,8 +13,8 @@
 .serviceIcon { display: grid; place-items: center; width: 52px; height: 52px; background: #f8eeeb; color: var(--red); border-radius: 12px; }
 .serviceIcon svg { width: 30px; height: 30px; }
 .serviceIndex { color: #6e776b; font-size: 12px; font-variant-numeric: tabular-nums; letter-spacing: 1px; }
-.serviceCard h3 { max-width: 280px; margin-bottom: 14px; font-size: 22px; }
-.serviceCard > p { font-size: 14px; color: #697167; max-width: 310px; margin-bottom: 28px; }
+.serviceCard h3 { max-width: 300px; margin-bottom: 12px; font-size: 26px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; color: #141a18; }
+.serviceCard > p { font-size: 15px; color: #5a6258; max-width: 320px; margin-bottom: 28px; }
 .serviceAction { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 18px; margin-top: auto; border-top: 1px solid #eceee7; font-size: 12px; font-weight: 600; }
 .serviceAction > span { color: var(--red); font-size: 21px; line-height: 1; transition: transform .2s; }
 .serviceCard:hover .serviceAction > span { transform: translate(2px, -2px); }
