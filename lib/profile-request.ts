@@ -1,5 +1,6 @@
 /**
  * Company profile request form: fields and validation.
+ * Only email is required; name and company are optional.
  * Shared by the browser modal and the server action so both apply the same rules.
  */
 
@@ -31,10 +32,8 @@ export function readProfileRequest(data: FormData): ProfileRequestFields {
 
 export function validateProfileRequest(fields: ProfileRequestFields): ProfileRequestErrors {
   const errors: ProfileRequestErrors = {};
-  if (!fields.name) errors.name = "Please enter your name.";
   if (!fields.email) errors.email = "Please enter your email address.";
   else if (!EMAIL_PATTERN.test(fields.email)) errors.email = "Please enter a valid email address.";
-  if (!fields.company) errors.company = "Please enter your company name.";
   for (const key of Object.keys(MAX_LENGTH) as (keyof ProfileRequestFields)[]) {
     if (fields[key].length > MAX_LENGTH[key]) errors[key] = `Please use at most ${MAX_LENGTH[key]} characters.`;
   }

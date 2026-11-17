@@ -59,13 +59,16 @@ async function deliverProfile(fields: { name: string; email: string; company: st
 
   const link = `${SITE_URL}${companyProfile}`;
   const name = escapeHtml(fields.name);
+  const greeting = fields.name ? `Hello ${fields.name},` : "Hello,";
+  const requester = [fields.name, fields.company && `(${fields.company})`].filter(Boolean).join(" ") || fields.email;
+  const notProvided = "<em style=\"color:#6d746b\">not provided</em>";
   await sendEmail({
     to: fields.email,
     replyTo: CONTACT_TO,
     subject: "Your Eram Asacon company profile",
-    text: `Hello ${fields.name},\n\nThank you for your interest in Eram Asacon. You can download our company profile here:\n${link}\n\nIf you have a project in mind, simply reply to this email or call +966 138656686.\n\nEram Asacon\n#353, 2nd floor, Khobar Mall, King Fahd Road, Al Khobar\nhttps://eramasacon.com`,
+    text: `${greeting}\n\nThank you for your interest in Eram Asacon. You can download our company profile here:\n${link}\n\nIf you have a project in mind, simply reply to this email or call +966 138656686.\n\nEram Asacon\n#353, 2nd floor, Khobar Mall, King Fahd Road, Al Khobar\nhttps://eramasacon.com`,
     html: `<div style="font-family:Arial,sans-serif;font-size:15px;line-height:1.6;color:#202725;max-width:560px">
-  <p>Hello ${name},</p>
+  <p>${escapeHtml(greeting)}</p>
   <p>Thank you for your interest in Eram Asacon. Our company profile covers our MEP and HVAC services, fabrication capabilities and recent projects.</p>
   <p style="margin:28px 0"><a href="${link}" style="background:#c5352d;color:#fff;text-decoration:none;padding:14px 24px;font-weight:bold;display:inline-block">Download the company profile (PDF)</a></p>
   <p>If you have a project in mind, simply reply to this email or call <a href="tel:+966138656686" style="color:#c5352d">+966 138656686</a>.</p>
@@ -78,9 +81,9 @@ async function deliverProfile(fields: { name: string; email: string; company: st
     await sendEmail({
       to: CONTACT_TO,
       replyTo: fields.email,
-      subject: `Company profile requested by ${fields.name} (${fields.company})`,
-      text: `Name: ${fields.name}\nEmail: ${fields.email}\nCompany: ${fields.company}\n\nThe company profile link was emailed to them.`,
-      html: `<div style="font-family:Arial,sans-serif;font-size:15px;color:#202725"><h2 style="margin:0 0 12px">Company profile requested</h2><p>Name: <strong>${name}</strong><br>Email: <strong>${escapeHtml(fields.email)}</strong><br>Company: <strong>${escapeHtml(fields.company)}</strong></p><p style="color:#6d746b">The profile download link was emailed to them. Reply to follow up.</p></div>`,
+      subject: `Company profile requested by ${requester}`,
+      text: `Name: ${fields.name || "not provided"}\nEmail: ${fields.email}\nCompany: ${fields.company || "not provided"}\n\nThe company profile link was emailed to them.`,
+      html: `<div style="font-family:Arial,sans-serif;font-size:15px;color:#202725"><h2 style="margin:0 0 12px">Company profile requested</h2><p>Name: ${fields.name ? `<strong>${name}</strong>` : notProvided}<br>Email: <strong>${escapeHtml(fields.email)}</strong><br>Company: ${fields.company ? `<strong>${escapeHtml(fields.company)}</strong>` : notProvided}</p><p style="color:#6d746b">The profile download link was emailed to them. Reply to follow up.</p></div>`,
     });
   } catch (error) {
     console.error("[company profile] lead notification failed:", error);

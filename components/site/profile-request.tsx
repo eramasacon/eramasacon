@@ -23,7 +23,7 @@ export function ProfileRequestProvider({ children }: { children: ReactNode }) {
     const el = dialog.current;
     if (session === 0 || !el || el.open) return;
     el.showModal();
-    el.querySelector<HTMLInputElement>('input[name="name"]')?.focus();
+    el.querySelector<HTMLInputElement>('input[name="email"]')?.focus();
   }, [session]);
 
   return (
@@ -89,16 +89,16 @@ function ProfileRequestForm({ onClose }: { onClose: () => void }) {
     if (errors[name]) setErrors((current) => ({ ...current, [name]: undefined }));
   };
 
-  const field = (name: keyof ProfileRequestFields, label: string, props: { type?: string; autoComplete: string; placeholder: string}) => (
+  const field = (name: keyof ProfileRequestFields, label: string, props: { type?: string; autoComplete: string; placeholder: string; optional?: boolean }) => (
     <div className={styles.field}>
-      <label htmlFor={`${id}-${name}`}>{label}</label>
+      <label htmlFor={`${id}-${name}`}>{label}{props.optional && <span className={styles.optional}> (optional)</span>}</label>
       <input
         id={`${id}-${name}`}
         name={name}
         type={props.type ?? "text"}
         autoComplete={props.autoComplete}
         placeholder={props.placeholder}
-        required
+        required={!props.optional}
         aria-invalid={errors[name] ? true : undefined}
         aria-describedby={errors[name] ? `${id}-${name}-error` : undefined}
         onInput={() => clearError(name)}
@@ -127,11 +127,11 @@ function ProfileRequestForm({ onClose }: { onClose: () => void }) {
         <>
           <p className={styles.eyebrow}>Company profile</p>
           <h2 id="profile-request-title">Get our company profile</h2>
-          <p className={styles.intro}>Tell us a little about yourself and we&apos;ll email the PDF straight to your inbox.</p>
+          <p className={styles.intro}>Enter your email and we&apos;ll send the PDF straight to your inbox.</p>
           <form onSubmit={onSubmit} noValidate aria-busy={pending}>
-            {field("name", "Full name", { autoComplete: "name", placeholder: "Your name" })}
             {field("email", "Work email", { type: "email", autoComplete: "email", placeholder: "you@company.com" })}
-            {field("company", "Company", { autoComplete: "organization", placeholder: "Company name" })}
+            {field("name", "Full name", { autoComplete: "name", placeholder: "Your name", optional: true })}
+            {field("company", "Company", { autoComplete: "organization", placeholder: "Company name", optional: true })}
             <div className={styles.honeypot} aria-hidden="true">
               <label>Leave this empty<input name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" /></label>
             </div>
