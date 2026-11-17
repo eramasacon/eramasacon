@@ -171,25 +171,7 @@ export function ServiceDetails() {
                             </span>
                             {" "}
                             <span className="elementor-icon-list-text">
-                              Chilled Water System Design, Installation, and Commissioning
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item">
-                            <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="jki jki-construction-tool-vehicle-with-crane-lifting-materials-light" />
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Packaged Air Conditioning Unit Installation and Integration
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item">
-                            <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="jki jki-construction-tool-vehicle-with-crane-lifting-materials-light" />
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Variable Refrigerant Flow (VRF) System Design and Installation
+                              Laboratory HVAC Systems (Fume Hoods, Exhaust Systems)
                             </span>
                           </li>
                         </ul>
@@ -200,24 +182,6 @@ export function ServiceDetails() {
                     <div className="elementor-widget-wrap elementor-element-populated">
                       <div className="elementor-element elementor-element-2960147 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list">
                         <ul className="elementor-icon-list-items">
-                          <li className="elementor-icon-list-item">
-                            <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="jki jki-construction-tool-vehicle-with-crane-lifting-materials-light" />
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Chemical Filtration System Design and Implementation
-                            </span>
-                          </li>
-                          <li className="elementor-icon-list-item">
-                            <span className="elementor-icon-list-icon">
-                              <i aria-hidden="true" className="jki jki-construction-tool-vehicle-with-crane-lifting-materials-light" />
-                            </span>
-                            {" "}
-                            <span className="elementor-icon-list-text">
-                              Laboratory HVAC Systems (Fume Hoods, Exhaust Systems)
-                            </span>
-                          </li>
                           <li className="elementor-icon-list-item">
                             <span className="elementor-icon-list-icon">
                               <i aria-hidden="true" className="jki jki-construction-tool-vehicle-with-crane-lifting-materials-light" />

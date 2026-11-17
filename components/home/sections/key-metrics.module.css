@@ -8,9 +8,9 @@
   padding-top: 28px;
   border-top: 1px solid #dce0d8;
   color: #636b64;
-  font-size: var(--fs-label);
+  font-size: var(--fs-label, 13px);
   font-weight: 700;
-  letter-spacing: var(--ls-label);
+  letter-spacing: var(--ls-label, 1.6px);
 }
 
 .metrics {
@@ -30,12 +30,12 @@
 }
 
 .metric:first-child { padding-left: 0; border-left: 0; }
-.metric dt { color: #636b64; font-size: var(--fs-ui); line-height: 1.5; }
+.metric dt { color: #636b64; font-size: var(--fs-ui, 14px); line-height: 1.5; }
 .metric dd {
   order: -1;
   margin: 0 0 12px;
   color: var(--ink, #202725);
-  font-size: var(--fs-stat);
+  font-size: var(--fs-stat, clamp(34px, 3vw, 44px));
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -1px;
