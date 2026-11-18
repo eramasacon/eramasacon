@@ -189,7 +189,7 @@ function Label({ htmlFor, required, children }: { htmlFor: string; required: boo
     <label className="mf-input-label" htmlFor={htmlFor}>
       {children}
       {" "}
-      <span className="mf-input-required-indicator">{required ? "*" : ""}</span>
+      {required && <span className="mf-input-required-indicator" aria-hidden="true">*</span>}
     </label>
   );
 }

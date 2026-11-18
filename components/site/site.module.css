@@ -12,6 +12,9 @@
 .serviceMenu { position: relative; }
 .serviceMenu summary { cursor: pointer; gap: 8px; list-style: none; }
 .serviceMenu summary::-webkit-details-marker { display: none; }
+.serviceMenu summary svg { width: 14px; height: 14px; transition: transform .2s; }
+.serviceMenu[open] summary svg { transform: rotate(180deg); }
+@media (prefers-reduced-motion: reduce) { .serviceMenu summary svg { transition: none; } }
 .header .dropdown { position: absolute; z-index: 10; top: calc(100% + 8px); left: -20px; width: 300px; max-width: 80vw; padding: 12px; background: #fff; border: 1px solid var(--site-border); box-shadow: 0 12px 32px #20272516; }
 .dropdown a { display: block; padding: 12px; line-height: 1.4; }
 .dropdown a:hover, .dropdown a[aria-current="page"] { background: var(--site-paper); color: var(--site-red); }

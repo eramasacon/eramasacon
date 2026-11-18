@@ -91,7 +91,7 @@ function ProfileRequestForm({ onClose }: { onClose: () => void }) {
 
   const field = (name: keyof ProfileRequestFields, label: string, props: { type?: string; autoComplete: string; placeholder: string; optional?: boolean }) => (
     <div className={styles.field}>
-      <label htmlFor={`${id}-${name}`}>{label}{props.optional && <span className={styles.optional}> (optional)</span>}</label>
+      <label htmlFor={`${id}-${name}`}>{label}{props.optional ? <span className={styles.optional}> (optional)</span> : <span className={styles.required} aria-hidden="true"> *</span>}</label>
       <input
         id={`${id}-${name}`}
         name={name}

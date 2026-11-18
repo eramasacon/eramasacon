@@ -35,6 +35,7 @@
 .field { margin-bottom: 18px; }
 .field label { display: block; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: var(--site-ink); }
 .field label .optional { font-weight: 400; color: var(--site-muted, #636b64); }
+.field label .required { color: var(--site-red, #c5352d); }
 .dialog .field input { display: block; width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid var(--site-border); border-radius: 0; background: #fff; color: var(--site-ink); font: 400 15px var(--font-dm-sans), Arial, sans-serif; transition: border-color .15s; }
 .dialog .field input::placeholder { color: #9aa197; }
 .dialog .field input:hover { border-color: #bfc5b9; }

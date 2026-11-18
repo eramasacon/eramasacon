@@ -7,7 +7,7 @@
   margin-bottom: 28px;
   padding-top: 28px;
   border-top: 1px solid #dce0d8;
-  color: #636b64;
+  color: var(--red, #c5352d);
   font-size: var(--fs-label, 13px);
   font-weight: 700;
   letter-spacing: var(--ls-label, 1.6px);

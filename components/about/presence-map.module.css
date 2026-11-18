@@ -1,0 +1,92 @@
+/* Selectors are doubled-up where the About page's .split li/ul rules would otherwise win. */
+.map { margin: 0; }
+
+.canvas { position: relative; }
+/* Reset host-page image margins: markers are positioned against this box. */
+.canvas.canvas img { display: block; width: 100%; height: auto; margin: 0; }
+
+.marker {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  transform: translate(-50%, -50%);
+}
+.marker.office { width: 14px; height: 14px; }
+.marker.hq { width: 18px; height: 18px; z-index: 2; }
+.dot {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--site-red, #c5352d);
+  box-shadow: 0 0 0 2px var(--site-paper, #f5f4ef);
+}
+/* Bigger invisible hover target than the dot itself. */
+.marker::before { content: ""; position: absolute; z-index: 2; inset: -6px; border-radius: 50%; }
+
+/* Ripple from the original WordPress map (HT Mega "marker-ripple-animation"):
+   a 46px disc grows 1x -> 1.7x and fades every 2.6s, all markers in sync.
+   41px here: our map renders ~10% narrower than the original's 650px column. */
+.marker::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 41px;
+  height: 41px;
+  border: 1px solid #ff424438;
+  border-radius: 50%;
+  background-color: #ff424438;
+  opacity: 0;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  animation: marker-ripple 2.6s cubic-bezier(0.25, 0.9, 0.2, 1) infinite;
+  pointer-events: none;
+}
+@keyframes marker-ripple {
+  0% { transform: translate3d(-50%, -50%, 0) scale(1); opacity: 1; }
+  100% { transform: translate3d(-50%, -50%, 0) scale(1.7); opacity: 0; }
+}
+
+/* Country name on hover (mouse users; the legend lists every country for everyone else). */
+.marker:hover { z-index: 3; }
+.marker:hover::before {
+  content: attr(data-label);
+  inset: auto;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  border-radius: 0;
+  white-space: nowrap;
+  background: var(--site-ink, #202725);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+.legend { display: grid; gap: 14px; margin-top: 28px; padding-top: 24px; border-top: 1px solid #cfd5c9; }
+.group { display: grid; grid-template-columns: 18px minmax(0, 1fr); align-items: start; gap: 12px; }
+.key { justify-self: center; margin-top: 5px; border-radius: 50%; background: var(--site-red, #c5352d); width: 11px; height: 11px; }
+.key.office { width: 14px; height: 14px; margin-top: 4px; }
+.key.hq { width: 18px; height: 18px; margin-top: 2px; }
+.groupLabel { display: block; color: var(--site-ink, #202725); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; }
+.legend.legend ul { display: flex; flex-wrap: wrap; margin: 2px 0 0; padding: 0; list-style: none; }
+.legend.legend li { margin: 0; padding: 0; font-size: 15px; line-height: 1.6; color: var(--site-muted, #636b64); }
+.legend.legend li:not(:last-child)::after { content: ","; margin-right: 6px; }
+.legend.legend li::marker { content: none; }
+
+.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .marker { width: 8px; height: 8px; }
+  .marker.office { width: 10px; height: 10px; }
+  .marker.hq { width: 13px; height: 13px; }
+  /* Map is about half as wide on phones; keep the ripple in proportion. */
+  .marker::after { width: 26px; height: 26px; }
+}
+@media (prefers-reduced-motion: reduce) { .marker::after { animation: none; opacity: 0.5; } }

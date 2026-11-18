@@ -1,6 +1,6 @@
-/* eslint-disable @next/next/no-img-element -- existing local presence map */
 import { Banner } from "./sections/banner";
 import { ContactForm } from "./contact-form";
+import { PresenceMap } from "@/components/about/presence-map";
 import styles from "@/components/site/interior.module.css";
 
 export function ContactPage() {
@@ -15,9 +15,8 @@ export function ContactPage() {
           <address>#353, 2nd floor, Khobar mall,<br />King Fahd Road, Al Khobar</address>
           <a href="tel:+966138656686">+966 138656686</a>
           <a href="mailto:info@eramasacon.com">info@eramasacon.com</a>
-          <img src="/wp-content/uploads/2025/01/325051862_fa899d86-37bf-46b5-88eb-abe693907fc5-3-1.png" alt="Map of our international presence" width="1234" height="633" loading="lazy" />
-          <h3>International presence</h3>
-          <p className={styles.countries}>Saudi Arabia · UAE · India · Ireland · Oman · Qatar · Bahrain · Kuwait · UK · Italy · Spain · South Korea · Thailand · Sri Lanka</p>
+          <h3 className={styles.presenceTitle}>International presence</h3>
+          <PresenceMap />
         </aside>
       </section>
     </main>

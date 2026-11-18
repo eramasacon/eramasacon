@@ -127,3 +127,6 @@ body #ast-scroll-top:hover { background: #a52b24; }
 }
 
 #content :is(input, textarea, [role="combobox"]) { scroll-margin-top: calc(var(--navigation-height, 86px) + 24px); }
+
+/* The original MetForm styles made the required "*" transparent; show it in brand red. */
+#content .mf-input-required-indicator { color: var(--site-red, #c5352d); }

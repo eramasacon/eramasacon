@@ -33,7 +33,7 @@ export function SiteHeader() {
           {mainNavigation.map(item => (
             <li key={item.href} className={isActive(item.href) ? styles.active : undefined}>
               {item.href === "/services" ? <details ref={services} className={styles.serviceMenu}>
-                <summary>Services <span aria-hidden="true">⌄</span></summary>
+                <summary>Services <ArrowIcon direction="chevron-down" /></summary>
                 <ul className={styles.dropdown}>
                   <li><Link href="/services" aria-current={pathname === "/services" ? "page" : undefined}>Explore all services</Link></li>
                   {serviceNavigation.map(service => <li key={service.href}><Link href={service.href} aria-current={pathname === service.href ? "page" : undefined}>{service.label}</Link></li>)}

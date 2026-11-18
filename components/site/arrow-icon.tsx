@@ -1,9 +1,10 @@
-type ArrowDirection = "up-right" | "right" | "down";
+type ArrowDirection = "up-right" | "right" | "down" | "chevron-down";
 
 const paths: Record<ArrowDirection, string> = {
   "up-right": "M6 18 18 6M6 6h12v12",
   right: "M4 12h16m-7-7 7 7-7 7",
   down: "M12 4v16m-7-7 7 7 7-7",
+  "chevron-down": "m6 9 6 6 6-6",
 };
 
 /** Vector arrows stay consistent across platforms without emoji font fallback. */
